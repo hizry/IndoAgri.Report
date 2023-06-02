@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h4>Report</h4>
+    <p class="lead">
+        <ol>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/CETAK_BKMHK.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03" target="_blank">Cetak Buku Mandor HK </a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/CetakBukuPanen2.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03" target="_blank">Cetak Buku Panen</a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/RptAnomali.aspx?bkmDate=2023-04-04&divisi=04" target="_blank">Anomali Absent Output Panen</a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/NotesPotongBuah_Header.aspx?startDate=2022-12-20&finishDate=2022-12-22&nik=200500686&gang=03HC01" target="_blank">Note Potong Buah</a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/ReportPrestasiDivisi.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03&estate=6920&company=9600" target="_blank">Prestasi Divisi</a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/ReportAnomaliPanenVsAngkut.aspx?from=2023-03-25&to=2023-04-04&block=H22P17&estate=3520" target="_blank">Anomali Penen Vs Angkut</a>
+            </li>
+        </ol>
+    </p>
+</div>
+<hr />
+@*<div class="row">
+    <div class="col-md-4">
+        <input type="text" class="form-control" id="searchText" placeholder="Enter Company Name">
+    </div>
+    <div class="col-md-3">
+        <button type="button" id="btnSearch" class="btn btn-raised btn-primary btn-block">Get Report</button>
+    </div>
+</div>*@
+<div class="row">
+    <div class="col-md-12">
+        <div id="divReport">
+        </div>
+    </div>
+</div>
+    <script>
+        //$(function () {
+        //    $('#btnSearch').click(function () {
+
+        //        var searchText = $("#searchText").val();
+
+        //        //ASPX page URL to load report
+        //        var src = '../Reports/HMS/CetakBukuPanen.aspx';
+        //        //We can add parameters here
+        //        //srcsrc = src + "searchText=" + searchText
+
+        //        //We can append more than one parameter like below
+        //        //var companyId = 1
+        //        //srcsrc = src + "compnayID=" + companyId
+
+        //        //Create a dynamic iframe here and append this to div tag
+        //        var iframe = '<iframe id="reportFrame" width="1000px" height="1200px" scrolling="no" frameborder="0" src="' + src + '" allowfullscreen></iframe>';
+        //        $("#divReport").html(iframe);
+        //    });
+        //});
+    </script>

@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PPMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblM_AccountingPeriod">
+          <Key>
+            <PropertyRef Name="Estate" />
+            <PropertyRef Name="ZYear" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="Estate" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ZYear" Type="int" Nullable="false" />
+          <Property Name="Period" Type="smallint" Nullable="false" />
+          <Property Name="ClosingDate" Type="datetime2" Precision="7" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime2" Precision="7" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="tblM_CheckrollPeriod">
+          <Key>
+            <PropertyRef Name="Estate" />
+            <PropertyRef Name="ZYear" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="Estate" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="ZYear" Type="int" Nullable="false" />
+          <Property Name="Period" Type="smallint" Nullable="false" />
+          <Property Name="ClosingDate" Type="datetime2" Precision="7" />
+          <Property Name="Status" Type="varchar" MaxLength="10" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime2" Precision="7" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Function Name="GetBukuPanenItemNormal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nik" Type="nvarchar" Mode="In" />
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="nvarchar" Mode="In" />
+          <Parameter Name="Achievement" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="GetBukuPanenItemPenalty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Nik" Type="nvarchar" Mode="In" />
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="nvarchar" Mode="In" />
+          <Parameter Name="Achievement" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_PrestasiOuputHKDivisi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="divisi" Type="varchar" Mode="In" />
+          <Parameter Name="bkmdate" Type="date" Mode="In" />
+        </Function>
+        <Function Name="SPS_CETAK_BKMHK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BkmDate" Type="datetime" Mode="In" />
+          <Parameter Name="Division" Type="nvarchar" Mode="In" />
+          <Parameter Name="GangCode" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_CETAK_BKMHK_DETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BkmDate" Type="datetime" Mode="In" />
+          <Parameter Name="Division" Type="nvarchar" Mode="In" />
+          <Parameter Name="GangCode" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_CETAK_BKMHK_DETAIL_DDT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BkmDate" Type="datetime" Mode="In" />
+          <Parameter Name="Division" Type="nvarchar" Mode="In" />
+          <Parameter Name="GangCode" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_CETAK_BUKUPANEN_HEADER_REV1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Division" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_Cetak_BukuPanenItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="Division" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="int" Mode="In" />
+          <Parameter Name="Achievement" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_Cetak_BukuPanenItem_Quality" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="Division" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="int" Mode="In" />
+          <Parameter Name="Quality" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_Cetak_BukuPanenItem_Rev1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Division" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="int" Mode="In" />
+          <Parameter Name="Achievement" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_POTONGBUAH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Start" Type="datetime" Mode="In" />
+          <Parameter Name="Finish" Type="datetime" Mode="In" />
+          <Parameter Name="Gang" Type="varchar" Mode="In" />
+          <Parameter Name="Nik" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_POTONGBUAH_HDR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Start" Type="datetime" Mode="In" />
+          <Parameter Name="Finish" Type="datetime" Mode="In" />
+          <Parameter Name="Gang" Type="varchar" Mode="In" />
+          <Parameter Name="Nik" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_REPORT_ANOMALI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Date" Type="datetime" Mode="In" />
+          <Parameter Name="Division" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="SPS_REPORTANOMALIPANENVSANGKUT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Start" Type="datetime" Mode="In" />
+          <Parameter Name="Finish" Type="datetime" Mode="In" />
+          <Parameter Name="Block" Type="nvarchar" Mode="In" />
+          <Parameter Name="Estate" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="PPMSModelStoreContainer">
+          <EntitySet Name="tblM_AccountingPeriod" EntityType="Self.tblM_AccountingPeriod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblM_CheckrollPeriod" EntityType="Self.tblM_CheckrollPeriod" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PPMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PPMSEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="SPS_CETAK_BKMHK" ReturnType="Collection(PPMSModel.SPS_CETAK_BKMHK_Result)">
+            <Parameter Name="BkmDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+            <Parameter Name="GangCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_CETAK_BKMHK_DETAIL_DDT" ReturnType="Collection(PPMSModel.SPS_CETAK_BKMHK_DETAIL_DDT_Result)">
+            <Parameter Name="BkmDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+            <Parameter Name="GangCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_Cetak_BukuPanenItem" ReturnType="Collection(PPMSModel.SPS_Cetak_BukuPanenItem_Result)">
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="Int32" />
+            <Parameter Name="Achievement" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_Cetak_BukuPanenItem_Quality" ReturnType="Collection(PPMSModel.SPS_Cetak_BukuPanenItem_Quality_Result)">
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="Int32" />
+            <Parameter Name="Quality" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_CETAK_BKMHK_DETAIL" ReturnType="Collection(PPMSModel.SPS_CETAK_BKMHK_DETAIL_Result)">
+            <Parameter Name="BkmDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+            <Parameter Name="GangCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_CETAK_BUKUPANEN_HEADER_REV1" ReturnType="Collection(PPMSModel.SPS_CETAK_BUKUPANEN_HEADER_REV1_Result)">
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_Cetak_BukuPanenItem_Rev1" ReturnType="Collection(PPMSModel.SPS_Cetak_BukuPanenItem_Rev1_Result)">
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="Int32" />
+            <Parameter Name="Achievement" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetBukuPanenItemNormal" ReturnType="Collection(PPMSModel.GetBukuPanenItemNormal_Result)">
+            <Parameter Name="Nik" Mode="In" Type="String" />
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="String" />
+            <Parameter Name="Achievement" Mode="In" Type="String" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetBukuPanenItemPenalty" ReturnType="Collection(PPMSModel.GetBukuPanenItemPenalty_Result)">
+            <Parameter Name="Nik" Mode="In" Type="String" />
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="String" />
+            <Parameter Name="Achievement" Mode="In" Type="String" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_POTONGBUAH" ReturnType="Collection(PPMSModel.SPS_POTONGBUAH_Result)">
+            <Parameter Name="Start" Mode="In" Type="DateTime" />
+            <Parameter Name="Finish" Mode="In" Type="DateTime" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+            <Parameter Name="Nik" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_POTONGBUAH_HDR" ReturnType="Collection(PPMSModel.SPS_POTONGBUAH_HDR_Result)">
+            <Parameter Name="Start" Mode="In" Type="DateTime" />
+            <Parameter Name="Finish" Mode="In" Type="DateTime" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+            <Parameter Name="Nik" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SP_PrestasiOuputHKDivisi" ReturnType="Collection(PPMSModel.SP_PrestasiOuputHKDivisi_Result)">
+            <Parameter Name="divisi" Mode="In" Type="String" />
+            <Parameter Name="bkmdate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="tblM_CheckrollPeriod" EntityType="PPMSModel.tblM_CheckrollPeriod" />
+          <EntitySet Name="tblM_AccountingPeriod" EntityType="PPMSModel.tblM_AccountingPeriod" />
+          <FunctionImport Name="SPS_REPORT_ANOMALI" ReturnType="Collection(PPMSModel.SPS_REPORT_ANOMALI_Result)">
+            <Parameter Name="Date" Mode="In" Type="DateTime" />
+            <Parameter Name="Division" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SPS_REPORTANOMALIPANENVSANGKUT" ReturnType="Collection(PPMSModel.SPS_REPORTANOMALIPANENVSANGKUT_Result)">
+            <Parameter Name="Start" Mode="In" Type="DateTime" />
+            <Parameter Name="Finish" Mode="In" Type="DateTime" />
+            <Parameter Name="Block" Mode="In" Type="String" />
+            <Parameter Name="Estate" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="SPS_CETAK_BKMHK_Result">
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="String" Name="BKMNumber" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BKMDate" Nullable="false" />
+          <Property Type="String" Name="Division" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="Gang" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Estate" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="Nik_Foreman" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Foreman" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Nik_Clerk" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Clerk" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SPS_CETAK_BKMHK_DETAIL_DDT_Result">
+          <Property Type="String" Name="Nik" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AbsentType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="4" />
+          <Property Type="String" Name="ActivityType" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Block" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Mandays" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Output" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Uom" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="JobPos" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Premi" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Penalty" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+          <Property Type="Decimal" Name="Overtime" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="SPS_Cetak_BukuPanenItem_Result">
+          <Property Type="Int64" Name="Nomor" Nullable="true" />
+          <Property Type="String" Name="NikHarvester" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="HK" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HA" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="TPH" Nullable="true" MaxLength="5" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="SPS_Cetak_BukuPanenItem_Quality_Result">
+          <Property Type="Int64" Name="Nomor" Nullable="true" />
+          <Property Type="String" Name="NikHarvester" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="HK" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HA" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="TPH" Nullable="true" MaxLength="5" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="SPS_CETAK_BKMHK_DETAIL_Result">
+          <Property Type="String" Name="Nik" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="AbsentType" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ActivityType" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Block" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Mandays" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Output" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="Uom" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="JobPos" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="Premi" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="Penalty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SPS_CETAK_BUKUPANEN_HEADER_REV1_Result">
+          <Property Type="String" Name="Division" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Gang" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="HarvestDate" Nullable="false" />
+          <Property Type="String" Name="Estate" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="BKMNo" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Location" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="Harvested" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="Mandor" Nullable="true" MaxLength="103" />
+          <Property Type="String" Name="Clerk" Nullable="true" MaxLength="43" />
+        </ComplexType>
+        <ComplexType Name="SPS_Cetak_BukuPanenItem_Rev1_Result">
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="NikHarvester" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="HK" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="HA" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="Gang" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="HarvestDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="JjgDinas" Nullable="true" />
+          <Property Type="Int32" Name="OverBasic" Nullable="true" />
+          <Property Type="Int32" Name="BlockBasic" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetBukuPanenItemNormal_Result">
+          <Property Type="String" Name="Tph" Nullable="false" MaxLength="21" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="GetBukuPanenItemPenalty_Result">
+          <Property Type="String" Name="Tph" Nullable="false" MaxLength="20" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="SPS_POTONGBUAH_Result">
+          <Property Type="DateTime" Name="Start" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Finish" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Nik" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BkmDate" Nullable="false" />
+          <Property Type="String" Name="Gang" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="Location" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="BlockBasic" Nullable="true" />
+          <Property Type="String" Name="Achievement" Nullable="false" MaxLength="5" />
+          <Property Type="Int32" Name="BasisHarian" Nullable="true" />
+          <Property Type="Int32" Name="OverBasic" Nullable="true" />
+          <Property Type="Decimal" Name="PremiAllocation" Nullable="true" Precision="20" Scale="4" />
+          <Property Type="Decimal" Name="OveBasicPremi" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="TotalPremiAllocation" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="RpPenalty" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="NettPremi" Nullable="true" Precision="21" Scale="4" />
+        </ComplexType>
+        <ComplexType Name="SPS_POTONGBUAH_HDR_Result">
+          <Property Type="String" Name="Nik" Nullable="false" MaxLength="20" />
+          <Property Type="DateTime" Name="Start" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="Finish" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Gang" Nullable="false" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="SP_PrestasiOuputHKDivisi_Result">
+          <Property Type="String" Name="gang" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="ActivityType" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="ActivityName" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Block" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BKMDate" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Hectare" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="PlantingYear" Nullable="false" />
+          <Property Type="String" Name="Uom" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="OutputHi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Outputsdi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Outputtotal" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="HKHi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="HKSdi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="HKTotal" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="PremiHi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="premiSdi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="PremiTotal" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="OvertimeHi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="OvertimeSdi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="OvertimeTotal" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="Matnr" Nullable="true" MaxLength="18" />
+          <Property Type="String" Name="MatName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MatUom" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="MatHi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="MatSdi" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Int32" Name="rotasi" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="tblM_CheckrollPeriod">
+          <Key>
+            <PropertyRef Name="Estate" />
+            <PropertyRef Name="ZYear" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="Estate" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ZYear" Type="Int32" Nullable="false" />
+          <Property Name="Period" Type="Int16" Nullable="false" />
+          <Property Name="ClosingDate" Type="DateTime" Precision="7" />
+          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="7" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="tblM_AccountingPeriod">
+          <Key>
+            <PropertyRef Name="Estate" />
+            <PropertyRef Name="ZYear" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="Estate" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ZYear" Type="Int32" Nullable="false" />
+          <Property Name="Period" Type="Int16" Nullable="false" />
+          <Property Name="ClosingDate" Type="DateTime" Precision="7" />
+          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="7" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <ComplexType Name="SPS_REPORT_ANOMALI_Result">
+          <Property Type="String" Name="Gang" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Nik" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="MandorOrKeani" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="AbsentType" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="Mandays" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Block" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Output" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="Location" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FFB" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="LooseFruit" Nullable="true" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="SPS_REPORTANOMALIPANENVSANGKUT_Result">
+          <Property Type="String" Name="HarvestDate" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="location" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="tph" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="QtyJjg" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="QtyAngkut" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="Decimal" Name="Restan" Nullable="true" Precision="38" Scale="2" />
+          <Property Type="String" Name="KodeKendaraan" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Mandor" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="driver" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Achievement" Nullable="false" MaxLength="5" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PPMSModelStoreContainer" CdmEntityContainer="PPMSEntities" >
+          <FunctionImportMapping FunctionImportName="SPS_CETAK_BKMHK" FunctionName="PPMSModel.Store.SPS_CETAK_BKMHK">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_CETAK_BKMHK_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BKMNumber" ColumnName="BKMNumber" />
+                <ScalarProperty Name="BKMDate" ColumnName="BKMDate" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Gang" ColumnName="Gang" />
+                <ScalarProperty Name="Estate" ColumnName="Estate" />
+                <ScalarProperty Name="Nik_Foreman" ColumnName="Nik_Foreman" />
+                <ScalarProperty Name="Foreman" ColumnName="Foreman" />
+                <ScalarProperty Name="Nik_Clerk" ColumnName="Nik_Clerk" />
+                <ScalarProperty Name="Clerk" ColumnName="Clerk" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_CETAK_BKMHK_DETAIL_DDT" FunctionName="PPMSModel.Store.SPS_CETAK_BKMHK_DETAIL_DDT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_CETAK_BKMHK_DETAIL_DDT_Result">
+                <ScalarProperty Name="Nik" ColumnName="Nik" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AbsentType" ColumnName="AbsentType" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+                <ScalarProperty Name="Block" ColumnName="Block" />
+                <ScalarProperty Name="Mandays" ColumnName="Mandays" />
+                <ScalarProperty Name="Output" ColumnName="Output" />
+                <ScalarProperty Name="Uom" ColumnName="Uom" />
+                <ScalarProperty Name="JobPos" ColumnName="JobPos" />
+                <ScalarProperty Name="Premi" ColumnName="Premi" />
+                <ScalarProperty Name="Penalty" ColumnName="Penalty" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Overtime" ColumnName="Overtime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_Cetak_BukuPanenItem" FunctionName="PPMSModel.Store.SPS_Cetak_BukuPanenItem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_Cetak_BukuPanenItem_Result">
+                <ScalarProperty Name="Nomor" ColumnName="Nomor" />
+                <ScalarProperty Name="NikHarvester" ColumnName="NikHarvester" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="HK" ColumnName="HK" />
+                <ScalarProperty Name="HA" ColumnName="HA" />
+                <ScalarProperty Name="TPH" ColumnName="TPH" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_Cetak_BukuPanenItem_Quality" FunctionName="PPMSModel.Store.SPS_Cetak_BukuPanenItem_Quality">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_Cetak_BukuPanenItem_Quality_Result">
+                <ScalarProperty Name="Nomor" ColumnName="Nomor" />
+                <ScalarProperty Name="NikHarvester" ColumnName="NikHarvester" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="HK" ColumnName="HK" />
+                <ScalarProperty Name="HA" ColumnName="HA" />
+                <ScalarProperty Name="TPH" ColumnName="TPH" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_CETAK_BKMHK_DETAIL" FunctionName="PPMSModel.Store.SPS_CETAK_BKMHK_DETAIL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_CETAK_BKMHK_DETAIL_Result">
+                <ScalarProperty Name="Nik" ColumnName="Nik" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AbsentType" ColumnName="AbsentType" />
+                <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+                <ScalarProperty Name="Block" ColumnName="Block" />
+                <ScalarProperty Name="Mandays" ColumnName="Mandays" />
+                <ScalarProperty Name="Output" ColumnName="Output" />
+                <ScalarProperty Name="Uom" ColumnName="Uom" />
+                <ScalarProperty Name="JobPos" ColumnName="JobPos" />
+                <ScalarProperty Name="Premi" ColumnName="Premi" />
+                <ScalarProperty Name="Penalty" ColumnName="Penalty" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_CETAK_BUKUPANEN_HEADER_REV1" FunctionName="PPMSModel.Store.SPS_CETAK_BUKUPANEN_HEADER_REV1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_CETAK_BUKUPANEN_HEADER_REV1_Result">
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="Gang" ColumnName="Gang" />
+                <ScalarProperty Name="HarvestDate" ColumnName="HarvestDate" />
+                <ScalarProperty Name="Estate" ColumnName="Estate" />
+                <ScalarProperty Name="BKMNo" ColumnName="BKMNo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Harvested" ColumnName="Harvested" />
+                <ScalarProperty Name="Mandor" ColumnName="Mandor" />
+                <ScalarProperty Name="Clerk" ColumnName="Clerk" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_Cetak_BukuPanenItem_Rev1" FunctionName="PPMSModel.Store.SPS_Cetak_BukuPanenItem_Rev1">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_Cetak_BukuPanenItem_Rev1_Result">
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="NikHarvester" ColumnName="NikHarvester" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="HK" ColumnName="HK" />
+                <ScalarProperty Name="HA" ColumnName="HA" />
+                <ScalarProperty Name="Gang" ColumnName="Gang" />
+                <ScalarProperty Name="HarvestDate" ColumnName="HarvestDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="JjgDinas" ColumnName="JjgDinas" />
+                <ScalarProperty Name="OverBasic" ColumnName="OverBasic" />
+                <ScalarProperty Name="BlockBasic" ColumnName="BlockBasic" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetBukuPanenItemNormal" FunctionName="PPMSModel.Store.GetBukuPanenItemNormal">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.GetBukuPanenItemNormal_Result">
+                <ScalarProperty Name="Tph" ColumnName="Tph" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetBukuPanenItemPenalty" FunctionName="PPMSModel.Store.GetBukuPanenItemPenalty">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.GetBukuPanenItemPenalty_Result">
+                <ScalarProperty Name="Tph" ColumnName="Tph" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_POTONGBUAH" FunctionName="PPMSModel.Store.SPS_POTONGBUAH">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_POTONGBUAH_Result">
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Finish" ColumnName="Finish" />
+                <ScalarProperty Name="Nik" ColumnName="Nik" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BkmDate" ColumnName="BkmDate" />
+                <ScalarProperty Name="Gang" ColumnName="Gang" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="BlockBasic" ColumnName="BlockBasic" />
+                <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+                <ScalarProperty Name="BasisHarian" ColumnName="BasisHarian" />
+                <ScalarProperty Name="OverBasic" ColumnName="OverBasic" />
+                <ScalarProperty Name="PremiAllocation" ColumnName="PremiAllocation" />
+                <ScalarProperty Name="OveBasicPremi" ColumnName="OveBasicPremi" />
+                <ScalarProperty Name="TotalPremiAllocation" ColumnName="TotalPremiAllocation" />
+                <ScalarProperty Name="RpPenalty" ColumnName="RpPenalty" />
+                <ScalarProperty Name="NettPremi" ColumnName="NettPremi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_POTONGBUAH_HDR" FunctionName="PPMSModel.Store.SPS_POTONGBUAH_HDR">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_POTONGBUAH_HDR_Result">
+                <ScalarProperty Name="Nik" ColumnName="Nik" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Finish" ColumnName="Finish" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Gang" ColumnName="Gang" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_PrestasiOuputHKDivisi" FunctionName="PPMSModel.Store.SP_PrestasiOuputHKDivisi">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SP_PrestasiOuputHKDivisi_Result">
+                <ScalarProperty Name="gang" ColumnName="gang" />
+                <ScalarProperty Name="ActivityType" ColumnName="ActivityType" />
+                <ScalarProperty Name="ActivityName" ColumnName="ActivityName" />
+                <ScalarProperty Name="Block" ColumnName="Block" />
+                <ScalarProperty Name="BKMDate" ColumnName="BKMDate" />
+                <ScalarProperty Name="Hectare" ColumnName="Hectare" />
+                <ScalarProperty Name="PlantingYear" ColumnName="PlantingYear" />
+                <ScalarProperty Name="Uom" ColumnName="Uom" />
+                <ScalarProperty Name="OutputHi" ColumnName="OutputHi" />
+                <ScalarProperty Name="Outputsdi" ColumnName="Outputsdi" />
+                <ScalarProperty Name="Outputtotal" ColumnName="Outputtotal" />
+                <ScalarProperty Name="HKHi" ColumnName="HKHi" />
+                <ScalarProperty Name="HKSdi" ColumnName="HKSdi" />
+                <ScalarProperty Name="HKTotal" ColumnName="HKTotal" />
+                <ScalarProperty Name="PremiHi" ColumnName="PremiHi" />
+                <ScalarProperty Name="premiSdi" ColumnName="premiSdi" />
+                <ScalarProperty Name="PremiTotal" ColumnName="PremiTotal" />
+                <ScalarProperty Name="OvertimeHi" ColumnName="OvertimeHi" />
+                <ScalarProperty Name="OvertimeSdi" ColumnName="OvertimeSdi" />
+                <ScalarProperty Name="OvertimeTotal" ColumnName="OvertimeTotal" />
+                <ScalarProperty Name="Matnr" ColumnName="Matnr" />
+                <ScalarProperty Name="MatName" ColumnName="MatName" />
+                <ScalarProperty Name="MatUom" ColumnName="MatUom" />
+                <ScalarProperty Name="MatHi" ColumnName="MatHi" />
+                <ScalarProperty Name="MatSdi" ColumnName="MatSdi" />
+                <ScalarProperty Name="rotasi" ColumnName="rotasi" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tblM_CheckrollPeriod">
+            <EntityTypeMapping TypeName="PPMSModel.tblM_CheckrollPeriod">
+              <MappingFragment StoreEntitySet="tblM_CheckrollPeriod">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ClosingDate" ColumnName="ClosingDate" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="ZYear" ColumnName="ZYear" />
+                <ScalarProperty Name="Estate" ColumnName="Estate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblM_AccountingPeriod">
+            <EntityTypeMapping TypeName="PPMSModel.tblM_AccountingPeriod">
+              <MappingFragment StoreEntitySet="tblM_AccountingPeriod">
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ClosingDate" ColumnName="ClosingDate" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="ZYear" ColumnName="ZYear" />
+                <ScalarProperty Name="Estate" ColumnName="Estate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SPS_REPORT_ANOMALI" FunctionName="PPMSModel.Store.SPS_REPORT_ANOMALI">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_REPORT_ANOMALI_Result">
+                <ScalarProperty Name="Gang" ColumnName="Gang" />
+                <ScalarProperty Name="Nik" ColumnName="Nik" />
+                <ScalarProperty Name="MandorOrKeani" ColumnName="MandorOrKeani" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AbsentType" ColumnName="AbsentType" />
+                <ScalarProperty Name="Mandays" ColumnName="Mandays" />
+                <ScalarProperty Name="Block" ColumnName="Block" />
+                <ScalarProperty Name="Output" ColumnName="Output" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="FFB" ColumnName="FFB" />
+                <ScalarProperty Name="LooseFruit" ColumnName="LooseFruit" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SPS_REPORTANOMALIPANENVSANGKUT" FunctionName="PPMSModel.Store.SPS_REPORTANOMALIPANENVSANGKUT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.SPS_REPORTANOMALIPANENVSANGKUT_Result">
+                <ScalarProperty Name="HarvestDate" ColumnName="HarvestDate" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="tph" ColumnName="tph" />
+                <ScalarProperty Name="QtyJjg" ColumnName="QtyJjg" />
+                <ScalarProperty Name="QtyAngkut" ColumnName="QtyAngkut" />
+                <ScalarProperty Name="Restan" ColumnName="Restan" />
+                <ScalarProperty Name="KodeKendaraan" ColumnName="KodeKendaraan" />
+                <ScalarProperty Name="Mandor" ColumnName="Mandor" />
+                <ScalarProperty Name="driver" ColumnName="driver" />
+                <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
