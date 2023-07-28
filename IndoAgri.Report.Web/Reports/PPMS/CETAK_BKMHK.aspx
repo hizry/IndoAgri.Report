@@ -13,21 +13,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" AsyncRendering="false" Height="900px" Style="display: block; min-width: 1150px;
         min-height: 250px" 
-            ShowExportControls="false"
-            ShowPageNavigationControls="false" 
-            ShowFindControls="false" 
-            ShowRefreshButton="false" 
-            ShowZoomControl="false" 
-            ShowBackButton="false"
-           
-
-            ShowCredentialPrompts="false"
-            ShowDocumentMapButton="false"
-            ShowParameterPrompts="false"
-            ShowPromptAreaButton ="false"
-            ShowReportBody="true"
-            ShowPrintButton="true"
-            ShowWaitControlCancelLink="false"
+            ShowToolBar="false"
             ></rsweb:ReportViewer>
     </form>
 </body>

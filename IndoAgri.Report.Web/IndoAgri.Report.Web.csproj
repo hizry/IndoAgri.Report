@@ -130,6 +130,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataSets\HMSDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -162,6 +163,42 @@
       <DependentUpon>PPMS.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Reporting.cs" />
+    <Compile Include="Models\spReport_ANOMALIPANENVSANGKUT_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_ANOMALI_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_CETAK_BKMHK_DETAIL_Online_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_Cetak_BKM_HK_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_Cetak_BukuPanenItem_Rev1_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_CETAK_BUKUPANEN_HEADER_Online_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_GetBukuPanenItemNormal_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_GetBukuPanenItemPenalty_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_Header_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_POTONGBUAH_HDR_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_PrestasiOutputHKDivisi_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_Signing_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\SPS_CETAK_BKMHK_DETAIL_DDT_Result.cs">
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
@@ -205,12 +242,12 @@
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\PPMS\CetakBukuPanen2.aspx.cs">
-      <DependentUpon>CetakBukuPanen2.aspx</DependentUpon>
+    <Compile Include="Reports\PPMS\CetakBukuPanen_print.aspx.cs">
+      <DependentUpon>CetakBukuPanen_print.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Reports\PPMS\CetakBukuPanen2.aspx.designer.cs">
-      <DependentUpon>CetakBukuPanen2.aspx</DependentUpon>
+    <Compile Include="Reports\PPMS\CetakBukuPanen_print.aspx.designer.cs">
+      <DependentUpon>CetakBukuPanen_print.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reports\PPMS\CetakBukuPanen.aspx.cs">
       <DependentUpon>CetakBukuPanen.aspx</DependentUpon>
@@ -218,6 +255,34 @@
     </Compile>
     <Compile Include="Reports\PPMS\CetakBukuPanen.aspx.designer.cs">
       <DependentUpon>CetakBukuPanen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PPMS\CETAK_BKMHK_print.aspx.cs">
+      <DependentUpon>CETAK_BKMHK_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\CETAK_BKMHK_print.aspx.designer.cs">
+      <DependentUpon>CETAK_BKMHK_print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PPMS\NotesPotongBuahHarian_print.aspx.cs">
+      <DependentUpon>NotesPotongBuahHarian_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\NotesPotongBuahHarian_print.aspx.designer.cs">
+      <DependentUpon>NotesPotongBuahHarian_print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PPMS\NotesPotongBuah_Header_print.aspx.cs">
+      <DependentUpon>NotesPotongBuah_Header_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\NotesPotongBuah_Header_print.aspx.designer.cs">
+      <DependentUpon>NotesPotongBuah_Header_print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PPMS\ReportAnomaliPanenVsAngkut_print.aspx.cs">
+      <DependentUpon>ReportAnomaliPanenVsAngkut_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\ReportAnomaliPanenVsAngkut_print.aspx.designer.cs">
+      <DependentUpon>ReportAnomaliPanenVsAngkut_print.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reports\PPMS\ReportAnomaliPanenVsAngkut.aspx.cs">
       <DependentUpon>ReportAnomaliPanenVsAngkut.aspx</DependentUpon>
@@ -247,12 +312,26 @@
     <Compile Include="Reports\PPMS\NotesPotongBuahHarian.aspx.designer.cs">
       <DependentUpon>NotesPotongBuahHarian.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PPMS\ReportPrestasiDivisi_print.aspx.cs">
+      <DependentUpon>ReportPrestasiDivisi_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\ReportPrestasiDivisi_print.aspx.designer.cs">
+      <DependentUpon>ReportPrestasiDivisi_print.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PPMS\ReportPrestasiDivisi.aspx.cs">
       <DependentUpon>ReportPrestasiDivisi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Reports\PPMS\ReportPrestasiDivisi.aspx.designer.cs">
       <DependentUpon>ReportPrestasiDivisi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PPMS\RptAnomali_print.aspx.cs">
+      <DependentUpon>RptAnomali_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\RptAnomali_print.aspx.designer.cs">
+      <DependentUpon>RptAnomali_print.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reports\PPMS\RptAnomali.aspx.cs">
       <DependentUpon>RptAnomali.aspx</DependentUpon>
@@ -267,13 +346,6 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\PPMS\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reports\PPMS\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -295,14 +367,20 @@
       <DependentUpon>PPMS.edmx</DependentUpon>
       <LastGenOutput>PPMS.cs</LastGenOutput>
     </Content>
-    <Content Include="Reports\PPMS\CetakBukuPanen2.aspx" />
+    <Content Include="Reports\PPMS\CetakBukuPanen_print.aspx" />
+    <Content Include="Reports\PPMS\CetakBukuPanen.aspx" />
+    <Content Include="Reports\PPMS\CETAK_BKMHK_print.aspx" />
+    <Content Include="Reports\PPMS\NotesPotongBuahHarian_print.aspx" />
+    <Content Include="Reports\PPMS\NotesPotongBuah_Header_print.aspx" />
+    <Content Include="Reports\PPMS\ReportAnomaliPanenVsAngkut_print.aspx" />
     <Content Include="Reports\PPMS\ReportAnomaliPanenVsAngkut.aspx" />
     <Content Include="Reports\PPMS\CETAK_BKMHK.aspx" />
     <Content Include="Reports\PPMS\NotesPotongBuah_Header.aspx" />
     <Content Include="Reports\PPMS\NotesPotongBuahHarian.aspx" />
+    <Content Include="Reports\PPMS\ReportPrestasiDivisi_print.aspx" />
     <Content Include="Reports\PPMS\ReportPrestasiDivisi.aspx" />
+    <Content Include="Reports\PPMS\RptAnomali_print.aspx" />
     <Content Include="Reports\PPMS\RptAnomali.aspx" />
-    <Content Include="Reports\PPMS\WebForm1.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="DataSets\HMSDataSet.xsc">
@@ -336,7 +414,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Reports\PPMS\CetakBukuPanen.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -355,6 +432,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -377,9 +455,7 @@
     <Content Include="Reports\PPMS\BPN_SumNAE.rdlc" />
     <Content Include="Reports\PPMS\BPN_UNripe.rdlc" />
     <Content Include="Reports\PPMS\BPN_UNripeSum.rdlc" />
-    <Content Include="Reports\PPMS\CetakBukuPanen.rdlc" />
     <Content Include="Reports\PPMS\CETAK_BKMHK.rdlc" />
-    <Content Include="Reports\PPMS\CetakBukuPanen2.rdlc" />
     <Content Include="Reports\PPMS\NotesPotongBuah.rdlc" />
     <Content Include="Reports\PPMS\NotesPotongBuahHarian.rdlc" />
     <Content Include="Reports\PPMS\NotesPotongBuah_Header.rdlc" />
@@ -389,6 +465,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\PPMS\CetakBukuPanenV5.rdlc" />
+    <EmbeddedResource Include="Reports\PPMS\Cetak_BukuPanen.rdlc" />
+    <EmbeddedResource Include="Reports\PPMS\Subreport_Signing.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -11,11 +11,11 @@ using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
 {
-    public partial class ReportAnomaliPanenVsAngkut : System.Web.UI.Page   
+    public partial class ReportAnomaliPanenVsAngkut_print : System.Web.UI.Page   
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (! IsPostBack)
             {
                 // Reports/PPMS/ReportAnomaliPanenVsAngkut.aspx?from=2023-03-25&to=2023-04-04&block=H22P17&estate=3520
                 var block = Request.QueryString["block"] ?? "";
@@ -29,7 +29,7 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 DataTable tbl = hmsdset.Tables["spReport_ANOMALIPANENVSANGKUT"];
                 DataTable tblHeader = hmsdset.Tables["spReport_Header"];
 
-                tbl = new Reporting().GetRptAnomaliPanenVsAngkut(fromDate, toDate, block, estate, tbl);
+                tbl = new Reporting().GetRptAnomaliPanenVsAngkut(fromDate, toDate, block, estate,tbl);
                 tblHeader = new Reporting().GetReportHeader(estate, tblHeader);
                 this.ReportViewer1.Reset();
                 ReportDataSource rds = new ReportDataSource("DSAnomaliPanenVsAngkut", tbl);

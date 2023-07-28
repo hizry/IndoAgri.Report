@@ -10,7 +10,8 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" AsyncRendering="false"></rsweb:ReportViewer>
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" AsyncRendering="false" Height="900px" Style="display: block; min-width: 1150px;
+        min-height: 250px"  ShowToolBar="false"></rsweb:ReportViewer>
     </form>
 </body>
 </html>

@@ -11,7 +11,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
 {
-    public partial class NotesPotongBuahHarian : System.Web.UI.Page
+    public partial class NotesPotongBuahHarian_print : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 this.ReportViewer1.Reset();
                 ReportDataSource rds = new ReportDataSource("DSNotesPotBuahPerDay", tbl);
                 ReportParameter[] param = new ReportParameter[3];
-                param[0] = new ReportParameter("Dari", startDate.ToString("dd-MM-yyyy"));
+                param[0] = new ReportParameter("Dari",startDate.ToString("dd-MM-yyyy"));
                 param[1] = new ReportParameter("Sampai", finishDate.ToString("dd-MM-yyyy"));
                 param[2] = new ReportParameter("Gang", gang);
                 ReportViewer1.ShowExportControls = true;

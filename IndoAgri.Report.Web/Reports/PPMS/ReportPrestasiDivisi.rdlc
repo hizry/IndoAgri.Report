@@ -9,6 +9,13 @@
       </ConnectionProperties>
       <rd:DataSourceID>422bed2c-643b-4bc7-9025-c182ce76524a</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="HMSDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>38191002-38ab-4934-a14c-2836b84f55b9</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSetPrestasiDivisi">
@@ -131,6 +138,102 @@
         <rd:TableAdapterName>SP_PrestasiOuputHKDivisiTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
+    <DataSet Name="DataSetHeader">
+      <Query>
+        <DataSourceName>HMSDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Estate">
+          <DataField>Estate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Company">
+          <DataField>Company</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>HMSDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\Office\IndoAgri Reports\IndoAgri.Report\IndoAgri.Report.Web\DataSets\HMSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>spReport_Header</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>spReport_HeaderTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSetSigning">
+      <Query>
+        <DataSourceName>HMSDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="bacode">
+          <DataField>bacode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Divisi">
+          <DataField>Divisi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIKAMA">
+          <DataField>NIKAMA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AMA">
+          <DataField>AMA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIKMANAGER">
+          <DataField>NIKMANAGER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MANAGER">
+          <DataField>MANAGER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIKASKEP">
+          <DataField>NIKASKEP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ASKEP">
+          <DataField>ASKEP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nik_asisten">
+          <DataField>nik_asisten</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ASISTEN">
+          <DataField>ASISTEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Foreman">
+          <DataField>Foreman</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nik_Foreman">
+          <DataField>Nik_Foreman</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIKKraniDivisi">
+          <DataField>NIKKraniDivisi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="KraniDivisi">
+          <DataField>KraniDivisi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>HMSDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\Office\IndoAgri Reports\IndoAgri.Report\IndoAgri.Report.Web\DataSets\HMSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>spReport_Signing</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>spReport_SigningTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -140,13 +243,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.81208cm</Width>
+                  <Width>1.44166cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.78563cm</Width>
+                  <Width>1.75917cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.62688cm</Width>
+                  <Width>1.46813cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -277,6 +380,7 @@
                                 <TextRun>
                                   <Value>Qty HI</Value>
                                   <Style>
+                                    <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -311,6 +415,7 @@
                                 <TextRun>
                                   <Value>Qty s.d HI</Value>
                                   <Style>
+                                    <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -617,7 +722,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>5.82477cm</Size>
+                        <Size>4.70845cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox259">
                             <CanGrow>true</CanGrow>
@@ -683,7 +788,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>1.49459cm</Size>
+                                <Size>1.32455cm</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox261">
                                     <CanGrow>true</CanGrow>
@@ -716,7 +821,7 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>2.96271cm</Size>
+                                    <Size>2.47701cm</Size>
                                     <CellContents>
                                       <Textbox Name="Textbox262">
                                         <CanGrow>true</CanGrow>
@@ -753,7 +858,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>3.22729cm</Size>
+                                        <Size>2.74158cm</Size>
                                         <CellContents>
                                           <Textbox Name="Textbox274">
                                             <CanGrow>true</CanGrow>
@@ -790,7 +895,7 @@
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>3.14791cm</Size>
+                                            <Size>2.77749cm</Size>
                                             <CellContents>
                                               <Textbox Name="Textbox266">
                                                 <CanGrow>true</CanGrow>
@@ -827,7 +932,7 @@
                                           <TablixMembers>
                                             <TablixMember>
                                               <TablixHeader>
-                                                <Size>3.14791cm</Size>
+                                                <Size>2.57367cm</Size>
                                                 <CellContents>
                                                   <Textbox Name="Textbox268">
                                                     <CanGrow>true</CanGrow>
@@ -864,7 +969,7 @@
                                               <TablixMembers>
                                                 <TablixMember>
                                                   <TablixHeader>
-                                                    <Size>4.8548cm</Size>
+                                                    <Size>4.03459cm</Size>
                                                     <CellContents>
                                                       <Textbox Name="Textbox28">
                                                         <CanGrow>true</CanGrow>
@@ -933,6 +1038,7 @@
                               <TextRun>
                                 <Value>Activity</Value>
                                 <Style>
+                                  <FontSize>8pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
                               </TextRun>
@@ -959,7 +1065,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>5.82477cm</Size>
+                        <Size>4.70845cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox29">
                             <CanGrow>true</CanGrow>
@@ -970,6 +1076,7 @@
                                   <TextRun>
                                     <Value>Description</Value>
                                     <Style>
+                                      <FontSize>8pt</FontSize>
                                       <FontWeight>Bold</FontWeight>
                                     </Style>
                                   </TextRun>
@@ -1007,6 +1114,7 @@
                                       <TextRun>
                                         <Value>Block</Value>
                                         <Style>
+                                          <FontSize>8pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
                                         </Style>
                                       </TextRun>
@@ -1033,7 +1141,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>1.49459cm</Size>
+                                <Size>1.32455cm</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox25">
                                     <CanGrow>true</CanGrow>
@@ -1044,6 +1152,7 @@
                                           <TextRun>
                                             <Value>HA</Value>
                                             <Style>
+                                              <FontSize>8pt</FontSize>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
                                           </TextRun>
@@ -1070,7 +1179,7 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>1.5475cm</Size>
+                                    <Size>1.23184cm</Size>
                                     <CellContents>
                                       <Textbox Name="Textbox23">
                                         <CanGrow>true</CanGrow>
@@ -1081,6 +1190,7 @@
                                               <TextRun>
                                                 <Value>HI</Value>
                                                 <Style>
+                                                  <FontSize>8pt</FontSize>
                                                   <FontWeight>Bold</FontWeight>
                                                 </Style>
                                               </TextRun>
@@ -1107,7 +1217,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>1.41521cm</Size>
+                                        <Size>1.24517cm</Size>
                                         <CellContents>
                                           <Textbox Name="Textbox21">
                                             <CanGrow>true</CanGrow>
@@ -1118,6 +1228,7 @@
                                                   <TextRun>
                                                     <Value>s.d HI</Value>
                                                     <Style>
+                                                      <FontSize>8pt</FontSize>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
                                                   </TextRun>
@@ -1144,7 +1255,7 @@
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>1.57396cm</Size>
+                                            <Size>1.34874cm</Size>
                                             <CellContents>
                                               <Textbox Name="Textbox19">
                                                 <CanGrow>true</CanGrow>
@@ -1155,6 +1266,7 @@
                                                       <TextRun>
                                                         <Value>HI</Value>
                                                         <Style>
+                                                          <FontSize>8pt</FontSize>
                                                           <FontWeight>Bold</FontWeight>
                                                         </Style>
                                                       </TextRun>
@@ -1181,7 +1293,7 @@
                                           <TablixMembers>
                                             <TablixMember>
                                               <TablixHeader>
-                                                <Size>1.65333cm</Size>
+                                                <Size>1.39284cm</Size>
                                                 <CellContents>
                                                   <Textbox Name="Textbox17">
                                                     <CanGrow>true</CanGrow>
@@ -1192,6 +1304,7 @@
                                                           <TextRun>
                                                             <Value>s.d HI</Value>
                                                             <Style>
+                                                              <FontSize>8pt</FontSize>
                                                               <FontWeight>Bold</FontWeight>
                                                             </Style>
                                                           </TextRun>
@@ -1218,7 +1331,7 @@
                                               <TablixMembers>
                                                 <TablixMember>
                                                   <TablixHeader>
-                                                    <Size>1.65333cm</Size>
+                                                    <Size>1.33583cm</Size>
                                                     <CellContents>
                                                       <Textbox Name="Textbox15">
                                                         <CanGrow>true</CanGrow>
@@ -1229,6 +1342,7 @@
                                                               <TextRun>
                                                                 <Value>HI</Value>
                                                                 <Style>
+                                                                  <FontSize>8pt</FontSize>
                                                                   <FontWeight>Bold</FontWeight>
                                                                 </Style>
                                                               </TextRun>
@@ -1255,7 +1369,7 @@
                                                   <TablixMembers>
                                                     <TablixMember>
                                                       <TablixHeader>
-                                                        <Size>1.49458cm</Size>
+                                                        <Size>1.44166cm</Size>
                                                         <CellContents>
                                                           <Textbox Name="Textbox13">
                                                             <CanGrow>true</CanGrow>
@@ -1266,6 +1380,7 @@
                                                                   <TextRun>
                                                                     <Value>s.d HI</Value>
                                                                     <Style>
+                                                                      <FontSize>8pt</FontSize>
                                                                       <FontWeight>Bold</FontWeight>
                                                                     </Style>
                                                                   </TextRun>
@@ -1292,7 +1407,7 @@
                                                       <TablixMembers>
                                                         <TablixMember>
                                                           <TablixHeader>
-                                                            <Size>1.5475cm</Size>
+                                                            <Size>1.23784cm</Size>
                                                             <CellContents>
                                                               <Textbox Name="Textbox11">
                                                                 <CanGrow>true</CanGrow>
@@ -1303,6 +1418,7 @@
                                                                       <TextRun>
                                                                         <Value>HI</Value>
                                                                         <Style>
+                                                                          <FontSize>8pt</FontSize>
                                                                           <FontWeight>Bold</FontWeight>
                                                                         </Style>
                                                                       </TextRun>
@@ -1329,7 +1445,7 @@
                                                           <TablixMembers>
                                                             <TablixMember>
                                                               <TablixHeader>
-                                                                <Size>1.60041cm</Size>
+                                                                <Size>1.33583cm</Size>
                                                                 <CellContents>
                                                                   <Textbox Name="Textbox9">
                                                                     <CanGrow>true</CanGrow>
@@ -1340,6 +1456,7 @@
                                                                           <TextRun>
                                                                             <Value>s.d HI</Value>
                                                                             <Style>
+                                                                              <FontSize>8pt</FontSize>
                                                                               <FontWeight>Bold</FontWeight>
                                                                             </Style>
                                                                           </TextRun>
@@ -1366,7 +1483,7 @@
                                                               <TablixMembers>
                                                                 <TablixMember>
                                                                   <TablixHeader>
-                                                                    <Size>4.8548cm</Size>
+                                                                    <Size>4.03459cm</Size>
                                                                     <CellContents>
                                                                       <Textbox Name="Textbox30">
                                                                         <CanGrow>true</CanGrow>
@@ -1377,6 +1494,7 @@
                                                                               <TextRun>
                                                                                 <Value>Description</Value>
                                                                                 <Style>
+                                                                                  <FontSize>8pt</FontSize>
                                                                                   <FontWeight>Bold</FontWeight>
                                                                                 </Style>
                                                                               </TextRun>
@@ -1490,7 +1608,7 @@
                             </SortExpression>
                           </SortExpressions>
                           <TablixHeader>
-                            <Size>5.82477cm</Size>
+                            <Size>4.70845cm</Size>
                             <CellContents>
                               <Textbox Name="ActivityName">
                                 <CanGrow>true</CanGrow>
@@ -1551,7 +1669,9 @@
                                             </Style>
                                           </TextRun>
                                         </TextRuns>
-                                        <Style />
+                                        <Style>
+                                          <TextAlign>Center</TextAlign>
+                                        </Style>
                                       </Paragraph>
                                     </Paragraphs>
                                     <rd:DefaultName>Block</rd:DefaultName>
@@ -1581,7 +1701,7 @@
                                     </SortExpression>
                                   </SortExpressions>
                                   <TablixHeader>
-                                    <Size>1.49459cm</Size>
+                                    <Size>1.32455cm</Size>
                                     <CellContents>
                                       <Textbox Name="Hectare">
                                         <CanGrow>true</CanGrow>
@@ -1618,7 +1738,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>1.5475cm</Size>
+                                        <Size>1.23184cm</Size>
                                         <CellContents>
                                           <Textbox Name="OutputHi">
                                             <CanGrow>true</CanGrow>
@@ -1655,7 +1775,7 @@
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>1.41521cm</Size>
+                                            <Size>1.24517cm</Size>
                                             <CellContents>
                                               <Textbox Name="OutputSdi">
                                                 <CanGrow>true</CanGrow>
@@ -1692,7 +1812,7 @@
                                           <TablixMembers>
                                             <TablixMember>
                                               <TablixHeader>
-                                                <Size>1.57396cm</Size>
+                                                <Size>1.34874cm</Size>
                                                 <CellContents>
                                                   <Textbox Name="HKHi">
                                                     <CanGrow>true</CanGrow>
@@ -1729,7 +1849,7 @@
                                               <TablixMembers>
                                                 <TablixMember>
                                                   <TablixHeader>
-                                                    <Size>1.65333cm</Size>
+                                                    <Size>1.39284cm</Size>
                                                     <CellContents>
                                                       <Textbox Name="HKSdi">
                                                         <CanGrow>true</CanGrow>
@@ -1766,7 +1886,7 @@
                                                   <TablixMembers>
                                                     <TablixMember>
                                                       <TablixHeader>
-                                                        <Size>1.65333cm</Size>
+                                                        <Size>1.33583cm</Size>
                                                         <CellContents>
                                                           <Textbox Name="PremiHi">
                                                             <CanGrow>true</CanGrow>
@@ -1803,7 +1923,7 @@
                                                       <TablixMembers>
                                                         <TablixMember>
                                                           <TablixHeader>
-                                                            <Size>1.49458cm</Size>
+                                                            <Size>1.44166cm</Size>
                                                             <CellContents>
                                                               <Textbox Name="premiSdi">
                                                                 <CanGrow>true</CanGrow>
@@ -1840,7 +1960,7 @@
                                                           <TablixMembers>
                                                             <TablixMember>
                                                               <TablixHeader>
-                                                                <Size>1.5475cm</Size>
+                                                                <Size>1.23784cm</Size>
                                                                 <CellContents>
                                                                   <Textbox Name="OvertimeHi">
                                                                     <CanGrow>true</CanGrow>
@@ -1877,7 +1997,7 @@
                                                               <TablixMembers>
                                                                 <TablixMember>
                                                                   <TablixHeader>
-                                                                    <Size>1.60041cm</Size>
+                                                                    <Size>1.33583cm</Size>
                                                                     <CellContents>
                                                                       <Textbox Name="OvertimeSdi">
                                                                         <CanGrow>true</CanGrow>
@@ -1924,7 +2044,7 @@
                                                                         </SortExpression>
                                                                       </SortExpressions>
                                                                       <TablixHeader>
-                                                                        <Size>4.8548cm</Size>
+                                                                        <Size>4.03459cm</Size>
                                                                         <CellContents>
                                                                           <Textbox Name="MatName2">
                                                                             <CanGrow>true</CanGrow>
@@ -2027,7 +2147,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>8.79853cm</Size>
+                        <Size>7.51217cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox301">
                             <CanGrow>true</CanGrow>
@@ -2064,7 +2184,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>1.5475cm</Size>
+                            <Size>1.23184cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox256">
                                 <CanGrow>true</CanGrow>
@@ -2098,7 +2218,7 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>1.41521cm</Size>
+                                <Size>1.24517cm</Size>
                                 <CellContents>
                                   <Textbox Name="Textbox257">
                                     <CanGrow>true</CanGrow>
@@ -2132,7 +2252,7 @@
                               <TablixMembers>
                                 <TablixMember>
                                   <TablixHeader>
-                                    <Size>1.57396cm</Size>
+                                    <Size>1.34874cm</Size>
                                     <CellContents>
                                       <Textbox Name="Textbox246">
                                         <CanGrow>true</CanGrow>
@@ -2169,7 +2289,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>1.65333cm</Size>
+                                        <Size>1.39284cm</Size>
                                         <CellContents>
                                           <Textbox Name="Textbox247">
                                             <CanGrow>true</CanGrow>
@@ -2206,7 +2326,7 @@
                                       <TablixMembers>
                                         <TablixMember>
                                           <TablixHeader>
-                                            <Size>1.65333cm</Size>
+                                            <Size>1.33583cm</Size>
                                             <CellContents>
                                               <Textbox Name="Textbox248">
                                                 <CanGrow>true</CanGrow>
@@ -2243,7 +2363,7 @@
                                           <TablixMembers>
                                             <TablixMember>
                                               <TablixHeader>
-                                                <Size>1.49458cm</Size>
+                                                <Size>1.44166cm</Size>
                                                 <CellContents>
                                                   <Textbox Name="Textbox249">
                                                     <CanGrow>true</CanGrow>
@@ -2280,7 +2400,7 @@
                                               <TablixMembers>
                                                 <TablixMember>
                                                   <TablixHeader>
-                                                    <Size>1.5475cm</Size>
+                                                    <Size>1.23784cm</Size>
                                                     <CellContents>
                                                       <Textbox Name="Textbox250">
                                                         <CanGrow>true</CanGrow>
@@ -2317,7 +2437,7 @@
                                                   <TablixMembers>
                                                     <TablixMember>
                                                       <TablixHeader>
-                                                        <Size>1.60041cm</Size>
+                                                        <Size>1.33583cm</Size>
                                                         <CellContents>
                                                           <Textbox Name="Textbox251">
                                                             <CanGrow>true</CanGrow>
@@ -2354,7 +2474,7 @@
                                                       <TablixMembers>
                                                         <TablixMember>
                                                           <TablixHeader>
-                                                            <Size>4.8548cm</Size>
+                                                            <Size>4.03459cm</Size>
                                                             <CellContents>
                                                               <Textbox Name="Textbox33">
                                                                 <CanGrow>true</CanGrow>
@@ -2419,7 +2539,7 @@
             <Top>2.96333cm</Top>
             <Left>0.23495cm</Left>
             <Height>2.4cm</Height>
-            <Width>32.99062cm</Width>
+            <Width>28.41235cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2433,20 +2553,22 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Performance Division Report</Value>
+                    <Value>PERFORMANCE DIVISION REPORT</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox308</rd:DefaultName>
-            <Top>0.20849cm</Top>
-            <Left>0.23495cm</Left>
+            <Top>0.13794cm</Top>
+            <Left>9.34828cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.49521cm</Width>
+            <Width>10.42541cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -2465,7 +2587,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>= "PT : " &amp; Parameters!CompanyName.Value</Value>
+                    <Value>=First(Fields!Company.Value, "DataSetHeader")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -2474,9 +2596,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox309</rd:DefaultName>
             <Top>0.84377cm</Top>
-            <Left>0.23495cm</Left>
+            <Left>2.64027cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.13292cm</Width>
+            <Width>7.3466cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -2495,7 +2617,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>= "BKM Date : " &amp; Parameters!BKMDate.Value</Value>
+                    <Value>=Parameters!BKMDate.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -2504,9 +2626,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox309</rd:DefaultName>
             <Top>0.84377cm</Top>
-            <Left>11.96626cm</Left>
+            <Left>13.52133cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.09764cm</Width>
+            <Width>8.11326cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -2525,7 +2647,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="Period : " &amp; Parameters!Period.Value</Value>
+                    <Value>=Parameters!Period.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -2533,10 +2655,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox309</rd:DefaultName>
-            <Top>2.11432cm</Top>
-            <Left>0.23495cm</Left>
+            <Top>2.14961cm</Top>
+            <Left>2.64027cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.09764cm</Width>
+            <Width>7.31132cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -2555,7 +2677,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>= "Estate : " &amp; Parameters!PlantName.Value</Value>
+                    <Value>=First(Fields!Estate.Value, "DataSetHeader")</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -2564,9 +2686,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox309</rd:DefaultName>
             <Top>1.47905cm</Top>
-            <Left>0.23495cm</Left>
+            <Left>2.64027cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.13292cm</Width>
+            <Width>7.3466cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -2585,7 +2707,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="Divisi : " &amp; Parameters!Division.Value</Value>
+                    <Value>=Parameters!Division.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -2593,10 +2715,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox309</rd:DefaultName>
-            <Top>1.47905cm</Top>
-            <Left>11.96626cm</Left>
+            <Top>1.51433cm</Top>
+            <Left>13.52133cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.09764cm</Width>
+            <Width>8.11326cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -2663,8 +2785,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
-                    <Style />
+                    <Value>=First(Fields!ASKEP.Value, "DataSetSigning")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -2767,8 +2891,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
-                    <Style />
+                    <Value>=First(Fields!ASISTEN.Value, "DataSetSigning")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -2873,8 +2999,10 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
-                    <Style />
+                    <Value>=First(Fields!KraniDivisi.Value, "DataSetSigning")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
@@ -2924,11 +3052,311 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Company</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.84377cm</Top>
+            <Left>0.23495cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.07667cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.84377cm</Top>
+            <Left>2.35395cm</Left>
+            <Height>0.6cm</Height>
+            <Width>0.25104cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Estate</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.47904cm</Top>
+            <Left>0.23495cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.07667cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.47904cm</Top>
+            <Left>2.35395cm</Left>
+            <Height>0.6cm</Height>
+            <Width>0.25104cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Period</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>2.1496cm</Top>
+            <Left>0.23495cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.07667cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox12">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>2.1496cm</Top>
+            <Left>2.35395cm</Left>
+            <Height>0.6cm</Height>
+            <Width>0.25104cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox14">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>BKM Date</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.88258cm</Top>
+            <Left>11.12307cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.07667cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox16">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.88258cm</Top>
+            <Left>13.23501cm</Left>
+            <Height>0.6cm</Height>
+            <Width>0.25104cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox18">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Divisi</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>1.51785cm</Top>
+            <Left>11.12307cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.07667cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox20">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.51785cm</Top>
+            <Left>13.23501cm</Left>
+            <Height>0.6cm</Height>
+            <Width>0.25104cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>3.54331in</Height>
         <Style />
       </Body>
-      <Width>14.68937in</Width>
+      <Width>11.53312in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

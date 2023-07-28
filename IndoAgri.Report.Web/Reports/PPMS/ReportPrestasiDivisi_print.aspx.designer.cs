@@ -11,7 +11,7 @@ namespace IndoAgri.Report.Web.Reports.PPMS
 {
 
 
-    public partial class CetakBukuPanen2
+    public partial class ReportPrestasiDivisi_print
     {
 
         /// <summary>

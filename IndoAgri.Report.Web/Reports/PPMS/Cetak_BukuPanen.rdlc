@@ -4306,7 +4306,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>0129ff6b-ee31-4447-b960-09f2d2c10eeb</rd:DataSourceID>
+      <rd:DataSourceID>58a8274d-4e4f-4061-9990-11b9d7f79beb</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -4355,11 +4355,11 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>HMSDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Office\IndoAgri Reports\IndoAgri.Report\IndoAgri.Report.Web\DataSets\HMSDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>SPS_CETAK_BUKUPANEN_HEADER_REV1</rd:TableName>
+        <rd:SchemaPath>D:\Aditya\Kerjaan\MAPPING TFS BARU 10.126.20.177\HMS\Source\MAIN\StagingHMS\Staging.Forms\HMSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>SPS_CETAK_BUKUPANEN_HEADER</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>SPS_CETAK_BUKUPANEN_HEADER_REV1TableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>SPS_CETAK_BUKUPANEN_HEADERTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DSITEM_NORMAL">
@@ -4415,11 +4415,75 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>HMSDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Office\IndoAgri Reports\IndoAgri.Report\IndoAgri.Report.Web\DataSets\HMSDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\Administrator\Documents\Source Code\STAGING HMS\MAIN\StagingHMS\Staging.Forms\HMSDataSet.xsd</rd:SchemaPath>
         <rd:TableName>SPS_Cetak_BukuPanenItem_Rev1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>SPS_Cetak_BukuPanenItem_Rev1TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DSSigning">
+      <Query>
+        <DataSourceName>HMSDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="bacode">
+          <DataField>bacode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Divisi">
+          <DataField>Divisi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIKAMA">
+          <DataField>NIKAMA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AMA">
+          <DataField>AMA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIKMANAGER">
+          <DataField>NIKMANAGER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MANAGER">
+          <DataField>MANAGER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NIKASKEP">
+          <DataField>NIKASKEP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ASKEP">
+          <DataField>ASKEP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nik_asisten">
+          <DataField>nik_asisten</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ASISTEN">
+          <DataField>ASISTEN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Foreman">
+          <DataField>Foreman</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Nik_Foreman">
+          <DataField>Nik_Foreman</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>HMSDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\Office\IndoAgri Reports\IndoAgri.Report\IndoAgri.Report.Web\DataSets\HMSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>spReport_Signing</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>spReport_SigningTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

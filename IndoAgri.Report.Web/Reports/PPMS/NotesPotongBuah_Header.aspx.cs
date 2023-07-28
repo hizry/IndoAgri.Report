@@ -20,17 +20,24 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 // Reports/PPMS/NotesPotongBuah_Header.aspx?startDate=2022-12-20&finishDate=2022-12-22&nik=200500686&gang=03HC01
                 var nik = Request.QueryString["nik"] ?? "";
                 var gang = Request.QueryString["gang"] ?? "";
-                var startDateString = Request.QueryString["startDate"] ?? "";
+                var estate = Request.QueryString["estate"] ?? "";
+
+                var startDateString = Request.QueryString["fromDate"] ?? "";
                 var startDate = DateTime.ParseExact(startDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
-                var finishDateString = Request.QueryString["finishDate"] ?? "";
+                var finishDateString = Request.QueryString["toDate"] ?? "";
                 var finishDate = DateTime.ParseExact(finishDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 
                 HMSDataSet hmsdset = new HMSDataSet();
-                DataTable tbl = hmsdset.Tables["SPS_POTONGBUAH_HDR"];
+                DataTable tbl = hmsdset.Tables["spReport_POTONGBUAH_HDR"];
+                DataTable tblHeader = hmsdset.Tables["spReport_Header"];
 
-                tbl = new Reporting().GetRptPotongBuah(startDate, finishDate, gang, nik, tbl);
+                tbl = new Reporting().GetRptPotongBuah(startDate, finishDate, estate, gang, nik, tbl);
+                tblHeader = new Reporting().GetReportHeader(estate, tbl);
+
                 this.ReportViewer1.Reset();
                 ReportDataSource rds = new ReportDataSource("DataSet1", tbl);
+                ReportDataSource rdsHeader = new ReportDataSource("DataSetHeader", tblHeader);
+
 
                 //ReportParameter[] param = new ReportParameter[3];
                 //param[0] = new ReportParameter("Dari",startDate.ToString("dd-MM-yyyy"));
@@ -41,6 +48,8 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 ReportViewer1.LocalReport.ReportPath = Server.MapPath("NotesPotongBuah_Header.rdlc");
                 //this.ReportViewer1.LocalReport.SetParameters(param);
                 this.ReportViewer1.LocalReport.DataSources.Add(rds);
+                this.ReportViewer1.LocalReport.DataSources.Add(rdsHeader);
+
 
                 this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_PotongBuah_Processing);
             }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -68,7 +69,7 @@ namespace IndoAgri.Report.Web.Models
             using (PPMSEntities context = new PPMSEntities())
             {
                 context.Database.CommandTimeout = 300;
-                var qry = context.SPS_REPORTANOMALIPANENVSANGKUT(start, finish, Block, estate ).ToList();
+                var qry = context.spReport_ANOMALIPANENVSANGKUT(start, finish, Block, estate ).ToList();
                 foreach (var item in qry)
                 {
                     DataRow dr = tblIn.NewRow();
@@ -91,18 +92,19 @@ namespace IndoAgri.Report.Web.Models
             tbl = tblIn;
             return tbl;
         }
-        public DataTable GetCetakBKMHK_Header(DateTime BKMDate, string Division, string GangCode, DataTable tblIn)
+        public DataTable GetCetakBKMHK_Header(DateTime BKMDate, string estate , string Division, string GangCode, DataTable tblIn)
         {
             DataTable tb = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
-                var Qry_Hdr = context.SPS_CETAK_BKMHK(BKMDate, Division, GangCode);
+                var Qry_Hdr = context.spReport_Cetak_BKM_HK(estate, BKMDate, Division, GangCode);
                 foreach (var item in Qry_Hdr)
                 {
                     DataRow dr = tblIn.NewRow();
                     dr["Id"] = item.Id;
                     dr["BKMNumber"] = item.BKMNumber;
                     dr["BKMDate"] = item.BKMDate;
+                    dr["Company"] = item.Company;
                     dr["Division"] = item.Division;
                     dr["Gang"] = item.Gang;
                     dr["Estate"] = item.Estate;
@@ -116,7 +118,57 @@ namespace IndoAgri.Report.Web.Models
             tb = tblIn;
             return tb;
         }
-        public DataTable GetCetakBKMHK_Detail(DateTime BKMDate, string Division, string GangCode, DataTable tblIn)
+
+        public DataTable GetReportHeader(string estate, DataTable tblIn)
+        {
+            DataTable tb = new DataTable();
+            using (PPMSEntities context = new PPMSEntities())
+            {
+                var Qry_Hdr = context.spReport_Header(estate);
+                foreach (var item in Qry_Hdr)
+                {
+                    DataRow dr = tblIn.NewRow();
+                    dr["Company"] = item.Company;
+                    dr["Estate"] = item.Estate;
+                    tblIn.Rows.Add(dr);
+                }
+            }
+            tb = tblIn;
+            return tb;
+        }
+
+        public DataTable GetSigning(DateTime BKMDate, string estate, string Division, string GangCode, DataTable tblIn)
+        {
+            using (PPMSEntities context = new PPMSEntities())
+            {
+                var QryDetail = context.spReport_Signing(estate, BKMDate, Division, GangCode);
+
+                foreach (var item in QryDetail)
+                {
+                    DataRow drow = tblIn.NewRow();
+                    //drow["Number"] = item.Number;
+                    drow["bacode"] = item.bacode;
+                    drow["Divisi"] = item.Divisi;
+                    drow["NIKAMA"] = item.NIKAMA;
+                    drow["AMA"] = item.AMA;
+                    drow["NIKMANAGER"] = item.NIKMANAGER;
+                    drow["MANAGER"] = item.MANAGER;
+                    drow["NIKASKEP"] = item.NIKASKEP;
+                    drow["ASKEP"] = item.ASKEP;
+                    drow["nik_asisten"] = item.nik_asisten;
+                    drow["ASISTEN"] = item.ASISTEN;
+                    drow["Foreman"] = item.Foreman;
+                    drow["Nik_Foreman"] = item.Nik_Foreman;
+                    drow["NIKKraniDivisi"] = item.NIKKraniDivisi;
+                    drow["KraniDivisi"] = item.KraniDivisi;
+                    tblIn.Rows.Add(drow);
+                }
+            }
+        
+            return tblIn;
+        }
+      
+        public DataTable GetCetakBKMHK_Detail(DateTime BKMDate, string estate, string Division, string GangCode, DataTable tblIn)
         {
             DataTable tbRes = new DataTable();
 
@@ -124,13 +176,13 @@ namespace IndoAgri.Report.Web.Models
             {
                 using (PPMSEntities context = new PPMSEntities())
                 {
-                    var QryDetail = context.SPS_CETAK_BKMHK_DETAIL(BKMDate, Division, GangCode);
+                    var QryDetail = context.spReport_CETAK_BKMHK_DETAIL_Online(estate, BKMDate, Division, GangCode);
                     foreach (var item in QryDetail)
                     {
                         DataRow drow = tblIn.NewRow();
                         //drow["Number"] = item.Number;
-                        drow["Nik"] = item.Nik;
-                        drow["Name"] = item.Name;
+                        drow["Nik"] = item.NIK;
+                        drow["Name"] = item.NAME;
                         drow["AbsentType"] = item.AbsentType;
                         drow["ActivityType"] = item.ActivityType;
                         drow["Block"] = item.Block;
@@ -230,24 +282,25 @@ namespace IndoAgri.Report.Web.Models
         //    return tbRes;
         //}
 
-        public DataTable GetCetakBukuPanenHeader(DateTime HarvestDate, string Division, string Gang, DataTable tbIn)
+        public DataTable GetCetakBukuPanenHeader(string estate, DateTime HarvestDate, string Division, string Gang, DataTable tbIn)
         {
             DataTable tbRes = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
-                var Qry = context.SPS_CETAK_BUKUPANEN_HEADER_REV1(HarvestDate, Division, Gang);
+                //var a = context.SPS_CETAK_BUKUPANEN_HEADER(estate, HarvestDate, Division, Gang);
+                var Qry = context.spReport_CETAK_BUKUPANEN_HEADER_Online(estate, HarvestDate, Division, Gang);
                 foreach (var item in Qry)
                 {
-                    DataRow dr = tbIn.NewRow();
-                    dr["Division"] = item.Division;
-                    dr["Gang"] = item.Gang;
+                   DataRow dr = tbIn.NewRow();
+                    dr["DIVISION"] = item.DIVISION;
+                    dr["GANG"] = item.GANG;
                     dr["HarvestDate"] = item.HarvestDate.Date.ToString("yyyy-MM-dd");
-                    dr["Estate"] = item.Estate;
+                    dr["ESTATE"] = item.ESTATE;
                     dr["BKMNo"] = item.BKMNo;
                     dr["Location"] = item.Location;
                     dr["Harvested"] = item.Harvested;
-                    dr["Mandor"] = item.Mandor;
-                    dr["Clerk"] = item.Clerk;
+                    dr["MANDOR"] = item.MANDOR;
+                    dr["CLERK"] = item.CLERK;
                     tbIn.Rows.Add(dr);
                 }
             }
@@ -256,12 +309,13 @@ namespace IndoAgri.Report.Web.Models
             return tbRes;
         }
 
-        public DataTable GetCetakBukuPanenItem(DateTime HarvestDate, string Division, string Gang, int Crop, string Achievement, DataTable tbIn)
+        public DataTable GetCetakBukuPanenItem(string estate, DateTime HarvestDate, string Division, string Gang, int Crop, string Achievement, DataTable tbIn)
         {
             DataTable tbRes = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
-                var Qry = context.SPS_Cetak_BukuPanenItem_Rev1(HarvestDate.Date, Division, Gang, Crop, Achievement);
+                //var cetakBukuPanen = context.spReport_Cetak_BukuPanenItem_Rev1(estate, HarvestDate, Division, Gang, Crop, Achievement);
+                var Qry = context.spReport_Cetak_BukuPanenItem_Rev1(estate , HarvestDate.Date, Division, Gang, Crop, Achievement);
                 foreach (var item in Qry)
                 {
                     DataRow dr = tbIn.NewRow();
@@ -311,13 +365,13 @@ namespace IndoAgri.Report.Web.Models
         //    return tbRes;
         //}
 
-        public DataTable GetTPH_Normal_PerNik(string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
+        public DataTable GetTPH_Normal_PerNik(string estate, string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
         {
             DataTable tb = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
                 // var Qry = context.GetBukuPanenItemNormal1(Nik, HarvestDate, Location, Crop, Achievement, Gang);
-                var Qry = context.GetBukuPanenItemNormal(Nik, HarvestDate, Location, Crop, Achievement, Gang);
+                var Qry = context.spReport_GetBukuPanenItemNormal(estate, Nik, HarvestDate, Location, Crop, Achievement, Gang);
 
                 foreach (var item in Qry)
                 {
@@ -350,13 +404,13 @@ namespace IndoAgri.Report.Web.Models
             return tb;
         }
 
-        public DataTable GetTPH_Unripe_PerNik(string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
+        public DataTable GetTPH_Unripe_PerNik( string estate, string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
         {
             DataTable tb = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
                 //var Qry = context.GetBukuPanenItemNormal1(Nik, HarvestDate, Location, Crop, Achievement, Gang);
-                var Qry = context.GetBukuPanenItemPenalty(Nik, HarvestDate, Location, Crop, Achievement, Gang);
+                var Qry = context.spReport_GetBukuPanenItemPenalty(estate, Nik, HarvestDate, Location, Crop, Achievement, Gang);
                 foreach (var item in Qry)
                 {
                     if (temp.Rows.Count < 4)
@@ -392,12 +446,12 @@ namespace IndoAgri.Report.Web.Models
             return tb;
         }
 
-        public DataTable GetTPH_EmptyBunch_PerNik(string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
+        public DataTable GetTPH_EmptyBunch_PerNik(string estate, string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
         {
             DataTable tb = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
-                var Qry = context.GetBukuPanenItemPenalty(Nik, HarvestDate, Location, Crop, Achievement, Gang);
+                var Qry = context.spReport_GetBukuPanenItemPenalty(estate, Nik, HarvestDate, Location, Crop, Achievement, Gang);
                 foreach (var item in Qry)
                 {
                     if (temp.Rows.Count < 4)
@@ -433,12 +487,12 @@ namespace IndoAgri.Report.Web.Models
             return tb;
         }
 
-        public DataTable GetRptPotongBuah(DateTime start, DateTime finish, string Gang, string Nik, DataTable tblin)
+        public DataTable GetRptPotongBuah(DateTime start, DateTime finish, string estate, string Gang, string Nik, DataTable tblin)
         {
             DataTable tbl = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
-                var qry = context.SPS_POTONGBUAH_HDR(start, finish, Gang, Nik);
+                var qry = context.spReport_POTONGBUAH_HDR(start, finish, estate ,Gang, Nik);
                 foreach (var item in qry)
                 {
                     DataRow dr = tblin.NewRow();
@@ -488,13 +542,32 @@ namespace IndoAgri.Report.Web.Models
             return tbl;
         }
 
-        public DataTable GetReportAnomali(DateTime tanggal, string Division, DataTable dtIn)
+        
+        public void spReport_ANOMALI(string estate, DateTime tanggal, string division, DataTable dtIn)
+        {
+            SqlConnection sqlCon = null;
+            //String SqlconString = ConfigurationManager.ConnectionStrings["SqlConnectionString"].ConnectionString;
+            PPMSEntities db = new PPMSEntities();
+            using (sqlCon = new SqlConnection(db.Database.Connection.ConnectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sql_cmnd = new SqlCommand("spReport_ANOMALI", sqlCon);
+                sql_cmnd.CommandType = CommandType.StoredProcedure;
+                sql_cmnd.Parameters.AddWithValue("@estate", SqlDbType.NVarChar).Value = estate;
+                sql_cmnd.Parameters.AddWithValue("@date", SqlDbType.DateTime).Value = tanggal;
+                sql_cmnd.Parameters.AddWithValue("@division", SqlDbType.NVarChar).Value = division;
+                SqlDataReader reader = sql_cmnd.ExecuteReader();
+                sqlCon.Close();
+            }
+        }
+
+        public DataTable GetReportAnomali(string estate , DateTime tanggal, string Division, DataTable dtIn)
         {
             DataTable tbl = new DataTable();
 
             using (PPMSEntities context = new PPMSEntities())
             {
-                var qry = context.SPS_REPORT_ANOMALI(tanggal, Division);
+                var qry = context.spReport_ANOMALI(estate, tanggal, Division);
                 foreach (var item in qry)
                 {
                     DataRow dr = dtIn.NewRow();
@@ -503,7 +576,15 @@ namespace IndoAgri.Report.Web.Models
                     dr["MandorOrKeani"] = item.MandorOrKeani;
                     dr["Name"] = item.Name;
                     dr["AbsentType"] = item.AbsentType;
-                    dr["Mandays"] = item.Mandays == null ? "" : item.Mandays;
+                    if (item.Mandays == null)
+                    {
+                        dr["Mandays"] = DBNull.Value;
+                    }
+                    else
+                    {
+                        dr["Mandays"] = item.Mandays;
+                    }
+                    
                     dr["Block"] = item.Block;
                     dr["Output"] = item.Output == null ? "" : item.Output;
                     dr["Location"] = item.Location;
@@ -625,7 +706,8 @@ namespace IndoAgri.Report.Web.Models
             using (PPMSEntities context = new PPMSEntities())
             {
                 //context.Database.CommandTimeout = 360;
-                var qry = context.SP_PrestasiOuputHKDivisi(divisi, BKMDate.Date);
+                var qry = context.spReport_PrestasiOutputHKDivisi(estate, divisi, BKMDate);
+                //var qry = context.SP_PrestasiOuputHKDivisi(divisi, BKMDate.Date);
                 foreach (var item in qry)
                 {
                     DataRow dr = dtIn.NewRow();

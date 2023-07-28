@@ -11,7 +11,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
 {
-    public partial class RptAnomali : System.Web.UI.Page
+    public partial class RptAnomali_print : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,7 +27,7 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 var bkmDateString = Request.QueryString["bkmDate"] ?? "";
                 var bkmDate = DateTime.ParseExact(bkmDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 
-                // new Reporting().spReport_ANOMALI(estate, bkmDate.Date, divisi, tblAnomali);
+               // new Reporting().spReport_ANOMALI(estate, bkmDate.Date, divisi, tblAnomali);
 
                 tblAnomali = new Reporting().GetReportAnomali(estate, bkmDate.Date, divisi, tblAnomali);
                 tblHeader = new Reporting().GetReportHeader(estate, tblHeader);

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReportPrestasiDivisi.aspx.cs" Inherits="IndoAgri.Report.Web.Reports.PPMS.ReportPrestasiDivisi" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReportPrestasiDivisi_print.aspx.cs" Inherits="IndoAgri.Report.Web.Reports.PPMS.ReportPrestasiDivisi_print" %>
 <%@Register Assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <!DOCTYPE html>

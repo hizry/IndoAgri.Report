@@ -30,8 +30,6 @@ namespace IndoAgri.Report.Web.DataSets {
         
         private SPS_Cetak_BukuPanenItem_QualityDataTable tableSPS_Cetak_BukuPanenItem_Quality;
         
-        private SPS_CETAK_BKMHKDataTable tableSPS_CETAK_BKMHK;
-        
         private SPS_CETAK_BKMHK_DETAIL_DDTDataTable tableSPS_CETAK_BKMHK_DETAIL_DDT;
         
         private SPS_Cetak_BukuPanenItem_Rev1DataTable tableSPS_Cetak_BukuPanenItem_Rev1;
@@ -51,6 +49,28 @@ namespace IndoAgri.Report.Web.DataSets {
         private SP_PrestasiOuputHKDivisiDataTable tableSP_PrestasiOuputHKDivisi;
         
         private SPS_REPORTANOMALIPANENVSANGKUTDataTable tableSPS_REPORTANOMALIPANENVSANGKUT;
+        
+        private SPS_CETAK_BKMHK_OnlineDataTable tableSPS_CETAK_BKMHK_Online;
+        
+        private spReport_Cetak_BKM_HKDataTable tablespReport_Cetak_BKM_HK;
+        
+        private spReport_CETAK_BKMHK_DETAIL_OnlineDataTable tablespReport_CETAK_BKMHK_DETAIL_Online;
+        
+        private spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable tablespReport_CETAK_BUKUPANEN_HEADER_Online;
+        
+        private spReport_Cetak_BukuPanenItem_Rev1DataTable tablespReport_Cetak_BukuPanenItem_Rev1;
+        
+        private spReport_POTONGBUAH_HDRDataTable tablespReport_POTONGBUAH_HDR;
+        
+        private spReport_ANOMALIDataTable tablespReport_ANOMALI;
+        
+        private spReport_PrestasiOutputHKDivisiDataTable tablespReport_PrestasiOutputHKDivisi;
+        
+        private spReport_ANOMALIPANENVSANGKUTDataTable tablespReport_ANOMALIPANENVSANGKUT;
+        
+        private spReport_HeaderDataTable tablespReport_Header;
+        
+        private spReport_SigningDataTable tablespReport_Signing;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -89,9 +109,6 @@ namespace IndoAgri.Report.Web.DataSets {
                 if ((ds.Tables["SPS_Cetak_BukuPanenItem_Quality"] != null)) {
                     base.Tables.Add(new SPS_Cetak_BukuPanenItem_QualityDataTable(ds.Tables["SPS_Cetak_BukuPanenItem_Quality"]));
                 }
-                if ((ds.Tables["SPS_CETAK_BKMHK"] != null)) {
-                    base.Tables.Add(new SPS_CETAK_BKMHKDataTable(ds.Tables["SPS_CETAK_BKMHK"]));
-                }
                 if ((ds.Tables["SPS_CETAK_BKMHK_DETAIL_DDT"] != null)) {
                     base.Tables.Add(new SPS_CETAK_BKMHK_DETAIL_DDTDataTable(ds.Tables["SPS_CETAK_BKMHK_DETAIL_DDT"]));
                 }
@@ -121,6 +138,39 @@ namespace IndoAgri.Report.Web.DataSets {
                 }
                 if ((ds.Tables["SPS_REPORTANOMALIPANENVSANGKUT"] != null)) {
                     base.Tables.Add(new SPS_REPORTANOMALIPANENVSANGKUTDataTable(ds.Tables["SPS_REPORTANOMALIPANENVSANGKUT"]));
+                }
+                if ((ds.Tables["SPS_CETAK_BKMHK_Online"] != null)) {
+                    base.Tables.Add(new SPS_CETAK_BKMHK_OnlineDataTable(ds.Tables["SPS_CETAK_BKMHK_Online"]));
+                }
+                if ((ds.Tables["spReport_Cetak_BKM_HK"] != null)) {
+                    base.Tables.Add(new spReport_Cetak_BKM_HKDataTable(ds.Tables["spReport_Cetak_BKM_HK"]));
+                }
+                if ((ds.Tables["spReport_CETAK_BKMHK_DETAIL_Online"] != null)) {
+                    base.Tables.Add(new spReport_CETAK_BKMHK_DETAIL_OnlineDataTable(ds.Tables["spReport_CETAK_BKMHK_DETAIL_Online"]));
+                }
+                if ((ds.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"] != null)) {
+                    base.Tables.Add(new spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable(ds.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"]));
+                }
+                if ((ds.Tables["spReport_Cetak_BukuPanenItem_Rev1"] != null)) {
+                    base.Tables.Add(new spReport_Cetak_BukuPanenItem_Rev1DataTable(ds.Tables["spReport_Cetak_BukuPanenItem_Rev1"]));
+                }
+                if ((ds.Tables["spReport_POTONGBUAH_HDR"] != null)) {
+                    base.Tables.Add(new spReport_POTONGBUAH_HDRDataTable(ds.Tables["spReport_POTONGBUAH_HDR"]));
+                }
+                if ((ds.Tables["spReport_ANOMALI"] != null)) {
+                    base.Tables.Add(new spReport_ANOMALIDataTable(ds.Tables["spReport_ANOMALI"]));
+                }
+                if ((ds.Tables["spReport_PrestasiOutputHKDivisi"] != null)) {
+                    base.Tables.Add(new spReport_PrestasiOutputHKDivisiDataTable(ds.Tables["spReport_PrestasiOutputHKDivisi"]));
+                }
+                if ((ds.Tables["spReport_ANOMALIPANENVSANGKUT"] != null)) {
+                    base.Tables.Add(new spReport_ANOMALIPANENVSANGKUTDataTable(ds.Tables["spReport_ANOMALIPANENVSANGKUT"]));
+                }
+                if ((ds.Tables["spReport_Header"] != null)) {
+                    base.Tables.Add(new spReport_HeaderDataTable(ds.Tables["spReport_Header"]));
+                }
+                if ((ds.Tables["spReport_Signing"] != null)) {
+                    base.Tables.Add(new spReport_SigningDataTable(ds.Tables["spReport_Signing"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -167,16 +217,6 @@ namespace IndoAgri.Report.Web.DataSets {
         public SPS_Cetak_BukuPanenItem_QualityDataTable SPS_Cetak_BukuPanenItem_Quality {
             get {
                 return this.tableSPS_Cetak_BukuPanenItem_Quality;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SPS_CETAK_BKMHKDataTable SPS_CETAK_BKMHK {
-            get {
-                return this.tableSPS_CETAK_BKMHK;
             }
         }
         
@@ -282,6 +322,116 @@ namespace IndoAgri.Report.Web.DataSets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SPS_CETAK_BKMHK_OnlineDataTable SPS_CETAK_BKMHK_Online {
+            get {
+                return this.tableSPS_CETAK_BKMHK_Online;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_Cetak_BKM_HKDataTable spReport_Cetak_BKM_HK {
+            get {
+                return this.tablespReport_Cetak_BKM_HK;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_CETAK_BKMHK_DETAIL_OnlineDataTable spReport_CETAK_BKMHK_DETAIL_Online {
+            get {
+                return this.tablespReport_CETAK_BKMHK_DETAIL_Online;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable spReport_CETAK_BUKUPANEN_HEADER_Online {
+            get {
+                return this.tablespReport_CETAK_BUKUPANEN_HEADER_Online;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_Cetak_BukuPanenItem_Rev1DataTable spReport_Cetak_BukuPanenItem_Rev1 {
+            get {
+                return this.tablespReport_Cetak_BukuPanenItem_Rev1;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_POTONGBUAH_HDRDataTable spReport_POTONGBUAH_HDR {
+            get {
+                return this.tablespReport_POTONGBUAH_HDR;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_ANOMALIDataTable spReport_ANOMALI {
+            get {
+                return this.tablespReport_ANOMALI;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_PrestasiOutputHKDivisiDataTable spReport_PrestasiOutputHKDivisi {
+            get {
+                return this.tablespReport_PrestasiOutputHKDivisi;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_ANOMALIPANENVSANGKUTDataTable spReport_ANOMALIPANENVSANGKUT {
+            get {
+                return this.tablespReport_ANOMALIPANENVSANGKUT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_HeaderDataTable spReport_Header {
+            get {
+                return this.tablespReport_Header;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public spReport_SigningDataTable spReport_Signing {
+            get {
+                return this.tablespReport_Signing;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -356,9 +506,6 @@ namespace IndoAgri.Report.Web.DataSets {
                 if ((ds.Tables["SPS_Cetak_BukuPanenItem_Quality"] != null)) {
                     base.Tables.Add(new SPS_Cetak_BukuPanenItem_QualityDataTable(ds.Tables["SPS_Cetak_BukuPanenItem_Quality"]));
                 }
-                if ((ds.Tables["SPS_CETAK_BKMHK"] != null)) {
-                    base.Tables.Add(new SPS_CETAK_BKMHKDataTable(ds.Tables["SPS_CETAK_BKMHK"]));
-                }
                 if ((ds.Tables["SPS_CETAK_BKMHK_DETAIL_DDT"] != null)) {
                     base.Tables.Add(new SPS_CETAK_BKMHK_DETAIL_DDTDataTable(ds.Tables["SPS_CETAK_BKMHK_DETAIL_DDT"]));
                 }
@@ -388,6 +535,39 @@ namespace IndoAgri.Report.Web.DataSets {
                 }
                 if ((ds.Tables["SPS_REPORTANOMALIPANENVSANGKUT"] != null)) {
                     base.Tables.Add(new SPS_REPORTANOMALIPANENVSANGKUTDataTable(ds.Tables["SPS_REPORTANOMALIPANENVSANGKUT"]));
+                }
+                if ((ds.Tables["SPS_CETAK_BKMHK_Online"] != null)) {
+                    base.Tables.Add(new SPS_CETAK_BKMHK_OnlineDataTable(ds.Tables["SPS_CETAK_BKMHK_Online"]));
+                }
+                if ((ds.Tables["spReport_Cetak_BKM_HK"] != null)) {
+                    base.Tables.Add(new spReport_Cetak_BKM_HKDataTable(ds.Tables["spReport_Cetak_BKM_HK"]));
+                }
+                if ((ds.Tables["spReport_CETAK_BKMHK_DETAIL_Online"] != null)) {
+                    base.Tables.Add(new spReport_CETAK_BKMHK_DETAIL_OnlineDataTable(ds.Tables["spReport_CETAK_BKMHK_DETAIL_Online"]));
+                }
+                if ((ds.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"] != null)) {
+                    base.Tables.Add(new spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable(ds.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"]));
+                }
+                if ((ds.Tables["spReport_Cetak_BukuPanenItem_Rev1"] != null)) {
+                    base.Tables.Add(new spReport_Cetak_BukuPanenItem_Rev1DataTable(ds.Tables["spReport_Cetak_BukuPanenItem_Rev1"]));
+                }
+                if ((ds.Tables["spReport_POTONGBUAH_HDR"] != null)) {
+                    base.Tables.Add(new spReport_POTONGBUAH_HDRDataTable(ds.Tables["spReport_POTONGBUAH_HDR"]));
+                }
+                if ((ds.Tables["spReport_ANOMALI"] != null)) {
+                    base.Tables.Add(new spReport_ANOMALIDataTable(ds.Tables["spReport_ANOMALI"]));
+                }
+                if ((ds.Tables["spReport_PrestasiOutputHKDivisi"] != null)) {
+                    base.Tables.Add(new spReport_PrestasiOutputHKDivisiDataTable(ds.Tables["spReport_PrestasiOutputHKDivisi"]));
+                }
+                if ((ds.Tables["spReport_ANOMALIPANENVSANGKUT"] != null)) {
+                    base.Tables.Add(new spReport_ANOMALIPANENVSANGKUTDataTable(ds.Tables["spReport_ANOMALIPANENVSANGKUT"]));
+                }
+                if ((ds.Tables["spReport_Header"] != null)) {
+                    base.Tables.Add(new spReport_HeaderDataTable(ds.Tables["spReport_Header"]));
+                }
+                if ((ds.Tables["spReport_Signing"] != null)) {
+                    base.Tables.Add(new spReport_SigningDataTable(ds.Tables["spReport_Signing"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -438,12 +618,6 @@ namespace IndoAgri.Report.Web.DataSets {
             if ((initTable == true)) {
                 if ((this.tableSPS_Cetak_BukuPanenItem_Quality != null)) {
                     this.tableSPS_Cetak_BukuPanenItem_Quality.InitVars();
-                }
-            }
-            this.tableSPS_CETAK_BKMHK = ((SPS_CETAK_BKMHKDataTable)(base.Tables["SPS_CETAK_BKMHK"]));
-            if ((initTable == true)) {
-                if ((this.tableSPS_CETAK_BKMHK != null)) {
-                    this.tableSPS_CETAK_BKMHK.InitVars();
                 }
             }
             this.tableSPS_CETAK_BKMHK_DETAIL_DDT = ((SPS_CETAK_BKMHK_DETAIL_DDTDataTable)(base.Tables["SPS_CETAK_BKMHK_DETAIL_DDT"]));
@@ -506,6 +680,72 @@ namespace IndoAgri.Report.Web.DataSets {
                     this.tableSPS_REPORTANOMALIPANENVSANGKUT.InitVars();
                 }
             }
+            this.tableSPS_CETAK_BKMHK_Online = ((SPS_CETAK_BKMHK_OnlineDataTable)(base.Tables["SPS_CETAK_BKMHK_Online"]));
+            if ((initTable == true)) {
+                if ((this.tableSPS_CETAK_BKMHK_Online != null)) {
+                    this.tableSPS_CETAK_BKMHK_Online.InitVars();
+                }
+            }
+            this.tablespReport_Cetak_BKM_HK = ((spReport_Cetak_BKM_HKDataTable)(base.Tables["spReport_Cetak_BKM_HK"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_Cetak_BKM_HK != null)) {
+                    this.tablespReport_Cetak_BKM_HK.InitVars();
+                }
+            }
+            this.tablespReport_CETAK_BKMHK_DETAIL_Online = ((spReport_CETAK_BKMHK_DETAIL_OnlineDataTable)(base.Tables["spReport_CETAK_BKMHK_DETAIL_Online"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_CETAK_BKMHK_DETAIL_Online != null)) {
+                    this.tablespReport_CETAK_BKMHK_DETAIL_Online.InitVars();
+                }
+            }
+            this.tablespReport_CETAK_BUKUPANEN_HEADER_Online = ((spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable)(base.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_CETAK_BUKUPANEN_HEADER_Online != null)) {
+                    this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.InitVars();
+                }
+            }
+            this.tablespReport_Cetak_BukuPanenItem_Rev1 = ((spReport_Cetak_BukuPanenItem_Rev1DataTable)(base.Tables["spReport_Cetak_BukuPanenItem_Rev1"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_Cetak_BukuPanenItem_Rev1 != null)) {
+                    this.tablespReport_Cetak_BukuPanenItem_Rev1.InitVars();
+                }
+            }
+            this.tablespReport_POTONGBUAH_HDR = ((spReport_POTONGBUAH_HDRDataTable)(base.Tables["spReport_POTONGBUAH_HDR"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_POTONGBUAH_HDR != null)) {
+                    this.tablespReport_POTONGBUAH_HDR.InitVars();
+                }
+            }
+            this.tablespReport_ANOMALI = ((spReport_ANOMALIDataTable)(base.Tables["spReport_ANOMALI"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_ANOMALI != null)) {
+                    this.tablespReport_ANOMALI.InitVars();
+                }
+            }
+            this.tablespReport_PrestasiOutputHKDivisi = ((spReport_PrestasiOutputHKDivisiDataTable)(base.Tables["spReport_PrestasiOutputHKDivisi"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_PrestasiOutputHKDivisi != null)) {
+                    this.tablespReport_PrestasiOutputHKDivisi.InitVars();
+                }
+            }
+            this.tablespReport_ANOMALIPANENVSANGKUT = ((spReport_ANOMALIPANENVSANGKUTDataTable)(base.Tables["spReport_ANOMALIPANENVSANGKUT"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_ANOMALIPANENVSANGKUT != null)) {
+                    this.tablespReport_ANOMALIPANENVSANGKUT.InitVars();
+                }
+            }
+            this.tablespReport_Header = ((spReport_HeaderDataTable)(base.Tables["spReport_Header"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_Header != null)) {
+                    this.tablespReport_Header.InitVars();
+                }
+            }
+            this.tablespReport_Signing = ((spReport_SigningDataTable)(base.Tables["spReport_Signing"]));
+            if ((initTable == true)) {
+                if ((this.tablespReport_Signing != null)) {
+                    this.tablespReport_Signing.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -522,8 +762,6 @@ namespace IndoAgri.Report.Web.DataSets {
             base.Tables.Add(this.tableSPS_Cetak_BukuPanenItem);
             this.tableSPS_Cetak_BukuPanenItem_Quality = new SPS_Cetak_BukuPanenItem_QualityDataTable();
             base.Tables.Add(this.tableSPS_Cetak_BukuPanenItem_Quality);
-            this.tableSPS_CETAK_BKMHK = new SPS_CETAK_BKMHKDataTable();
-            base.Tables.Add(this.tableSPS_CETAK_BKMHK);
             this.tableSPS_CETAK_BKMHK_DETAIL_DDT = new SPS_CETAK_BKMHK_DETAIL_DDTDataTable();
             base.Tables.Add(this.tableSPS_CETAK_BKMHK_DETAIL_DDT);
             this.tableSPS_Cetak_BukuPanenItem_Rev1 = new SPS_Cetak_BukuPanenItem_Rev1DataTable();
@@ -544,6 +782,28 @@ namespace IndoAgri.Report.Web.DataSets {
             base.Tables.Add(this.tableSP_PrestasiOuputHKDivisi);
             this.tableSPS_REPORTANOMALIPANENVSANGKUT = new SPS_REPORTANOMALIPANENVSANGKUTDataTable();
             base.Tables.Add(this.tableSPS_REPORTANOMALIPANENVSANGKUT);
+            this.tableSPS_CETAK_BKMHK_Online = new SPS_CETAK_BKMHK_OnlineDataTable();
+            base.Tables.Add(this.tableSPS_CETAK_BKMHK_Online);
+            this.tablespReport_Cetak_BKM_HK = new spReport_Cetak_BKM_HKDataTable();
+            base.Tables.Add(this.tablespReport_Cetak_BKM_HK);
+            this.tablespReport_CETAK_BKMHK_DETAIL_Online = new spReport_CETAK_BKMHK_DETAIL_OnlineDataTable();
+            base.Tables.Add(this.tablespReport_CETAK_BKMHK_DETAIL_Online);
+            this.tablespReport_CETAK_BUKUPANEN_HEADER_Online = new spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable();
+            base.Tables.Add(this.tablespReport_CETAK_BUKUPANEN_HEADER_Online);
+            this.tablespReport_Cetak_BukuPanenItem_Rev1 = new spReport_Cetak_BukuPanenItem_Rev1DataTable();
+            base.Tables.Add(this.tablespReport_Cetak_BukuPanenItem_Rev1);
+            this.tablespReport_POTONGBUAH_HDR = new spReport_POTONGBUAH_HDRDataTable();
+            base.Tables.Add(this.tablespReport_POTONGBUAH_HDR);
+            this.tablespReport_ANOMALI = new spReport_ANOMALIDataTable();
+            base.Tables.Add(this.tablespReport_ANOMALI);
+            this.tablespReport_PrestasiOutputHKDivisi = new spReport_PrestasiOutputHKDivisiDataTable();
+            base.Tables.Add(this.tablespReport_PrestasiOutputHKDivisi);
+            this.tablespReport_ANOMALIPANENVSANGKUT = new spReport_ANOMALIPANENVSANGKUTDataTable();
+            base.Tables.Add(this.tablespReport_ANOMALIPANENVSANGKUT);
+            this.tablespReport_Header = new spReport_HeaderDataTable();
+            base.Tables.Add(this.tablespReport_Header);
+            this.tablespReport_Signing = new spReport_SigningDataTable();
+            base.Tables.Add(this.tablespReport_Signing);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -561,12 +821,6 @@ namespace IndoAgri.Report.Web.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeSPS_Cetak_BukuPanenItem_Quality() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeSPS_CETAK_BKMHK() {
             return false;
         }
         
@@ -627,6 +881,72 @@ namespace IndoAgri.Report.Web.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializeSPS_REPORTANOMALIPANENVSANGKUT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeSPS_CETAK_BKMHK_Online() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_Cetak_BKM_HK() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_CETAK_BKMHK_DETAIL_Online() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_CETAK_BUKUPANEN_HEADER_Online() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_Cetak_BukuPanenItem_Rev1() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_POTONGBUAH_HDR() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_ANOMALI() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_PrestasiOutputHKDivisi() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_ANOMALIPANENVSANGKUT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_Header() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializespReport_Signing() {
             return false;
         }
         
@@ -695,9 +1015,6 @@ namespace IndoAgri.Report.Web.DataSets {
         public delegate void SPS_Cetak_BukuPanenItem_QualityRowChangeEventHandler(object sender, SPS_Cetak_BukuPanenItem_QualityRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void SPS_CETAK_BKMHKRowChangeEventHandler(object sender, SPS_CETAK_BKMHKRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void SPS_CETAK_BKMHK_DETAIL_DDTRowChangeEventHandler(object sender, SPS_CETAK_BKMHK_DETAIL_DDTRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -726,6 +1043,39 @@ namespace IndoAgri.Report.Web.DataSets {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void SPS_REPORTANOMALIPANENVSANGKUTRowChangeEventHandler(object sender, SPS_REPORTANOMALIPANENVSANGKUTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void SPS_CETAK_BKMHK_OnlineRowChangeEventHandler(object sender, SPS_CETAK_BKMHK_OnlineRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_Cetak_BKM_HKRowChangeEventHandler(object sender, spReport_Cetak_BKM_HKRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEventHandler(object sender, spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEventHandler(object sender, spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_Cetak_BukuPanenItem_Rev1RowChangeEventHandler(object sender, spReport_Cetak_BukuPanenItem_Rev1RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_POTONGBUAH_HDRRowChangeEventHandler(object sender, spReport_POTONGBUAH_HDRRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_ANOMALIRowChangeEventHandler(object sender, spReport_ANOMALIRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_PrestasiOutputHKDivisiRowChangeEventHandler(object sender, spReport_PrestasiOutputHKDivisiRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_ANOMALIPANENVSANGKUTRowChangeEventHandler(object sender, spReport_ANOMALIPANENVSANGKUTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_HeaderRowChangeEventHandler(object sender, spReport_HeaderRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void spReport_SigningRowChangeEventHandler(object sender, spReport_SigningRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1731,412 +2081,6 @@ namespace IndoAgri.Report.Web.DataSets {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "SPS_Cetak_BukuPanenItem_QualityDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SPS_CETAK_BKMHKDataTable : global::System.Data.TypedTableBase<SPS_CETAK_BKMHKRow> {
-            
-            private global::System.Data.DataColumn columnId;
-            
-            private global::System.Data.DataColumn columnBKMNumber;
-            
-            private global::System.Data.DataColumn columnBKMDate;
-            
-            private global::System.Data.DataColumn columnDivision;
-            
-            private global::System.Data.DataColumn columnGang;
-            
-            private global::System.Data.DataColumn columnEstate;
-            
-            private global::System.Data.DataColumn columnNik_Foreman;
-            
-            private global::System.Data.DataColumn columnForeman;
-            
-            private global::System.Data.DataColumn columnNik_Clerk;
-            
-            private global::System.Data.DataColumn columnClerk;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SPS_CETAK_BKMHKDataTable() {
-                this.TableName = "SPS_CETAK_BKMHK";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SPS_CETAK_BKMHKDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected SPS_CETAK_BKMHKDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BKMNumberColumn {
-                get {
-                    return this.columnBKMNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn BKMDateColumn {
-                get {
-                    return this.columnBKMDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DivisionColumn {
-                get {
-                    return this.columnDivision;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn GangColumn {
-                get {
-                    return this.columnGang;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn EstateColumn {
-                get {
-                    return this.columnEstate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Nik_ForemanColumn {
-                get {
-                    return this.columnNik_Foreman;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ForemanColumn {
-                get {
-                    return this.columnForeman;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Nik_ClerkColumn {
-                get {
-                    return this.columnNik_Clerk;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ClerkColumn {
-                get {
-                    return this.columnClerk;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SPS_CETAK_BKMHKRow this[int index] {
-                get {
-                    return ((SPS_CETAK_BKMHKRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SPS_CETAK_BKMHKRowChangeEventHandler SPS_CETAK_BKMHKRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SPS_CETAK_BKMHKRowChangeEventHandler SPS_CETAK_BKMHKRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SPS_CETAK_BKMHKRowChangeEventHandler SPS_CETAK_BKMHKRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SPS_CETAK_BKMHKRowChangeEventHandler SPS_CETAK_BKMHKRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddSPS_CETAK_BKMHKRow(SPS_CETAK_BKMHKRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SPS_CETAK_BKMHKRow AddSPS_CETAK_BKMHKRow(string BKMNumber, System.DateTime BKMDate, string Division, string Gang, string Estate, string Nik_Foreman, string Foreman, string Nik_Clerk, string Clerk) {
-                SPS_CETAK_BKMHKRow rowSPS_CETAK_BKMHKRow = ((SPS_CETAK_BKMHKRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        BKMNumber,
-                        BKMDate,
-                        Division,
-                        Gang,
-                        Estate,
-                        Nik_Foreman,
-                        Foreman,
-                        Nik_Clerk,
-                        Clerk};
-                rowSPS_CETAK_BKMHKRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSPS_CETAK_BKMHKRow);
-                return rowSPS_CETAK_BKMHKRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SPS_CETAK_BKMHKRow FindByBKMDateDivisionGangEstate(System.DateTime BKMDate, string Division, string Gang, string Estate) {
-                return ((SPS_CETAK_BKMHKRow)(this.Rows.Find(new object[] {
-                            BKMDate,
-                            Division,
-                            Gang,
-                            Estate})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                SPS_CETAK_BKMHKDataTable cln = ((SPS_CETAK_BKMHKDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new SPS_CETAK_BKMHKDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnBKMNumber = base.Columns["BKMNumber"];
-                this.columnBKMDate = base.Columns["BKMDate"];
-                this.columnDivision = base.Columns["Division"];
-                this.columnGang = base.Columns["Gang"];
-                this.columnEstate = base.Columns["Estate"];
-                this.columnNik_Foreman = base.Columns["Nik_Foreman"];
-                this.columnForeman = base.Columns["Foreman"];
-                this.columnNik_Clerk = base.Columns["Nik_Clerk"];
-                this.columnClerk = base.Columns["Clerk"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnBKMNumber = new global::System.Data.DataColumn("BKMNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBKMNumber);
-                this.columnBKMDate = new global::System.Data.DataColumn("BKMDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBKMDate);
-                this.columnDivision = new global::System.Data.DataColumn("Division", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDivision);
-                this.columnGang = new global::System.Data.DataColumn("Gang", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGang);
-                this.columnEstate = new global::System.Data.DataColumn("Estate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEstate);
-                this.columnNik_Foreman = new global::System.Data.DataColumn("Nik_Foreman", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNik_Foreman);
-                this.columnForeman = new global::System.Data.DataColumn("Foreman", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnForeman);
-                this.columnNik_Clerk = new global::System.Data.DataColumn("Nik_Clerk", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNik_Clerk);
-                this.columnClerk = new global::System.Data.DataColumn("Clerk", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnClerk);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnBKMDate,
-                                this.columnDivision,
-                                this.columnGang,
-                                this.columnEstate}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnBKMNumber.ReadOnly = true;
-                this.columnBKMNumber.MaxLength = 50;
-                this.columnBKMDate.AllowDBNull = false;
-                this.columnDivision.AllowDBNull = false;
-                this.columnDivision.MaxLength = 10;
-                this.columnGang.AllowDBNull = false;
-                this.columnGang.MaxLength = 50;
-                this.columnEstate.AllowDBNull = false;
-                this.columnEstate.MaxLength = 4;
-                this.columnNik_Foreman.MaxLength = 50;
-                this.columnForeman.MaxLength = 50;
-                this.columnNik_Clerk.MaxLength = 50;
-                this.columnClerk.MaxLength = 50;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SPS_CETAK_BKMHKRow NewSPS_CETAK_BKMHKRow() {
-                return ((SPS_CETAK_BKMHKRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SPS_CETAK_BKMHKRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(SPS_CETAK_BKMHKRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.SPS_CETAK_BKMHKRowChanged != null)) {
-                    this.SPS_CETAK_BKMHKRowChanged(this, new SPS_CETAK_BKMHKRowChangeEvent(((SPS_CETAK_BKMHKRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.SPS_CETAK_BKMHKRowChanging != null)) {
-                    this.SPS_CETAK_BKMHKRowChanging(this, new SPS_CETAK_BKMHKRowChangeEvent(((SPS_CETAK_BKMHKRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.SPS_CETAK_BKMHKRowDeleted != null)) {
-                    this.SPS_CETAK_BKMHKRowDeleted(this, new SPS_CETAK_BKMHKRowChangeEvent(((SPS_CETAK_BKMHKRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.SPS_CETAK_BKMHKRowDeleting != null)) {
-                    this.SPS_CETAK_BKMHKRowDeleting(this, new SPS_CETAK_BKMHKRowChangeEvent(((SPS_CETAK_BKMHKRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveSPS_CETAK_BKMHKRow(SPS_CETAK_BKMHKRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HMSDataSet ds = new HMSDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SPS_CETAK_BKMHKDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -6161,6 +6105,4494 @@ namespace IndoAgri.Report.Web.DataSets {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SPS_CETAK_BKMHK_OnlineDataTable : global::System.Data.TypedTableBase<SPS_CETAK_BKMHK_OnlineRow> {
+            
+            private global::System.Data.DataColumn columnBKM_NO;
+            
+            private global::System.Data.DataColumn columnBKM_DATE;
+            
+            private global::System.Data.DataColumn columnDIVISION;
+            
+            private global::System.Data.DataColumn columnGANG;
+            
+            private global::System.Data.DataColumn columnESTATE;
+            
+            private global::System.Data.DataColumn columnCOMPANY_CODE;
+            
+            private global::System.Data.DataColumn columnNIK_FOREMAN;
+            
+            private global::System.Data.DataColumn columnFOREMAN;
+            
+            private global::System.Data.DataColumn columnNIK_CLERK;
+            
+            private global::System.Data.DataColumn columnCLERK;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SPS_CETAK_BKMHK_OnlineDataTable() {
+                this.TableName = "SPS_CETAK_BKMHK_Online";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SPS_CETAK_BKMHK_OnlineDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected SPS_CETAK_BKMHK_OnlineDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BKM_NOColumn {
+                get {
+                    return this.columnBKM_NO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BKM_DATEColumn {
+                get {
+                    return this.columnBKM_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DIVISIONColumn {
+                get {
+                    return this.columnDIVISION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GANGColumn {
+                get {
+                    return this.columnGANG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ESTATEColumn {
+                get {
+                    return this.columnESTATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn COMPANY_CODEColumn {
+                get {
+                    return this.columnCOMPANY_CODE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NIK_FOREMANColumn {
+                get {
+                    return this.columnNIK_FOREMAN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FOREMANColumn {
+                get {
+                    return this.columnFOREMAN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NIK_CLERKColumn {
+                get {
+                    return this.columnNIK_CLERK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CLERKColumn {
+                get {
+                    return this.columnCLERK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SPS_CETAK_BKMHK_OnlineRow this[int index] {
+                get {
+                    return ((SPS_CETAK_BKMHK_OnlineRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SPS_CETAK_BKMHK_OnlineRowChangeEventHandler SPS_CETAK_BKMHK_OnlineRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SPS_CETAK_BKMHK_OnlineRowChangeEventHandler SPS_CETAK_BKMHK_OnlineRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SPS_CETAK_BKMHK_OnlineRowChangeEventHandler SPS_CETAK_BKMHK_OnlineRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event SPS_CETAK_BKMHK_OnlineRowChangeEventHandler SPS_CETAK_BKMHK_OnlineRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddSPS_CETAK_BKMHK_OnlineRow(SPS_CETAK_BKMHK_OnlineRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SPS_CETAK_BKMHK_OnlineRow AddSPS_CETAK_BKMHK_OnlineRow(string BKM_NO, System.DateTime BKM_DATE, string DIVISION, string GANG, string ESTATE, string COMPANY_CODE, string NIK_FOREMAN, string FOREMAN, string NIK_CLERK, string CLERK) {
+                SPS_CETAK_BKMHK_OnlineRow rowSPS_CETAK_BKMHK_OnlineRow = ((SPS_CETAK_BKMHK_OnlineRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        BKM_NO,
+                        BKM_DATE,
+                        DIVISION,
+                        GANG,
+                        ESTATE,
+                        COMPANY_CODE,
+                        NIK_FOREMAN,
+                        FOREMAN,
+                        NIK_CLERK,
+                        CLERK};
+                rowSPS_CETAK_BKMHK_OnlineRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSPS_CETAK_BKMHK_OnlineRow);
+                return rowSPS_CETAK_BKMHK_OnlineRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SPS_CETAK_BKMHK_OnlineRow FindByBKM_DATEDIVISIONGANGESTATE(System.DateTime BKM_DATE, string DIVISION, string GANG, string ESTATE) {
+                return ((SPS_CETAK_BKMHK_OnlineRow)(this.Rows.Find(new object[] {
+                            BKM_DATE,
+                            DIVISION,
+                            GANG,
+                            ESTATE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SPS_CETAK_BKMHK_OnlineDataTable cln = ((SPS_CETAK_BKMHK_OnlineDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SPS_CETAK_BKMHK_OnlineDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnBKM_NO = base.Columns["BKM_NO"];
+                this.columnBKM_DATE = base.Columns["BKM_DATE"];
+                this.columnDIVISION = base.Columns["DIVISION"];
+                this.columnGANG = base.Columns["GANG"];
+                this.columnESTATE = base.Columns["ESTATE"];
+                this.columnCOMPANY_CODE = base.Columns["COMPANY_CODE"];
+                this.columnNIK_FOREMAN = base.Columns["NIK_FOREMAN"];
+                this.columnFOREMAN = base.Columns["FOREMAN"];
+                this.columnNIK_CLERK = base.Columns["NIK_CLERK"];
+                this.columnCLERK = base.Columns["CLERK"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnBKM_NO = new global::System.Data.DataColumn("BKM_NO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBKM_NO);
+                this.columnBKM_DATE = new global::System.Data.DataColumn("BKM_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBKM_DATE);
+                this.columnDIVISION = new global::System.Data.DataColumn("DIVISION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIVISION);
+                this.columnGANG = new global::System.Data.DataColumn("GANG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGANG);
+                this.columnESTATE = new global::System.Data.DataColumn("ESTATE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESTATE);
+                this.columnCOMPANY_CODE = new global::System.Data.DataColumn("COMPANY_CODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOMPANY_CODE);
+                this.columnNIK_FOREMAN = new global::System.Data.DataColumn("NIK_FOREMAN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIK_FOREMAN);
+                this.columnFOREMAN = new global::System.Data.DataColumn("FOREMAN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFOREMAN);
+                this.columnNIK_CLERK = new global::System.Data.DataColumn("NIK_CLERK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIK_CLERK);
+                this.columnCLERK = new global::System.Data.DataColumn("CLERK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLERK);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnBKM_DATE,
+                                this.columnDIVISION,
+                                this.columnGANG,
+                                this.columnESTATE}, true));
+                this.columnBKM_NO.MaxLength = 50;
+                this.columnBKM_DATE.AllowDBNull = false;
+                this.columnDIVISION.AllowDBNull = false;
+                this.columnDIVISION.MaxLength = 10;
+                this.columnGANG.AllowDBNull = false;
+                this.columnGANG.MaxLength = 50;
+                this.columnESTATE.AllowDBNull = false;
+                this.columnESTATE.MaxLength = 4;
+                this.columnCOMPANY_CODE.MaxLength = 4;
+                this.columnNIK_FOREMAN.MaxLength = 50;
+                this.columnFOREMAN.MaxLength = 50;
+                this.columnNIK_CLERK.MaxLength = 50;
+                this.columnCLERK.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SPS_CETAK_BKMHK_OnlineRow NewSPS_CETAK_BKMHK_OnlineRow() {
+                return ((SPS_CETAK_BKMHK_OnlineRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SPS_CETAK_BKMHK_OnlineRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SPS_CETAK_BKMHK_OnlineRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SPS_CETAK_BKMHK_OnlineRowChanged != null)) {
+                    this.SPS_CETAK_BKMHK_OnlineRowChanged(this, new SPS_CETAK_BKMHK_OnlineRowChangeEvent(((SPS_CETAK_BKMHK_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SPS_CETAK_BKMHK_OnlineRowChanging != null)) {
+                    this.SPS_CETAK_BKMHK_OnlineRowChanging(this, new SPS_CETAK_BKMHK_OnlineRowChangeEvent(((SPS_CETAK_BKMHK_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SPS_CETAK_BKMHK_OnlineRowDeleted != null)) {
+                    this.SPS_CETAK_BKMHK_OnlineRowDeleted(this, new SPS_CETAK_BKMHK_OnlineRowChangeEvent(((SPS_CETAK_BKMHK_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SPS_CETAK_BKMHK_OnlineRowDeleting != null)) {
+                    this.SPS_CETAK_BKMHK_OnlineRowDeleting(this, new SPS_CETAK_BKMHK_OnlineRowChangeEvent(((SPS_CETAK_BKMHK_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveSPS_CETAK_BKMHK_OnlineRow(SPS_CETAK_BKMHK_OnlineRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SPS_CETAK_BKMHK_OnlineDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_Cetak_BKM_HKDataTable : global::System.Data.TypedTableBase<spReport_Cetak_BKM_HKRow> {
+            
+            private global::System.Data.DataColumn columnId;
+            
+            private global::System.Data.DataColumn columnBKMNumber;
+            
+            private global::System.Data.DataColumn columnBKMDate;
+            
+            private global::System.Data.DataColumn columnDivision;
+            
+            private global::System.Data.DataColumn columnGang;
+            
+            private global::System.Data.DataColumn columnEstate;
+            
+            private global::System.Data.DataColumn columnCompany;
+            
+            private global::System.Data.DataColumn columnNik_Foreman;
+            
+            private global::System.Data.DataColumn columnForeman;
+            
+            private global::System.Data.DataColumn columnNik_Clerk;
+            
+            private global::System.Data.DataColumn columnClerk;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BKM_HKDataTable() {
+                this.TableName = "spReport_Cetak_BKM_HK";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_Cetak_BKM_HKDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_Cetak_BKM_HKDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BKMNumberColumn {
+                get {
+                    return this.columnBKMNumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BKMDateColumn {
+                get {
+                    return this.columnBKMDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DivisionColumn {
+                get {
+                    return this.columnDivision;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GangColumn {
+                get {
+                    return this.columnGang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EstateColumn {
+                get {
+                    return this.columnEstate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CompanyColumn {
+                get {
+                    return this.columnCompany;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Nik_ForemanColumn {
+                get {
+                    return this.columnNik_Foreman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ForemanColumn {
+                get {
+                    return this.columnForeman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Nik_ClerkColumn {
+                get {
+                    return this.columnNik_Clerk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ClerkColumn {
+                get {
+                    return this.columnClerk;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BKM_HKRow this[int index] {
+                get {
+                    return ((spReport_Cetak_BKM_HKRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BKM_HKRowChangeEventHandler spReport_Cetak_BKM_HKRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BKM_HKRowChangeEventHandler spReport_Cetak_BKM_HKRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BKM_HKRowChangeEventHandler spReport_Cetak_BKM_HKRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BKM_HKRowChangeEventHandler spReport_Cetak_BKM_HKRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_Cetak_BKM_HKRow(spReport_Cetak_BKM_HKRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BKM_HKRow AddspReport_Cetak_BKM_HKRow(string BKMNumber, System.DateTime BKMDate, string Division, string Gang, string Estate, string Company, string Nik_Foreman, string Foreman, string Nik_Clerk, string Clerk) {
+                spReport_Cetak_BKM_HKRow rowspReport_Cetak_BKM_HKRow = ((spReport_Cetak_BKM_HKRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        BKMNumber,
+                        BKMDate,
+                        Division,
+                        Gang,
+                        Estate,
+                        Company,
+                        Nik_Foreman,
+                        Foreman,
+                        Nik_Clerk,
+                        Clerk};
+                rowspReport_Cetak_BKM_HKRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_Cetak_BKM_HKRow);
+                return rowspReport_Cetak_BKM_HKRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_Cetak_BKM_HKDataTable cln = ((spReport_Cetak_BKM_HKDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_Cetak_BKM_HKDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnId = base.Columns["Id"];
+                this.columnBKMNumber = base.Columns["BKMNumber"];
+                this.columnBKMDate = base.Columns["BKMDate"];
+                this.columnDivision = base.Columns["Division"];
+                this.columnGang = base.Columns["Gang"];
+                this.columnEstate = base.Columns["Estate"];
+                this.columnCompany = base.Columns["Company"];
+                this.columnNik_Foreman = base.Columns["Nik_Foreman"];
+                this.columnForeman = base.Columns["Foreman"];
+                this.columnNik_Clerk = base.Columns["Nik_Clerk"];
+                this.columnClerk = base.Columns["Clerk"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
+                this.columnBKMNumber = new global::System.Data.DataColumn("BKMNumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBKMNumber);
+                this.columnBKMDate = new global::System.Data.DataColumn("BKMDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBKMDate);
+                this.columnDivision = new global::System.Data.DataColumn("Division", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDivision);
+                this.columnGang = new global::System.Data.DataColumn("Gang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGang);
+                this.columnEstate = new global::System.Data.DataColumn("Estate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstate);
+                this.columnCompany = new global::System.Data.DataColumn("Company", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompany);
+                this.columnNik_Foreman = new global::System.Data.DataColumn("Nik_Foreman", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNik_Foreman);
+                this.columnForeman = new global::System.Data.DataColumn("Foreman", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnForeman);
+                this.columnNik_Clerk = new global::System.Data.DataColumn("Nik_Clerk", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNik_Clerk);
+                this.columnClerk = new global::System.Data.DataColumn("Clerk", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClerk);
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnBKMNumber.MaxLength = 50;
+                this.columnBKMDate.AllowDBNull = false;
+                this.columnDivision.AllowDBNull = false;
+                this.columnDivision.MaxLength = 10;
+                this.columnGang.AllowDBNull = false;
+                this.columnGang.MaxLength = 50;
+                this.columnEstate.ReadOnly = true;
+                this.columnEstate.MaxLength = 57;
+                this.columnCompany.ReadOnly = true;
+                this.columnCompany.MaxLength = 57;
+                this.columnNik_Foreman.MaxLength = 50;
+                this.columnForeman.MaxLength = 50;
+                this.columnNik_Clerk.MaxLength = 50;
+                this.columnClerk.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BKM_HKRow NewspReport_Cetak_BKM_HKRow() {
+                return ((spReport_Cetak_BKM_HKRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_Cetak_BKM_HKRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_Cetak_BKM_HKRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_Cetak_BKM_HKRowChanged != null)) {
+                    this.spReport_Cetak_BKM_HKRowChanged(this, new spReport_Cetak_BKM_HKRowChangeEvent(((spReport_Cetak_BKM_HKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_Cetak_BKM_HKRowChanging != null)) {
+                    this.spReport_Cetak_BKM_HKRowChanging(this, new spReport_Cetak_BKM_HKRowChangeEvent(((spReport_Cetak_BKM_HKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_Cetak_BKM_HKRowDeleted != null)) {
+                    this.spReport_Cetak_BKM_HKRowDeleted(this, new spReport_Cetak_BKM_HKRowChangeEvent(((spReport_Cetak_BKM_HKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_Cetak_BKM_HKRowDeleting != null)) {
+                    this.spReport_Cetak_BKM_HKRowDeleting(this, new spReport_Cetak_BKM_HKRowChangeEvent(((spReport_Cetak_BKM_HKRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_Cetak_BKM_HKRow(spReport_Cetak_BKM_HKRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_Cetak_BKM_HKDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_CETAK_BKMHK_DETAIL_OnlineDataTable : global::System.Data.TypedTableBase<spReport_CETAK_BKMHK_DETAIL_OnlineRow> {
+            
+            private global::System.Data.DataColumn columnNIK;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            private global::System.Data.DataColumn columnAbsentType;
+            
+            private global::System.Data.DataColumn columnType;
+            
+            private global::System.Data.DataColumn columnActivityType;
+            
+            private global::System.Data.DataColumn columnBlock;
+            
+            private global::System.Data.DataColumn columnMandays;
+            
+            private global::System.Data.DataColumn columnOutput;
+            
+            private global::System.Data.DataColumn columnUom;
+            
+            private global::System.Data.DataColumn columnJobPos;
+            
+            private global::System.Data.DataColumn columnPremi;
+            
+            private global::System.Data.DataColumn columnPenalty;
+            
+            private global::System.Data.DataColumn columnCreatedDate;
+            
+            private global::System.Data.DataColumn columnOvertime;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BKMHK_DETAIL_OnlineDataTable() {
+                this.TableName = "spReport_CETAK_BKMHK_DETAIL_Online";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_CETAK_BKMHK_DETAIL_OnlineDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_CETAK_BKMHK_DETAIL_OnlineDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NIKColumn {
+                get {
+                    return this.columnNIK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AbsentTypeColumn {
+                get {
+                    return this.columnAbsentType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TypeColumn {
+                get {
+                    return this.columnType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ActivityTypeColumn {
+                get {
+                    return this.columnActivityType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BlockColumn {
+                get {
+                    return this.columnBlock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MandaysColumn {
+                get {
+                    return this.columnMandays;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OutputColumn {
+                get {
+                    return this.columnOutput;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn UomColumn {
+                get {
+                    return this.columnUom;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobPosColumn {
+                get {
+                    return this.columnJobPos;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PremiColumn {
+                get {
+                    return this.columnPremi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PenaltyColumn {
+                get {
+                    return this.columnPenalty;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CreatedDateColumn {
+                get {
+                    return this.columnCreatedDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OvertimeColumn {
+                get {
+                    return this.columnOvertime;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BKMHK_DETAIL_OnlineRow this[int index] {
+                get {
+                    return ((spReport_CETAK_BKMHK_DETAIL_OnlineRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEventHandler spReport_CETAK_BKMHK_DETAIL_OnlineRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEventHandler spReport_CETAK_BKMHK_DETAIL_OnlineRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEventHandler spReport_CETAK_BKMHK_DETAIL_OnlineRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEventHandler spReport_CETAK_BKMHK_DETAIL_OnlineRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_CETAK_BKMHK_DETAIL_OnlineRow(spReport_CETAK_BKMHK_DETAIL_OnlineRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BKMHK_DETAIL_OnlineRow AddspReport_CETAK_BKMHK_DETAIL_OnlineRow(string NIK, string NAME, string AbsentType, string Type, string ActivityType, string Block, decimal Mandays, decimal Output, string Uom, string JobPos, decimal Premi, decimal Penalty, System.DateTime CreatedDate, decimal Overtime) {
+                spReport_CETAK_BKMHK_DETAIL_OnlineRow rowspReport_CETAK_BKMHK_DETAIL_OnlineRow = ((spReport_CETAK_BKMHK_DETAIL_OnlineRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        NIK,
+                        NAME,
+                        AbsentType,
+                        Type,
+                        ActivityType,
+                        Block,
+                        Mandays,
+                        Output,
+                        Uom,
+                        JobPos,
+                        Premi,
+                        Penalty,
+                        CreatedDate,
+                        Overtime};
+                rowspReport_CETAK_BKMHK_DETAIL_OnlineRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_CETAK_BKMHK_DETAIL_OnlineRow);
+                return rowspReport_CETAK_BKMHK_DETAIL_OnlineRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_CETAK_BKMHK_DETAIL_OnlineDataTable cln = ((spReport_CETAK_BKMHK_DETAIL_OnlineDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_CETAK_BKMHK_DETAIL_OnlineDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNIK = base.Columns["NIK"];
+                this.columnNAME = base.Columns["NAME"];
+                this.columnAbsentType = base.Columns["AbsentType"];
+                this.columnType = base.Columns["Type"];
+                this.columnActivityType = base.Columns["ActivityType"];
+                this.columnBlock = base.Columns["Block"];
+                this.columnMandays = base.Columns["Mandays"];
+                this.columnOutput = base.Columns["Output"];
+                this.columnUom = base.Columns["Uom"];
+                this.columnJobPos = base.Columns["JobPos"];
+                this.columnPremi = base.Columns["Premi"];
+                this.columnPenalty = base.Columns["Penalty"];
+                this.columnCreatedDate = base.Columns["CreatedDate"];
+                this.columnOvertime = base.Columns["Overtime"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNIK = new global::System.Data.DataColumn("NIK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIK);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.columnAbsentType = new global::System.Data.DataColumn("AbsentType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbsentType);
+                this.columnType = new global::System.Data.DataColumn("Type", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnType);
+                this.columnActivityType = new global::System.Data.DataColumn("ActivityType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActivityType);
+                this.columnBlock = new global::System.Data.DataColumn("Block", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBlock);
+                this.columnMandays = new global::System.Data.DataColumn("Mandays", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMandays);
+                this.columnOutput = new global::System.Data.DataColumn("Output", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOutput);
+                this.columnUom = new global::System.Data.DataColumn("Uom", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUom);
+                this.columnJobPos = new global::System.Data.DataColumn("JobPos", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJobPos);
+                this.columnPremi = new global::System.Data.DataColumn("Premi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPremi);
+                this.columnPenalty = new global::System.Data.DataColumn("Penalty", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPenalty);
+                this.columnCreatedDate = new global::System.Data.DataColumn("CreatedDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreatedDate);
+                this.columnOvertime = new global::System.Data.DataColumn("Overtime", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOvertime);
+                this.columnNIK.AllowDBNull = false;
+                this.columnNIK.MaxLength = 50;
+                this.columnNAME.MaxLength = 50;
+                this.columnAbsentType.MaxLength = 50;
+                this.columnType.MaxLength = 4;
+                this.columnActivityType.MaxLength = 10;
+                this.columnBlock.MaxLength = 50;
+                this.columnUom.MaxLength = 50;
+                this.columnJobPos.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BKMHK_DETAIL_OnlineRow NewspReport_CETAK_BKMHK_DETAIL_OnlineRow() {
+                return ((spReport_CETAK_BKMHK_DETAIL_OnlineRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_CETAK_BKMHK_DETAIL_OnlineRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_CETAK_BKMHK_DETAIL_OnlineRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_CETAK_BKMHK_DETAIL_OnlineRowChanged != null)) {
+                    this.spReport_CETAK_BKMHK_DETAIL_OnlineRowChanged(this, new spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEvent(((spReport_CETAK_BKMHK_DETAIL_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_CETAK_BKMHK_DETAIL_OnlineRowChanging != null)) {
+                    this.spReport_CETAK_BKMHK_DETAIL_OnlineRowChanging(this, new spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEvent(((spReport_CETAK_BKMHK_DETAIL_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_CETAK_BKMHK_DETAIL_OnlineRowDeleted != null)) {
+                    this.spReport_CETAK_BKMHK_DETAIL_OnlineRowDeleted(this, new spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEvent(((spReport_CETAK_BKMHK_DETAIL_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_CETAK_BKMHK_DETAIL_OnlineRowDeleting != null)) {
+                    this.spReport_CETAK_BKMHK_DETAIL_OnlineRowDeleting(this, new spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEvent(((spReport_CETAK_BKMHK_DETAIL_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_CETAK_BKMHK_DETAIL_OnlineRow(spReport_CETAK_BKMHK_DETAIL_OnlineRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_CETAK_BKMHK_DETAIL_OnlineDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable : global::System.Data.TypedTableBase<spReport_CETAK_BUKUPANEN_HEADER_OnlineRow> {
+            
+            private global::System.Data.DataColumn columnDIVISION;
+            
+            private global::System.Data.DataColumn columnGANG;
+            
+            private global::System.Data.DataColumn columnHarvestDate;
+            
+            private global::System.Data.DataColumn columnESTATE;
+            
+            private global::System.Data.DataColumn columnBKMNo;
+            
+            private global::System.Data.DataColumn columnLocation;
+            
+            private global::System.Data.DataColumn columnHarvested;
+            
+            private global::System.Data.DataColumn columnMANDOR;
+            
+            private global::System.Data.DataColumn columnCLERK;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable() {
+                this.TableName = "spReport_CETAK_BUKUPANEN_HEADER_Online";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DIVISIONColumn {
+                get {
+                    return this.columnDIVISION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GANGColumn {
+                get {
+                    return this.columnGANG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HarvestDateColumn {
+                get {
+                    return this.columnHarvestDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ESTATEColumn {
+                get {
+                    return this.columnESTATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BKMNoColumn {
+                get {
+                    return this.columnBKMNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LocationColumn {
+                get {
+                    return this.columnLocation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HarvestedColumn {
+                get {
+                    return this.columnHarvested;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MANDORColumn {
+                get {
+                    return this.columnMANDOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CLERKColumn {
+                get {
+                    return this.columnCLERK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BUKUPANEN_HEADER_OnlineRow this[int index] {
+                get {
+                    return ((spReport_CETAK_BUKUPANEN_HEADER_OnlineRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEventHandler spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEventHandler spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEventHandler spReport_CETAK_BUKUPANEN_HEADER_OnlineRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEventHandler spReport_CETAK_BUKUPANEN_HEADER_OnlineRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_CETAK_BUKUPANEN_HEADER_OnlineRow(spReport_CETAK_BUKUPANEN_HEADER_OnlineRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BUKUPANEN_HEADER_OnlineRow AddspReport_CETAK_BUKUPANEN_HEADER_OnlineRow(string DIVISION, string GANG, System.DateTime HarvestDate, string ESTATE, string BKMNo, string Location, decimal Harvested, string MANDOR, string CLERK) {
+                spReport_CETAK_BUKUPANEN_HEADER_OnlineRow rowspReport_CETAK_BUKUPANEN_HEADER_OnlineRow = ((spReport_CETAK_BUKUPANEN_HEADER_OnlineRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        DIVISION,
+                        GANG,
+                        HarvestDate,
+                        ESTATE,
+                        BKMNo,
+                        Location,
+                        Harvested,
+                        MANDOR,
+                        CLERK};
+                rowspReport_CETAK_BUKUPANEN_HEADER_OnlineRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_CETAK_BUKUPANEN_HEADER_OnlineRow);
+                return rowspReport_CETAK_BUKUPANEN_HEADER_OnlineRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable cln = ((spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnDIVISION = base.Columns["DIVISION"];
+                this.columnGANG = base.Columns["GANG"];
+                this.columnHarvestDate = base.Columns["HarvestDate"];
+                this.columnESTATE = base.Columns["ESTATE"];
+                this.columnBKMNo = base.Columns["BKMNo"];
+                this.columnLocation = base.Columns["Location"];
+                this.columnHarvested = base.Columns["Harvested"];
+                this.columnMANDOR = base.Columns["MANDOR"];
+                this.columnCLERK = base.Columns["CLERK"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnDIVISION = new global::System.Data.DataColumn("DIVISION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIVISION);
+                this.columnGANG = new global::System.Data.DataColumn("GANG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGANG);
+                this.columnHarvestDate = new global::System.Data.DataColumn("HarvestDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHarvestDate);
+                this.columnESTATE = new global::System.Data.DataColumn("ESTATE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESTATE);
+                this.columnBKMNo = new global::System.Data.DataColumn("BKMNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBKMNo);
+                this.columnLocation = new global::System.Data.DataColumn("Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocation);
+                this.columnHarvested = new global::System.Data.DataColumn("Harvested", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHarvested);
+                this.columnMANDOR = new global::System.Data.DataColumn("MANDOR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMANDOR);
+                this.columnCLERK = new global::System.Data.DataColumn("CLERK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLERK);
+                this.columnDIVISION.AllowDBNull = false;
+                this.columnDIVISION.MaxLength = 20;
+                this.columnGANG.AllowDBNull = false;
+                this.columnGANG.MaxLength = 20;
+                this.columnHarvestDate.AllowDBNull = false;
+                this.columnESTATE.AllowDBNull = false;
+                this.columnESTATE.MaxLength = 4;
+                this.columnBKMNo.MaxLength = 50;
+                this.columnLocation.AllowDBNull = false;
+                this.columnLocation.MaxLength = 20;
+                this.columnMANDOR.ReadOnly = true;
+                this.columnMANDOR.MaxLength = 103;
+                this.columnCLERK.ReadOnly = true;
+                this.columnCLERK.MaxLength = 43;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BUKUPANEN_HEADER_OnlineRow NewspReport_CETAK_BUKUPANEN_HEADER_OnlineRow() {
+                return ((spReport_CETAK_BUKUPANEN_HEADER_OnlineRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_CETAK_BUKUPANEN_HEADER_OnlineRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_CETAK_BUKUPANEN_HEADER_OnlineRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChanged != null)) {
+                    this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChanged(this, new spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEvent(((spReport_CETAK_BUKUPANEN_HEADER_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChanging != null)) {
+                    this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChanging(this, new spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEvent(((spReport_CETAK_BUKUPANEN_HEADER_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowDeleted != null)) {
+                    this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowDeleted(this, new spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEvent(((spReport_CETAK_BUKUPANEN_HEADER_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowDeleting != null)) {
+                    this.spReport_CETAK_BUKUPANEN_HEADER_OnlineRowDeleting(this, new spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEvent(((spReport_CETAK_BUKUPANEN_HEADER_OnlineRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_CETAK_BUKUPANEN_HEADER_OnlineRow(spReport_CETAK_BUKUPANEN_HEADER_OnlineRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_Cetak_BukuPanenItem_Rev1DataTable : global::System.Data.TypedTableBase<spReport_Cetak_BukuPanenItem_Rev1Row> {
+            
+            private global::System.Data.DataColumn columnLocation;
+            
+            private global::System.Data.DataColumn columnNikHarvester;
+            
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnHK;
+            
+            private global::System.Data.DataColumn columnHA;
+            
+            private global::System.Data.DataColumn columnGang;
+            
+            private global::System.Data.DataColumn columnHarvestDate;
+            
+            private global::System.Data.DataColumn columnCreatedDate;
+            
+            private global::System.Data.DataColumn columnJjgDinas;
+            
+            private global::System.Data.DataColumn columnOverBasic;
+            
+            private global::System.Data.DataColumn columnBlockBasic;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BukuPanenItem_Rev1DataTable() {
+                this.TableName = "spReport_Cetak_BukuPanenItem_Rev1";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_Cetak_BukuPanenItem_Rev1DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_Cetak_BukuPanenItem_Rev1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LocationColumn {
+                get {
+                    return this.columnLocation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NikHarvesterColumn {
+                get {
+                    return this.columnNikHarvester;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NameColumn {
+                get {
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HKColumn {
+                get {
+                    return this.columnHK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HAColumn {
+                get {
+                    return this.columnHA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GangColumn {
+                get {
+                    return this.columnGang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HarvestDateColumn {
+                get {
+                    return this.columnHarvestDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CreatedDateColumn {
+                get {
+                    return this.columnCreatedDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JjgDinasColumn {
+                get {
+                    return this.columnJjgDinas;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OverBasicColumn {
+                get {
+                    return this.columnOverBasic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BlockBasicColumn {
+                get {
+                    return this.columnBlockBasic;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BukuPanenItem_Rev1Row this[int index] {
+                get {
+                    return ((spReport_Cetak_BukuPanenItem_Rev1Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BukuPanenItem_Rev1RowChangeEventHandler spReport_Cetak_BukuPanenItem_Rev1RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BukuPanenItem_Rev1RowChangeEventHandler spReport_Cetak_BukuPanenItem_Rev1RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BukuPanenItem_Rev1RowChangeEventHandler spReport_Cetak_BukuPanenItem_Rev1RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_Cetak_BukuPanenItem_Rev1RowChangeEventHandler spReport_Cetak_BukuPanenItem_Rev1RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_Cetak_BukuPanenItem_Rev1Row(spReport_Cetak_BukuPanenItem_Rev1Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BukuPanenItem_Rev1Row AddspReport_Cetak_BukuPanenItem_Rev1Row(string Location, string NikHarvester, string Name, decimal HK, decimal HA, string Gang, System.DateTime HarvestDate, System.DateTime CreatedDate, int JjgDinas, int OverBasic, int BlockBasic) {
+                spReport_Cetak_BukuPanenItem_Rev1Row rowspReport_Cetak_BukuPanenItem_Rev1Row = ((spReport_Cetak_BukuPanenItem_Rev1Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Location,
+                        NikHarvester,
+                        Name,
+                        HK,
+                        HA,
+                        Gang,
+                        HarvestDate,
+                        CreatedDate,
+                        JjgDinas,
+                        OverBasic,
+                        BlockBasic};
+                rowspReport_Cetak_BukuPanenItem_Rev1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_Cetak_BukuPanenItem_Rev1Row);
+                return rowspReport_Cetak_BukuPanenItem_Rev1Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_Cetak_BukuPanenItem_Rev1DataTable cln = ((spReport_Cetak_BukuPanenItem_Rev1DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_Cetak_BukuPanenItem_Rev1DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnLocation = base.Columns["Location"];
+                this.columnNikHarvester = base.Columns["NikHarvester"];
+                this.columnName = base.Columns["Name"];
+                this.columnHK = base.Columns["HK"];
+                this.columnHA = base.Columns["HA"];
+                this.columnGang = base.Columns["Gang"];
+                this.columnHarvestDate = base.Columns["HarvestDate"];
+                this.columnCreatedDate = base.Columns["CreatedDate"];
+                this.columnJjgDinas = base.Columns["JjgDinas"];
+                this.columnOverBasic = base.Columns["OverBasic"];
+                this.columnBlockBasic = base.Columns["BlockBasic"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnLocation = new global::System.Data.DataColumn("Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocation);
+                this.columnNikHarvester = new global::System.Data.DataColumn("NikHarvester", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNikHarvester);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnHK = new global::System.Data.DataColumn("HK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHK);
+                this.columnHA = new global::System.Data.DataColumn("HA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHA);
+                this.columnGang = new global::System.Data.DataColumn("Gang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGang);
+                this.columnHarvestDate = new global::System.Data.DataColumn("HarvestDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHarvestDate);
+                this.columnCreatedDate = new global::System.Data.DataColumn("CreatedDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCreatedDate);
+                this.columnJjgDinas = new global::System.Data.DataColumn("JjgDinas", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJjgDinas);
+                this.columnOverBasic = new global::System.Data.DataColumn("OverBasic", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOverBasic);
+                this.columnBlockBasic = new global::System.Data.DataColumn("BlockBasic", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBlockBasic);
+                this.columnLocation.MaxLength = 20;
+                this.columnNikHarvester.MaxLength = 20;
+                this.columnName.MaxLength = 50;
+                this.columnHK.ReadOnly = true;
+                this.columnHA.ReadOnly = true;
+                this.columnGang.MaxLength = 10;
+                this.columnJjgDinas.ReadOnly = true;
+                this.columnOverBasic.ReadOnly = true;
+                this.columnBlockBasic.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BukuPanenItem_Rev1Row NewspReport_Cetak_BukuPanenItem_Rev1Row() {
+                return ((spReport_Cetak_BukuPanenItem_Rev1Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_Cetak_BukuPanenItem_Rev1Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_Cetak_BukuPanenItem_Rev1Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_Cetak_BukuPanenItem_Rev1RowChanged != null)) {
+                    this.spReport_Cetak_BukuPanenItem_Rev1RowChanged(this, new spReport_Cetak_BukuPanenItem_Rev1RowChangeEvent(((spReport_Cetak_BukuPanenItem_Rev1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_Cetak_BukuPanenItem_Rev1RowChanging != null)) {
+                    this.spReport_Cetak_BukuPanenItem_Rev1RowChanging(this, new spReport_Cetak_BukuPanenItem_Rev1RowChangeEvent(((spReport_Cetak_BukuPanenItem_Rev1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_Cetak_BukuPanenItem_Rev1RowDeleted != null)) {
+                    this.spReport_Cetak_BukuPanenItem_Rev1RowDeleted(this, new spReport_Cetak_BukuPanenItem_Rev1RowChangeEvent(((spReport_Cetak_BukuPanenItem_Rev1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_Cetak_BukuPanenItem_Rev1RowDeleting != null)) {
+                    this.spReport_Cetak_BukuPanenItem_Rev1RowDeleting(this, new spReport_Cetak_BukuPanenItem_Rev1RowChangeEvent(((spReport_Cetak_BukuPanenItem_Rev1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_Cetak_BukuPanenItem_Rev1Row(spReport_Cetak_BukuPanenItem_Rev1Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_Cetak_BukuPanenItem_Rev1DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_POTONGBUAH_HDRDataTable : global::System.Data.TypedTableBase<spReport_POTONGBUAH_HDRRow> {
+            
+            private global::System.Data.DataColumn columnNik;
+            
+            private global::System.Data.DataColumn columnStart;
+            
+            private global::System.Data.DataColumn columnFinish;
+            
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnGang;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_POTONGBUAH_HDRDataTable() {
+                this.TableName = "spReport_POTONGBUAH_HDR";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_POTONGBUAH_HDRDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_POTONGBUAH_HDRDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NikColumn {
+                get {
+                    return this.columnNik;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn StartColumn {
+                get {
+                    return this.columnStart;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FinishColumn {
+                get {
+                    return this.columnFinish;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NameColumn {
+                get {
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GangColumn {
+                get {
+                    return this.columnGang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_POTONGBUAH_HDRRow this[int index] {
+                get {
+                    return ((spReport_POTONGBUAH_HDRRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_POTONGBUAH_HDRRowChangeEventHandler spReport_POTONGBUAH_HDRRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_POTONGBUAH_HDRRowChangeEventHandler spReport_POTONGBUAH_HDRRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_POTONGBUAH_HDRRowChangeEventHandler spReport_POTONGBUAH_HDRRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_POTONGBUAH_HDRRowChangeEventHandler spReport_POTONGBUAH_HDRRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_POTONGBUAH_HDRRow(spReport_POTONGBUAH_HDRRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_POTONGBUAH_HDRRow AddspReport_POTONGBUAH_HDRRow(string Nik, System.DateTime Start, System.DateTime Finish, string Name, string Gang) {
+                spReport_POTONGBUAH_HDRRow rowspReport_POTONGBUAH_HDRRow = ((spReport_POTONGBUAH_HDRRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Nik,
+                        Start,
+                        Finish,
+                        Name,
+                        Gang};
+                rowspReport_POTONGBUAH_HDRRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_POTONGBUAH_HDRRow);
+                return rowspReport_POTONGBUAH_HDRRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_POTONGBUAH_HDRDataTable cln = ((spReport_POTONGBUAH_HDRDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_POTONGBUAH_HDRDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNik = base.Columns["Nik"];
+                this.columnStart = base.Columns["Start"];
+                this.columnFinish = base.Columns["Finish"];
+                this.columnName = base.Columns["Name"];
+                this.columnGang = base.Columns["Gang"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNik = new global::System.Data.DataColumn("Nik", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNik);
+                this.columnStart = new global::System.Data.DataColumn("Start", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnStart);
+                this.columnFinish = new global::System.Data.DataColumn("Finish", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFinish);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnGang = new global::System.Data.DataColumn("Gang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGang);
+                this.columnNik.AllowDBNull = false;
+                this.columnNik.MaxLength = 20;
+                this.columnStart.ReadOnly = true;
+                this.columnFinish.ReadOnly = true;
+                this.columnName.ReadOnly = true;
+                this.columnName.MaxLength = 50;
+                this.columnGang.AllowDBNull = false;
+                this.columnGang.MaxLength = 20;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_POTONGBUAH_HDRRow NewspReport_POTONGBUAH_HDRRow() {
+                return ((spReport_POTONGBUAH_HDRRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_POTONGBUAH_HDRRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_POTONGBUAH_HDRRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_POTONGBUAH_HDRRowChanged != null)) {
+                    this.spReport_POTONGBUAH_HDRRowChanged(this, new spReport_POTONGBUAH_HDRRowChangeEvent(((spReport_POTONGBUAH_HDRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_POTONGBUAH_HDRRowChanging != null)) {
+                    this.spReport_POTONGBUAH_HDRRowChanging(this, new spReport_POTONGBUAH_HDRRowChangeEvent(((spReport_POTONGBUAH_HDRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_POTONGBUAH_HDRRowDeleted != null)) {
+                    this.spReport_POTONGBUAH_HDRRowDeleted(this, new spReport_POTONGBUAH_HDRRowChangeEvent(((spReport_POTONGBUAH_HDRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_POTONGBUAH_HDRRowDeleting != null)) {
+                    this.spReport_POTONGBUAH_HDRRowDeleting(this, new spReport_POTONGBUAH_HDRRowChangeEvent(((spReport_POTONGBUAH_HDRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_POTONGBUAH_HDRRow(spReport_POTONGBUAH_HDRRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_POTONGBUAH_HDRDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_ANOMALIDataTable : global::System.Data.TypedTableBase<spReport_ANOMALIRow> {
+            
+            private global::System.Data.DataColumn columnGang;
+            
+            private global::System.Data.DataColumn columnNik;
+            
+            private global::System.Data.DataColumn columnMandorOrKeani;
+            
+            private global::System.Data.DataColumn columnName;
+            
+            private global::System.Data.DataColumn columnAbsentType;
+            
+            private global::System.Data.DataColumn columnMandays;
+            
+            private global::System.Data.DataColumn columnBlock;
+            
+            private global::System.Data.DataColumn columnOutput;
+            
+            private global::System.Data.DataColumn columnLocation;
+            
+            private global::System.Data.DataColumn columnFFB;
+            
+            private global::System.Data.DataColumn columnLooseFruit;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIDataTable() {
+                this.TableName = "spReport_ANOMALI";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_ANOMALIDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_ANOMALIDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GangColumn {
+                get {
+                    return this.columnGang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NikColumn {
+                get {
+                    return this.columnNik;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MandorOrKeaniColumn {
+                get {
+                    return this.columnMandorOrKeani;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NameColumn {
+                get {
+                    return this.columnName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AbsentTypeColumn {
+                get {
+                    return this.columnAbsentType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MandaysColumn {
+                get {
+                    return this.columnMandays;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BlockColumn {
+                get {
+                    return this.columnBlock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OutputColumn {
+                get {
+                    return this.columnOutput;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LocationColumn {
+                get {
+                    return this.columnLocation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn FFBColumn {
+                get {
+                    return this.columnFFB;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn LooseFruitColumn {
+                get {
+                    return this.columnLooseFruit;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIRow this[int index] {
+                get {
+                    return ((spReport_ANOMALIRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIRowChangeEventHandler spReport_ANOMALIRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIRowChangeEventHandler spReport_ANOMALIRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIRowChangeEventHandler spReport_ANOMALIRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIRowChangeEventHandler spReport_ANOMALIRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_ANOMALIRow(spReport_ANOMALIRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIRow AddspReport_ANOMALIRow(string Gang, string Nik, int MandorOrKeani, string Name, string AbsentType, decimal Mandays, string Block, string Output, string Location, string FFB, string LooseFruit) {
+                spReport_ANOMALIRow rowspReport_ANOMALIRow = ((spReport_ANOMALIRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Gang,
+                        Nik,
+                        MandorOrKeani,
+                        Name,
+                        AbsentType,
+                        Mandays,
+                        Block,
+                        Output,
+                        Location,
+                        FFB,
+                        LooseFruit};
+                rowspReport_ANOMALIRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_ANOMALIRow);
+                return rowspReport_ANOMALIRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_ANOMALIDataTable cln = ((spReport_ANOMALIDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_ANOMALIDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnGang = base.Columns["Gang"];
+                this.columnNik = base.Columns["Nik"];
+                this.columnMandorOrKeani = base.Columns["MandorOrKeani"];
+                this.columnName = base.Columns["Name"];
+                this.columnAbsentType = base.Columns["AbsentType"];
+                this.columnMandays = base.Columns["Mandays"];
+                this.columnBlock = base.Columns["Block"];
+                this.columnOutput = base.Columns["Output"];
+                this.columnLocation = base.Columns["Location"];
+                this.columnFFB = base.Columns["FFB"];
+                this.columnLooseFruit = base.Columns["LooseFruit"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnGang = new global::System.Data.DataColumn("Gang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGang);
+                this.columnNik = new global::System.Data.DataColumn("Nik", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNik);
+                this.columnMandorOrKeani = new global::System.Data.DataColumn("MandorOrKeani", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMandorOrKeani);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnAbsentType = new global::System.Data.DataColumn("AbsentType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAbsentType);
+                this.columnMandays = new global::System.Data.DataColumn("Mandays", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMandays);
+                this.columnBlock = new global::System.Data.DataColumn("Block", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBlock);
+                this.columnOutput = new global::System.Data.DataColumn("Output", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOutput);
+                this.columnLocation = new global::System.Data.DataColumn("Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocation);
+                this.columnFFB = new global::System.Data.DataColumn("FFB", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFFB);
+                this.columnLooseFruit = new global::System.Data.DataColumn("LooseFruit", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLooseFruit);
+                this.columnGang.MaxLength = 10;
+                this.columnNik.ReadOnly = true;
+                this.columnNik.MaxLength = 20;
+                this.columnMandorOrKeani.ReadOnly = true;
+                this.columnName.ReadOnly = true;
+                this.columnName.MaxLength = 100;
+                this.columnAbsentType.MaxLength = 3;
+                this.columnBlock.ReadOnly = true;
+                this.columnBlock.MaxLength = 50;
+                this.columnOutput.ReadOnly = true;
+                this.columnOutput.MaxLength = 10;
+                this.columnLocation.MaxLength = 20;
+                this.columnFFB.ReadOnly = true;
+                this.columnFFB.MaxLength = 10;
+                this.columnLooseFruit.ReadOnly = true;
+                this.columnLooseFruit.MaxLength = 10;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIRow NewspReport_ANOMALIRow() {
+                return ((spReport_ANOMALIRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_ANOMALIRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_ANOMALIRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_ANOMALIRowChanged != null)) {
+                    this.spReport_ANOMALIRowChanged(this, new spReport_ANOMALIRowChangeEvent(((spReport_ANOMALIRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_ANOMALIRowChanging != null)) {
+                    this.spReport_ANOMALIRowChanging(this, new spReport_ANOMALIRowChangeEvent(((spReport_ANOMALIRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_ANOMALIRowDeleted != null)) {
+                    this.spReport_ANOMALIRowDeleted(this, new spReport_ANOMALIRowChangeEvent(((spReport_ANOMALIRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_ANOMALIRowDeleting != null)) {
+                    this.spReport_ANOMALIRowDeleting(this, new spReport_ANOMALIRowChangeEvent(((spReport_ANOMALIRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_ANOMALIRow(spReport_ANOMALIRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_ANOMALIDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_PrestasiOutputHKDivisiDataTable : global::System.Data.TypedTableBase<spReport_PrestasiOutputHKDivisiRow> {
+            
+            private global::System.Data.DataColumn columngang;
+            
+            private global::System.Data.DataColumn columnActivityType;
+            
+            private global::System.Data.DataColumn columnActivityName;
+            
+            private global::System.Data.DataColumn columnBlock;
+            
+            private global::System.Data.DataColumn columnBKMDate;
+            
+            private global::System.Data.DataColumn columnHectare;
+            
+            private global::System.Data.DataColumn columnPlantingYear;
+            
+            private global::System.Data.DataColumn columnUom;
+            
+            private global::System.Data.DataColumn columnOutputHi;
+            
+            private global::System.Data.DataColumn columnOutputsdi;
+            
+            private global::System.Data.DataColumn columnOutputtotal;
+            
+            private global::System.Data.DataColumn columnHKHi;
+            
+            private global::System.Data.DataColumn columnHKSdi;
+            
+            private global::System.Data.DataColumn columnHKTotal;
+            
+            private global::System.Data.DataColumn columnPremiHi;
+            
+            private global::System.Data.DataColumn columnpremiSdi;
+            
+            private global::System.Data.DataColumn columnPremiTotal;
+            
+            private global::System.Data.DataColumn columnOvertimeHi;
+            
+            private global::System.Data.DataColumn columnOvertimeSdi;
+            
+            private global::System.Data.DataColumn columnOvertimeTotal;
+            
+            private global::System.Data.DataColumn columnMatnr;
+            
+            private global::System.Data.DataColumn columnMatName;
+            
+            private global::System.Data.DataColumn columnMatUom;
+            
+            private global::System.Data.DataColumn columnMatHi;
+            
+            private global::System.Data.DataColumn columnMatSdi;
+            
+            private global::System.Data.DataColumn columnrotasi;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_PrestasiOutputHKDivisiDataTable() {
+                this.TableName = "spReport_PrestasiOutputHKDivisi";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_PrestasiOutputHKDivisiDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_PrestasiOutputHKDivisiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn gangColumn {
+                get {
+                    return this.columngang;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ActivityTypeColumn {
+                get {
+                    return this.columnActivityType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ActivityNameColumn {
+                get {
+                    return this.columnActivityName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BlockColumn {
+                get {
+                    return this.columnBlock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BKMDateColumn {
+                get {
+                    return this.columnBKMDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HectareColumn {
+                get {
+                    return this.columnHectare;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PlantingYearColumn {
+                get {
+                    return this.columnPlantingYear;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn UomColumn {
+                get {
+                    return this.columnUom;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OutputHiColumn {
+                get {
+                    return this.columnOutputHi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OutputsdiColumn {
+                get {
+                    return this.columnOutputsdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OutputtotalColumn {
+                get {
+                    return this.columnOutputtotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HKHiColumn {
+                get {
+                    return this.columnHKHi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HKSdiColumn {
+                get {
+                    return this.columnHKSdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HKTotalColumn {
+                get {
+                    return this.columnHKTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PremiHiColumn {
+                get {
+                    return this.columnPremiHi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn premiSdiColumn {
+                get {
+                    return this.columnpremiSdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PremiTotalColumn {
+                get {
+                    return this.columnPremiTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OvertimeHiColumn {
+                get {
+                    return this.columnOvertimeHi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OvertimeSdiColumn {
+                get {
+                    return this.columnOvertimeSdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn OvertimeTotalColumn {
+                get {
+                    return this.columnOvertimeTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MatnrColumn {
+                get {
+                    return this.columnMatnr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MatNameColumn {
+                get {
+                    return this.columnMatName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MatUomColumn {
+                get {
+                    return this.columnMatUom;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MatHiColumn {
+                get {
+                    return this.columnMatHi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MatSdiColumn {
+                get {
+                    return this.columnMatSdi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn rotasiColumn {
+                get {
+                    return this.columnrotasi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_PrestasiOutputHKDivisiRow this[int index] {
+                get {
+                    return ((spReport_PrestasiOutputHKDivisiRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_PrestasiOutputHKDivisiRowChangeEventHandler spReport_PrestasiOutputHKDivisiRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_PrestasiOutputHKDivisiRowChangeEventHandler spReport_PrestasiOutputHKDivisiRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_PrestasiOutputHKDivisiRowChangeEventHandler spReport_PrestasiOutputHKDivisiRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_PrestasiOutputHKDivisiRowChangeEventHandler spReport_PrestasiOutputHKDivisiRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_PrestasiOutputHKDivisiRow(spReport_PrestasiOutputHKDivisiRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_PrestasiOutputHKDivisiRow AddspReport_PrestasiOutputHKDivisiRow(
+                        string gang, 
+                        string ActivityType, 
+                        string ActivityName, 
+                        string Block, 
+                        System.DateTime BKMDate, 
+                        decimal Hectare, 
+                        int PlantingYear, 
+                        string Uom, 
+                        decimal OutputHi, 
+                        decimal Outputsdi, 
+                        decimal Outputtotal, 
+                        decimal HKHi, 
+                        decimal HKSdi, 
+                        decimal HKTotal, 
+                        decimal PremiHi, 
+                        decimal premiSdi, 
+                        decimal PremiTotal, 
+                        decimal OvertimeHi, 
+                        decimal OvertimeSdi, 
+                        decimal OvertimeTotal, 
+                        string Matnr, 
+                        string MatName, 
+                        string MatUom, 
+                        decimal MatHi, 
+                        decimal MatSdi, 
+                        int rotasi) {
+                spReport_PrestasiOutputHKDivisiRow rowspReport_PrestasiOutputHKDivisiRow = ((spReport_PrestasiOutputHKDivisiRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        gang,
+                        ActivityType,
+                        ActivityName,
+                        Block,
+                        BKMDate,
+                        Hectare,
+                        PlantingYear,
+                        Uom,
+                        OutputHi,
+                        Outputsdi,
+                        Outputtotal,
+                        HKHi,
+                        HKSdi,
+                        HKTotal,
+                        PremiHi,
+                        premiSdi,
+                        PremiTotal,
+                        OvertimeHi,
+                        OvertimeSdi,
+                        OvertimeTotal,
+                        Matnr,
+                        MatName,
+                        MatUom,
+                        MatHi,
+                        MatSdi,
+                        rotasi};
+                rowspReport_PrestasiOutputHKDivisiRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_PrestasiOutputHKDivisiRow);
+                return rowspReport_PrestasiOutputHKDivisiRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_PrestasiOutputHKDivisiDataTable cln = ((spReport_PrestasiOutputHKDivisiDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_PrestasiOutputHKDivisiDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columngang = base.Columns["gang"];
+                this.columnActivityType = base.Columns["ActivityType"];
+                this.columnActivityName = base.Columns["ActivityName"];
+                this.columnBlock = base.Columns["Block"];
+                this.columnBKMDate = base.Columns["BKMDate"];
+                this.columnHectare = base.Columns["Hectare"];
+                this.columnPlantingYear = base.Columns["PlantingYear"];
+                this.columnUom = base.Columns["Uom"];
+                this.columnOutputHi = base.Columns["OutputHi"];
+                this.columnOutputsdi = base.Columns["Outputsdi"];
+                this.columnOutputtotal = base.Columns["Outputtotal"];
+                this.columnHKHi = base.Columns["HKHi"];
+                this.columnHKSdi = base.Columns["HKSdi"];
+                this.columnHKTotal = base.Columns["HKTotal"];
+                this.columnPremiHi = base.Columns["PremiHi"];
+                this.columnpremiSdi = base.Columns["premiSdi"];
+                this.columnPremiTotal = base.Columns["PremiTotal"];
+                this.columnOvertimeHi = base.Columns["OvertimeHi"];
+                this.columnOvertimeSdi = base.Columns["OvertimeSdi"];
+                this.columnOvertimeTotal = base.Columns["OvertimeTotal"];
+                this.columnMatnr = base.Columns["Matnr"];
+                this.columnMatName = base.Columns["MatName"];
+                this.columnMatUom = base.Columns["MatUom"];
+                this.columnMatHi = base.Columns["MatHi"];
+                this.columnMatSdi = base.Columns["MatSdi"];
+                this.columnrotasi = base.Columns["rotasi"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columngang = new global::System.Data.DataColumn("gang", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columngang);
+                this.columnActivityType = new global::System.Data.DataColumn("ActivityType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActivityType);
+                this.columnActivityName = new global::System.Data.DataColumn("ActivityName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnActivityName);
+                this.columnBlock = new global::System.Data.DataColumn("Block", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBlock);
+                this.columnBKMDate = new global::System.Data.DataColumn("BKMDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBKMDate);
+                this.columnHectare = new global::System.Data.DataColumn("Hectare", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHectare);
+                this.columnPlantingYear = new global::System.Data.DataColumn("PlantingYear", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPlantingYear);
+                this.columnUom = new global::System.Data.DataColumn("Uom", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUom);
+                this.columnOutputHi = new global::System.Data.DataColumn("OutputHi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOutputHi);
+                this.columnOutputsdi = new global::System.Data.DataColumn("Outputsdi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOutputsdi);
+                this.columnOutputtotal = new global::System.Data.DataColumn("Outputtotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOutputtotal);
+                this.columnHKHi = new global::System.Data.DataColumn("HKHi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHKHi);
+                this.columnHKSdi = new global::System.Data.DataColumn("HKSdi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHKSdi);
+                this.columnHKTotal = new global::System.Data.DataColumn("HKTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHKTotal);
+                this.columnPremiHi = new global::System.Data.DataColumn("PremiHi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPremiHi);
+                this.columnpremiSdi = new global::System.Data.DataColumn("premiSdi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpremiSdi);
+                this.columnPremiTotal = new global::System.Data.DataColumn("PremiTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPremiTotal);
+                this.columnOvertimeHi = new global::System.Data.DataColumn("OvertimeHi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOvertimeHi);
+                this.columnOvertimeSdi = new global::System.Data.DataColumn("OvertimeSdi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOvertimeSdi);
+                this.columnOvertimeTotal = new global::System.Data.DataColumn("OvertimeTotal", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOvertimeTotal);
+                this.columnMatnr = new global::System.Data.DataColumn("Matnr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMatnr);
+                this.columnMatName = new global::System.Data.DataColumn("MatName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMatName);
+                this.columnMatUom = new global::System.Data.DataColumn("MatUom", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMatUom);
+                this.columnMatHi = new global::System.Data.DataColumn("MatHi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMatHi);
+                this.columnMatSdi = new global::System.Data.DataColumn("MatSdi", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMatSdi);
+                this.columnrotasi = new global::System.Data.DataColumn("rotasi", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrotasi);
+                this.columngang.ReadOnly = true;
+                this.columngang.MaxLength = 4;
+                this.columnActivityType.ReadOnly = true;
+                this.columnActivityType.MaxLength = 10;
+                this.columnActivityName.MaxLength = 255;
+                this.columnBlock.ReadOnly = true;
+                this.columnBlock.MaxLength = 50;
+                this.columnBKMDate.ReadOnly = true;
+                this.columnHectare.ReadOnly = true;
+                this.columnPlantingYear.ReadOnly = true;
+                this.columnUom.ReadOnly = true;
+                this.columnUom.MaxLength = 50;
+                this.columnOutputHi.ReadOnly = true;
+                this.columnOutputsdi.ReadOnly = true;
+                this.columnOutputtotal.ReadOnly = true;
+                this.columnHKHi.ReadOnly = true;
+                this.columnHKSdi.ReadOnly = true;
+                this.columnHKTotal.ReadOnly = true;
+                this.columnPremiHi.ReadOnly = true;
+                this.columnpremiSdi.ReadOnly = true;
+                this.columnPremiTotal.ReadOnly = true;
+                this.columnOvertimeHi.ReadOnly = true;
+                this.columnOvertimeSdi.ReadOnly = true;
+                this.columnOvertimeTotal.ReadOnly = true;
+                this.columnMatnr.ReadOnly = true;
+                this.columnMatnr.MaxLength = 18;
+                this.columnMatName.MaxLength = 50;
+                this.columnMatUom.MaxLength = 10;
+                this.columnMatHi.ReadOnly = true;
+                this.columnMatSdi.ReadOnly = true;
+                this.columnrotasi.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_PrestasiOutputHKDivisiRow NewspReport_PrestasiOutputHKDivisiRow() {
+                return ((spReport_PrestasiOutputHKDivisiRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_PrestasiOutputHKDivisiRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_PrestasiOutputHKDivisiRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_PrestasiOutputHKDivisiRowChanged != null)) {
+                    this.spReport_PrestasiOutputHKDivisiRowChanged(this, new spReport_PrestasiOutputHKDivisiRowChangeEvent(((spReport_PrestasiOutputHKDivisiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_PrestasiOutputHKDivisiRowChanging != null)) {
+                    this.spReport_PrestasiOutputHKDivisiRowChanging(this, new spReport_PrestasiOutputHKDivisiRowChangeEvent(((spReport_PrestasiOutputHKDivisiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_PrestasiOutputHKDivisiRowDeleted != null)) {
+                    this.spReport_PrestasiOutputHKDivisiRowDeleted(this, new spReport_PrestasiOutputHKDivisiRowChangeEvent(((spReport_PrestasiOutputHKDivisiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_PrestasiOutputHKDivisiRowDeleting != null)) {
+                    this.spReport_PrestasiOutputHKDivisiRowDeleting(this, new spReport_PrestasiOutputHKDivisiRowChangeEvent(((spReport_PrestasiOutputHKDivisiRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_PrestasiOutputHKDivisiRow(spReport_PrestasiOutputHKDivisiRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_PrestasiOutputHKDivisiDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_ANOMALIPANENVSANGKUTDataTable : global::System.Data.TypedTableBase<spReport_ANOMALIPANENVSANGKUTRow> {
+            
+            private global::System.Data.DataColumn columnHarvestDate;
+            
+            private global::System.Data.DataColumn columnlocation;
+            
+            private global::System.Data.DataColumn columntph;
+            
+            private global::System.Data.DataColumn columnQtyJjg;
+            
+            private global::System.Data.DataColumn columnQtyAngkut;
+            
+            private global::System.Data.DataColumn columnRestan;
+            
+            private global::System.Data.DataColumn columnKodeKendaraan;
+            
+            private global::System.Data.DataColumn columnMandor;
+            
+            private global::System.Data.DataColumn columndriver;
+            
+            private global::System.Data.DataColumn columnAchievement;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIPANENVSANGKUTDataTable() {
+                this.TableName = "spReport_ANOMALIPANENVSANGKUT";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_ANOMALIPANENVSANGKUTDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_ANOMALIPANENVSANGKUTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HarvestDateColumn {
+                get {
+                    return this.columnHarvestDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn locationColumn {
+                get {
+                    return this.columnlocation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tphColumn {
+                get {
+                    return this.columntph;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QtyJjgColumn {
+                get {
+                    return this.columnQtyJjg;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn QtyAngkutColumn {
+                get {
+                    return this.columnQtyAngkut;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RestanColumn {
+                get {
+                    return this.columnRestan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn KodeKendaraanColumn {
+                get {
+                    return this.columnKodeKendaraan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MandorColumn {
+                get {
+                    return this.columnMandor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn driverColumn {
+                get {
+                    return this.columndriver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AchievementColumn {
+                get {
+                    return this.columnAchievement;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIPANENVSANGKUTRow this[int index] {
+                get {
+                    return ((spReport_ANOMALIPANENVSANGKUTRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIPANENVSANGKUTRowChangeEventHandler spReport_ANOMALIPANENVSANGKUTRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIPANENVSANGKUTRowChangeEventHandler spReport_ANOMALIPANENVSANGKUTRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIPANENVSANGKUTRowChangeEventHandler spReport_ANOMALIPANENVSANGKUTRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_ANOMALIPANENVSANGKUTRowChangeEventHandler spReport_ANOMALIPANENVSANGKUTRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_ANOMALIPANENVSANGKUTRow(spReport_ANOMALIPANENVSANGKUTRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIPANENVSANGKUTRow AddspReport_ANOMALIPANENVSANGKUTRow(string HarvestDate, string location, string tph, decimal QtyJjg, decimal QtyAngkut, decimal Restan, string KodeKendaraan, string Mandor, string driver, string Achievement) {
+                spReport_ANOMALIPANENVSANGKUTRow rowspReport_ANOMALIPANENVSANGKUTRow = ((spReport_ANOMALIPANENVSANGKUTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        HarvestDate,
+                        location,
+                        tph,
+                        QtyJjg,
+                        QtyAngkut,
+                        Restan,
+                        KodeKendaraan,
+                        Mandor,
+                        driver,
+                        Achievement};
+                rowspReport_ANOMALIPANENVSANGKUTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_ANOMALIPANENVSANGKUTRow);
+                return rowspReport_ANOMALIPANENVSANGKUTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_ANOMALIPANENVSANGKUTDataTable cln = ((spReport_ANOMALIPANENVSANGKUTDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_ANOMALIPANENVSANGKUTDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnHarvestDate = base.Columns["HarvestDate"];
+                this.columnlocation = base.Columns["location"];
+                this.columntph = base.Columns["tph"];
+                this.columnQtyJjg = base.Columns["QtyJjg"];
+                this.columnQtyAngkut = base.Columns["QtyAngkut"];
+                this.columnRestan = base.Columns["Restan"];
+                this.columnKodeKendaraan = base.Columns["KodeKendaraan"];
+                this.columnMandor = base.Columns["Mandor"];
+                this.columndriver = base.Columns["driver"];
+                this.columnAchievement = base.Columns["Achievement"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnHarvestDate = new global::System.Data.DataColumn("HarvestDate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHarvestDate);
+                this.columnlocation = new global::System.Data.DataColumn("location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnlocation);
+                this.columntph = new global::System.Data.DataColumn("tph", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntph);
+                this.columnQtyJjg = new global::System.Data.DataColumn("QtyJjg", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQtyJjg);
+                this.columnQtyAngkut = new global::System.Data.DataColumn("QtyAngkut", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQtyAngkut);
+                this.columnRestan = new global::System.Data.DataColumn("Restan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRestan);
+                this.columnKodeKendaraan = new global::System.Data.DataColumn("KodeKendaraan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKodeKendaraan);
+                this.columnMandor = new global::System.Data.DataColumn("Mandor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMandor);
+                this.columndriver = new global::System.Data.DataColumn("driver", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndriver);
+                this.columnAchievement = new global::System.Data.DataColumn("Achievement", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAchievement);
+                this.columnHarvestDate.ReadOnly = true;
+                this.columnHarvestDate.MaxLength = 10;
+                this.columnlocation.AllowDBNull = false;
+                this.columnlocation.MaxLength = 20;
+                this.columntph.MaxLength = 20;
+                this.columnQtyJjg.ReadOnly = true;
+                this.columnQtyAngkut.ReadOnly = true;
+                this.columnRestan.ReadOnly = true;
+                this.columnKodeKendaraan.MaxLength = 50;
+                this.columnMandor.MaxLength = 30;
+                this.columndriver.ReadOnly = true;
+                this.columndriver.MaxLength = 1;
+                this.columnAchievement.AllowDBNull = false;
+                this.columnAchievement.MaxLength = 5;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIPANENVSANGKUTRow NewspReport_ANOMALIPANENVSANGKUTRow() {
+                return ((spReport_ANOMALIPANENVSANGKUTRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_ANOMALIPANENVSANGKUTRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_ANOMALIPANENVSANGKUTRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_ANOMALIPANENVSANGKUTRowChanged != null)) {
+                    this.spReport_ANOMALIPANENVSANGKUTRowChanged(this, new spReport_ANOMALIPANENVSANGKUTRowChangeEvent(((spReport_ANOMALIPANENVSANGKUTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_ANOMALIPANENVSANGKUTRowChanging != null)) {
+                    this.spReport_ANOMALIPANENVSANGKUTRowChanging(this, new spReport_ANOMALIPANENVSANGKUTRowChangeEvent(((spReport_ANOMALIPANENVSANGKUTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_ANOMALIPANENVSANGKUTRowDeleted != null)) {
+                    this.spReport_ANOMALIPANENVSANGKUTRowDeleted(this, new spReport_ANOMALIPANENVSANGKUTRowChangeEvent(((spReport_ANOMALIPANENVSANGKUTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_ANOMALIPANENVSANGKUTRowDeleting != null)) {
+                    this.spReport_ANOMALIPANENVSANGKUTRowDeleting(this, new spReport_ANOMALIPANENVSANGKUTRowChangeEvent(((spReport_ANOMALIPANENVSANGKUTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_ANOMALIPANENVSANGKUTRow(spReport_ANOMALIPANENVSANGKUTRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_ANOMALIPANENVSANGKUTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_HeaderDataTable : global::System.Data.TypedTableBase<spReport_HeaderRow> {
+            
+            private global::System.Data.DataColumn columnEstate;
+            
+            private global::System.Data.DataColumn columnCompany;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_HeaderDataTable() {
+                this.TableName = "spReport_Header";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_HeaderDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_HeaderDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EstateColumn {
+                get {
+                    return this.columnEstate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CompanyColumn {
+                get {
+                    return this.columnCompany;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_HeaderRow this[int index] {
+                get {
+                    return ((spReport_HeaderRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_HeaderRowChangeEventHandler spReport_HeaderRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_HeaderRowChangeEventHandler spReport_HeaderRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_HeaderRowChangeEventHandler spReport_HeaderRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_HeaderRowChangeEventHandler spReport_HeaderRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_HeaderRow(spReport_HeaderRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_HeaderRow AddspReport_HeaderRow(string Estate, string Company) {
+                spReport_HeaderRow rowspReport_HeaderRow = ((spReport_HeaderRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Estate,
+                        Company};
+                rowspReport_HeaderRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_HeaderRow);
+                return rowspReport_HeaderRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_HeaderDataTable cln = ((spReport_HeaderDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_HeaderDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnEstate = base.Columns["Estate"];
+                this.columnCompany = base.Columns["Company"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnEstate = new global::System.Data.DataColumn("Estate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstate);
+                this.columnCompany = new global::System.Data.DataColumn("Company", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCompany);
+                this.columnEstate.ReadOnly = true;
+                this.columnEstate.MaxLength = 57;
+                this.columnCompany.ReadOnly = true;
+                this.columnCompany.MaxLength = 57;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_HeaderRow NewspReport_HeaderRow() {
+                return ((spReport_HeaderRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_HeaderRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_HeaderRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_HeaderRowChanged != null)) {
+                    this.spReport_HeaderRowChanged(this, new spReport_HeaderRowChangeEvent(((spReport_HeaderRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_HeaderRowChanging != null)) {
+                    this.spReport_HeaderRowChanging(this, new spReport_HeaderRowChangeEvent(((spReport_HeaderRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_HeaderRowDeleted != null)) {
+                    this.spReport_HeaderRowDeleted(this, new spReport_HeaderRowChangeEvent(((spReport_HeaderRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_HeaderRowDeleting != null)) {
+                    this.spReport_HeaderRowDeleting(this, new spReport_HeaderRowChangeEvent(((spReport_HeaderRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_HeaderRow(spReport_HeaderRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_HeaderDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class spReport_SigningDataTable : global::System.Data.TypedTableBase<spReport_SigningRow> {
+            
+            private global::System.Data.DataColumn columnbacode;
+            
+            private global::System.Data.DataColumn columnDivisi;
+            
+            private global::System.Data.DataColumn columnNIKAMA;
+            
+            private global::System.Data.DataColumn columnAMA;
+            
+            private global::System.Data.DataColumn columnNIKMANAGER;
+            
+            private global::System.Data.DataColumn columnMANAGER;
+            
+            private global::System.Data.DataColumn columnNIKASKEP;
+            
+            private global::System.Data.DataColumn columnASKEP;
+            
+            private global::System.Data.DataColumn columnnik_asisten;
+            
+            private global::System.Data.DataColumn columnASISTEN;
+            
+            private global::System.Data.DataColumn columnForeman;
+            
+            private global::System.Data.DataColumn columnNik_Foreman;
+            
+            private global::System.Data.DataColumn columnNIKKraniDivisi;
+            
+            private global::System.Data.DataColumn columnKraniDivisi;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_SigningDataTable() {
+                this.TableName = "spReport_Signing";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_SigningDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected spReport_SigningDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn bacodeColumn {
+                get {
+                    return this.columnbacode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DivisiColumn {
+                get {
+                    return this.columnDivisi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NIKAMAColumn {
+                get {
+                    return this.columnNIKAMA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AMAColumn {
+                get {
+                    return this.columnAMA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NIKMANAGERColumn {
+                get {
+                    return this.columnNIKMANAGER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MANAGERColumn {
+                get {
+                    return this.columnMANAGER;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NIKASKEPColumn {
+                get {
+                    return this.columnNIKASKEP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ASKEPColumn {
+                get {
+                    return this.columnASKEP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nik_asistenColumn {
+                get {
+                    return this.columnnik_asisten;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ASISTENColumn {
+                get {
+                    return this.columnASISTEN;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ForemanColumn {
+                get {
+                    return this.columnForeman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Nik_ForemanColumn {
+                get {
+                    return this.columnNik_Foreman;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NIKKraniDivisiColumn {
+                get {
+                    return this.columnNIKKraniDivisi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn KraniDivisiColumn {
+                get {
+                    return this.columnKraniDivisi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_SigningRow this[int index] {
+                get {
+                    return ((spReport_SigningRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_SigningRowChangeEventHandler spReport_SigningRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_SigningRowChangeEventHandler spReport_SigningRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_SigningRowChangeEventHandler spReport_SigningRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event spReport_SigningRowChangeEventHandler spReport_SigningRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddspReport_SigningRow(spReport_SigningRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_SigningRow AddspReport_SigningRow(string bacode, string Divisi, string NIKAMA, string AMA, string NIKMANAGER, string MANAGER, string NIKASKEP, string ASKEP, string nik_asisten, string ASISTEN, string Foreman, string Nik_Foreman, string NIKKraniDivisi, string KraniDivisi) {
+                spReport_SigningRow rowspReport_SigningRow = ((spReport_SigningRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        bacode,
+                        Divisi,
+                        NIKAMA,
+                        AMA,
+                        NIKMANAGER,
+                        MANAGER,
+                        NIKASKEP,
+                        ASKEP,
+                        nik_asisten,
+                        ASISTEN,
+                        Foreman,
+                        Nik_Foreman,
+                        NIKKraniDivisi,
+                        KraniDivisi};
+                rowspReport_SigningRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowspReport_SigningRow);
+                return rowspReport_SigningRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                spReport_SigningDataTable cln = ((spReport_SigningDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new spReport_SigningDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnbacode = base.Columns["bacode"];
+                this.columnDivisi = base.Columns["Divisi"];
+                this.columnNIKAMA = base.Columns["NIKAMA"];
+                this.columnAMA = base.Columns["AMA"];
+                this.columnNIKMANAGER = base.Columns["NIKMANAGER"];
+                this.columnMANAGER = base.Columns["MANAGER"];
+                this.columnNIKASKEP = base.Columns["NIKASKEP"];
+                this.columnASKEP = base.Columns["ASKEP"];
+                this.columnnik_asisten = base.Columns["nik_asisten"];
+                this.columnASISTEN = base.Columns["ASISTEN"];
+                this.columnForeman = base.Columns["Foreman"];
+                this.columnNik_Foreman = base.Columns["Nik_Foreman"];
+                this.columnNIKKraniDivisi = base.Columns["NIKKraniDivisi"];
+                this.columnKraniDivisi = base.Columns["KraniDivisi"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnbacode = new global::System.Data.DataColumn("bacode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbacode);
+                this.columnDivisi = new global::System.Data.DataColumn("Divisi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDivisi);
+                this.columnNIKAMA = new global::System.Data.DataColumn("NIKAMA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIKAMA);
+                this.columnAMA = new global::System.Data.DataColumn("AMA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAMA);
+                this.columnNIKMANAGER = new global::System.Data.DataColumn("NIKMANAGER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIKMANAGER);
+                this.columnMANAGER = new global::System.Data.DataColumn("MANAGER", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMANAGER);
+                this.columnNIKASKEP = new global::System.Data.DataColumn("NIKASKEP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIKASKEP);
+                this.columnASKEP = new global::System.Data.DataColumn("ASKEP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASKEP);
+                this.columnnik_asisten = new global::System.Data.DataColumn("nik_asisten", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnik_asisten);
+                this.columnASISTEN = new global::System.Data.DataColumn("ASISTEN", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnASISTEN);
+                this.columnForeman = new global::System.Data.DataColumn("Foreman", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnForeman);
+                this.columnNik_Foreman = new global::System.Data.DataColumn("Nik_Foreman", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNik_Foreman);
+                this.columnNIKKraniDivisi = new global::System.Data.DataColumn("NIKKraniDivisi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNIKKraniDivisi);
+                this.columnKraniDivisi = new global::System.Data.DataColumn("KraniDivisi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKraniDivisi);
+                this.columnbacode.AllowDBNull = false;
+                this.columnbacode.MaxLength = 4;
+                this.columnDivisi.AllowDBNull = false;
+                this.columnDivisi.MaxLength = 50;
+                this.columnNIKAMA.ReadOnly = true;
+                this.columnNIKAMA.MaxLength = 1;
+                this.columnAMA.ReadOnly = true;
+                this.columnAMA.MaxLength = 50;
+                this.columnNIKMANAGER.ReadOnly = true;
+                this.columnNIKMANAGER.MaxLength = 1;
+                this.columnMANAGER.ReadOnly = true;
+                this.columnMANAGER.MaxLength = 50;
+                this.columnNIKASKEP.ReadOnly = true;
+                this.columnNIKASKEP.MaxLength = 1;
+                this.columnASKEP.ReadOnly = true;
+                this.columnASKEP.MaxLength = 50;
+                this.columnnik_asisten.MaxLength = 11;
+                this.columnASISTEN.ReadOnly = true;
+                this.columnASISTEN.MaxLength = 50;
+                this.columnForeman.MaxLength = 50;
+                this.columnNik_Foreman.MaxLength = 50;
+                this.columnNIKKraniDivisi.AllowDBNull = false;
+                this.columnNIKKraniDivisi.MaxLength = 10;
+                this.columnKraniDivisi.AllowDBNull = false;
+                this.columnKraniDivisi.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_SigningRow NewspReport_SigningRow() {
+                return ((spReport_SigningRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new spReport_SigningRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(spReport_SigningRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.spReport_SigningRowChanged != null)) {
+                    this.spReport_SigningRowChanged(this, new spReport_SigningRowChangeEvent(((spReport_SigningRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.spReport_SigningRowChanging != null)) {
+                    this.spReport_SigningRowChanging(this, new spReport_SigningRowChangeEvent(((spReport_SigningRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.spReport_SigningRowDeleted != null)) {
+                    this.spReport_SigningRowDeleted(this, new spReport_SigningRowChangeEvent(((spReport_SigningRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.spReport_SigningRowDeleting != null)) {
+                    this.spReport_SigningRowDeleting(this, new spReport_SigningRowChangeEvent(((spReport_SigningRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovespReport_SigningRow(spReport_SigningRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                HMSDataSet ds = new HMSDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "spReport_SigningDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class SPS_CETAK_BUKUPANEN_HEADERRow : global::System.Data.DataRow {
@@ -6766,216 +11198,6 @@ namespace IndoAgri.Report.Web.DataSets {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetQtyNull() {
                 this[this.tableSPS_Cetak_BukuPanenItem_Quality.QtyColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class SPS_CETAK_BKMHKRow : global::System.Data.DataRow {
-            
-            private SPS_CETAK_BKMHKDataTable tableSPS_CETAK_BKMHK;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SPS_CETAK_BKMHKRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSPS_CETAK_BKMHK = ((SPS_CETAK_BKMHKDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public long Id {
-                get {
-                    return ((long)(this[this.tableSPS_CETAK_BKMHK.IdColumn]));
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string BKMNumber {
-                get {
-                    try {
-                        return ((string)(this[this.tableSPS_CETAK_BKMHK.BKMNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BKMNumber\' in table \'SPS_CETAK_BKMHK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.BKMNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime BKMDate {
-                get {
-                    return ((global::System.DateTime)(this[this.tableSPS_CETAK_BKMHK.BKMDateColumn]));
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.BKMDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Division {
-                get {
-                    return ((string)(this[this.tableSPS_CETAK_BKMHK.DivisionColumn]));
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.DivisionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Gang {
-                get {
-                    return ((string)(this[this.tableSPS_CETAK_BKMHK.GangColumn]));
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.GangColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Estate {
-                get {
-                    return ((string)(this[this.tableSPS_CETAK_BKMHK.EstateColumn]));
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.EstateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nik_Foreman {
-                get {
-                    try {
-                        return ((string)(this[this.tableSPS_CETAK_BKMHK.Nik_ForemanColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nik_Foreman\' in table \'SPS_CETAK_BKMHK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.Nik_ForemanColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Foreman {
-                get {
-                    try {
-                        return ((string)(this[this.tableSPS_CETAK_BKMHK.ForemanColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Foreman\' in table \'SPS_CETAK_BKMHK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.ForemanColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Nik_Clerk {
-                get {
-                    try {
-                        return ((string)(this[this.tableSPS_CETAK_BKMHK.Nik_ClerkColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Nik_Clerk\' in table \'SPS_CETAK_BKMHK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.Nik_ClerkColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Clerk {
-                get {
-                    try {
-                        return ((string)(this[this.tableSPS_CETAK_BKMHK.ClerkColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Clerk\' in table \'SPS_CETAK_BKMHK\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSPS_CETAK_BKMHK.ClerkColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsBKMNumberNull() {
-                return this.IsNull(this.tableSPS_CETAK_BKMHK.BKMNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetBKMNumberNull() {
-                this[this.tableSPS_CETAK_BKMHK.BKMNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNik_ForemanNull() {
-                return this.IsNull(this.tableSPS_CETAK_BKMHK.Nik_ForemanColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNik_ForemanNull() {
-                this[this.tableSPS_CETAK_BKMHK.Nik_ForemanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsForemanNull() {
-                return this.IsNull(this.tableSPS_CETAK_BKMHK.ForemanColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetForemanNull() {
-                this[this.tableSPS_CETAK_BKMHK.ForemanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsNik_ClerkNull() {
-                return this.IsNull(this.tableSPS_CETAK_BKMHK.Nik_ClerkColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetNik_ClerkNull() {
-                this[this.tableSPS_CETAK_BKMHK.Nik_ClerkColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsClerkNull() {
-                return this.IsNull(this.tableSPS_CETAK_BKMHK.ClerkColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetClerkNull() {
-                this[this.tableSPS_CETAK_BKMHK.ClerkColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9853,6 +14075,3301 @@ namespace IndoAgri.Report.Web.DataSets {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SPS_CETAK_BKMHK_OnlineRow : global::System.Data.DataRow {
+            
+            private SPS_CETAK_BKMHK_OnlineDataTable tableSPS_CETAK_BKMHK_Online;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal SPS_CETAK_BKMHK_OnlineRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSPS_CETAK_BKMHK_Online = ((SPS_CETAK_BKMHK_OnlineDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string BKM_NO {
+                get {
+                    try {
+                        return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.BKM_NOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BKM_NO\' in table \'SPS_CETAK_BKMHK_Online\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.BKM_NOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime BKM_DATE {
+                get {
+                    return ((global::System.DateTime)(this[this.tableSPS_CETAK_BKMHK_Online.BKM_DATEColumn]));
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.BKM_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DIVISION {
+                get {
+                    return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.DIVISIONColumn]));
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.DIVISIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string GANG {
+                get {
+                    return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.GANGColumn]));
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.GANGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ESTATE {
+                get {
+                    return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.ESTATEColumn]));
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.ESTATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string COMPANY_CODE {
+                get {
+                    try {
+                        return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.COMPANY_CODEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'COMPANY_CODE\' in table \'SPS_CETAK_BKMHK_Online\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.COMPANY_CODEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NIK_FOREMAN {
+                get {
+                    try {
+                        return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.NIK_FOREMANColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NIK_FOREMAN\' in table \'SPS_CETAK_BKMHK_Online\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.NIK_FOREMANColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FOREMAN {
+                get {
+                    try {
+                        return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.FOREMANColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FOREMAN\' in table \'SPS_CETAK_BKMHK_Online\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.FOREMANColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NIK_CLERK {
+                get {
+                    try {
+                        return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.NIK_CLERKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NIK_CLERK\' in table \'SPS_CETAK_BKMHK_Online\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.NIK_CLERKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CLERK {
+                get {
+                    try {
+                        return ((string)(this[this.tableSPS_CETAK_BKMHK_Online.CLERKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CLERK\' in table \'SPS_CETAK_BKMHK_Online\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSPS_CETAK_BKMHK_Online.CLERKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBKM_NONull() {
+                return this.IsNull(this.tableSPS_CETAK_BKMHK_Online.BKM_NOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBKM_NONull() {
+                this[this.tableSPS_CETAK_BKMHK_Online.BKM_NOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCOMPANY_CODENull() {
+                return this.IsNull(this.tableSPS_CETAK_BKMHK_Online.COMPANY_CODEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCOMPANY_CODENull() {
+                this[this.tableSPS_CETAK_BKMHK_Online.COMPANY_CODEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNIK_FOREMANNull() {
+                return this.IsNull(this.tableSPS_CETAK_BKMHK_Online.NIK_FOREMANColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNIK_FOREMANNull() {
+                this[this.tableSPS_CETAK_BKMHK_Online.NIK_FOREMANColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFOREMANNull() {
+                return this.IsNull(this.tableSPS_CETAK_BKMHK_Online.FOREMANColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFOREMANNull() {
+                this[this.tableSPS_CETAK_BKMHK_Online.FOREMANColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNIK_CLERKNull() {
+                return this.IsNull(this.tableSPS_CETAK_BKMHK_Online.NIK_CLERKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNIK_CLERKNull() {
+                this[this.tableSPS_CETAK_BKMHK_Online.NIK_CLERKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCLERKNull() {
+                return this.IsNull(this.tableSPS_CETAK_BKMHK_Online.CLERKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCLERKNull() {
+                this[this.tableSPS_CETAK_BKMHK_Online.CLERKColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_Cetak_BKM_HKRow : global::System.Data.DataRow {
+            
+            private spReport_Cetak_BKM_HKDataTable tablespReport_Cetak_BKM_HK;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_Cetak_BKM_HKRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_Cetak_BKM_HK = ((spReport_Cetak_BKM_HKDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public long Id {
+                get {
+                    return ((long)(this[this.tablespReport_Cetak_BKM_HK.IdColumn]));
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.IdColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string BKMNumber {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BKM_HK.BKMNumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BKMNumber\' in table \'spReport_Cetak_BKM_HK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.BKMNumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime BKMDate {
+                get {
+                    return ((global::System.DateTime)(this[this.tablespReport_Cetak_BKM_HK.BKMDateColumn]));
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.BKMDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Division {
+                get {
+                    return ((string)(this[this.tablespReport_Cetak_BKM_HK.DivisionColumn]));
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.DivisionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Gang {
+                get {
+                    return ((string)(this[this.tablespReport_Cetak_BKM_HK.GangColumn]));
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.GangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Estate {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BKM_HK.EstateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Estate\' in table \'spReport_Cetak_BKM_HK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.EstateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Company {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BKM_HK.CompanyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Company\' in table \'spReport_Cetak_BKM_HK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.CompanyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nik_Foreman {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BKM_HK.Nik_ForemanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nik_Foreman\' in table \'spReport_Cetak_BKM_HK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.Nik_ForemanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Foreman {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BKM_HK.ForemanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Foreman\' in table \'spReport_Cetak_BKM_HK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.ForemanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nik_Clerk {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BKM_HK.Nik_ClerkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nik_Clerk\' in table \'spReport_Cetak_BKM_HK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.Nik_ClerkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Clerk {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BKM_HK.ClerkColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Clerk\' in table \'spReport_Cetak_BKM_HK\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BKM_HK.ClerkColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBKMNumberNull() {
+                return this.IsNull(this.tablespReport_Cetak_BKM_HK.BKMNumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBKMNumberNull() {
+                this[this.tablespReport_Cetak_BKM_HK.BKMNumberColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEstateNull() {
+                return this.IsNull(this.tablespReport_Cetak_BKM_HK.EstateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEstateNull() {
+                this[this.tablespReport_Cetak_BKM_HK.EstateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCompanyNull() {
+                return this.IsNull(this.tablespReport_Cetak_BKM_HK.CompanyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCompanyNull() {
+                this[this.tablespReport_Cetak_BKM_HK.CompanyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNik_ForemanNull() {
+                return this.IsNull(this.tablespReport_Cetak_BKM_HK.Nik_ForemanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNik_ForemanNull() {
+                this[this.tablespReport_Cetak_BKM_HK.Nik_ForemanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsForemanNull() {
+                return this.IsNull(this.tablespReport_Cetak_BKM_HK.ForemanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetForemanNull() {
+                this[this.tablespReport_Cetak_BKM_HK.ForemanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNik_ClerkNull() {
+                return this.IsNull(this.tablespReport_Cetak_BKM_HK.Nik_ClerkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNik_ClerkNull() {
+                this[this.tablespReport_Cetak_BKM_HK.Nik_ClerkColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsClerkNull() {
+                return this.IsNull(this.tablespReport_Cetak_BKM_HK.ClerkColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetClerkNull() {
+                this[this.tablespReport_Cetak_BKM_HK.ClerkColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_CETAK_BKMHK_DETAIL_OnlineRow : global::System.Data.DataRow {
+            
+            private spReport_CETAK_BKMHK_DETAIL_OnlineDataTable tablespReport_CETAK_BKMHK_DETAIL_Online;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_CETAK_BKMHK_DETAIL_OnlineRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_CETAK_BKMHK_DETAIL_Online = ((spReport_CETAK_BKMHK_DETAIL_OnlineDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NIK {
+                get {
+                    return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.NIKColumn]));
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.NIKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string AbsentType {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.AbsentTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AbsentType\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.AbsentTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Type {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.TypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Type\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.TypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ActivityType {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.ActivityTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActivityType\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\'" +
+                                " is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.ActivityTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Block {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.BlockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Block\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.BlockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Mandays {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.MandaysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mandays\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.MandaysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Output {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.OutputColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Output\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.OutputColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Uom {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.UomColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Uom\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.UomColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string JobPos {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.JobPosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'JobPos\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.JobPosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Premi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.PremiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Premi\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.PremiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Penalty {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.PenaltyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Penalty\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.PenaltyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime CreatedDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.CreatedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedDate\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.CreatedDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Overtime {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.OvertimeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Overtime\' in table \'spReport_CETAK_BKMHK_DETAIL_Online\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.OvertimeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNAMENull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAbsentTypeNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.AbsentTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAbsentTypeNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.AbsentTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTypeNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.TypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTypeNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsActivityTypeNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.ActivityTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetActivityTypeNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.ActivityTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBlockNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.BlockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBlockNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.BlockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMandaysNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.MandaysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMandaysNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.MandaysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOutputNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.OutputColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOutputNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.OutputColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsUomNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.UomColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetUomNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.UomColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobPosNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.JobPosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobPosNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.JobPosColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPremiNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.PremiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPremiNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.PremiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPenaltyNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.PenaltyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPenaltyNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.PenaltyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCreatedDateNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.CreatedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCreatedDateNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.CreatedDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOvertimeNull() {
+                return this.IsNull(this.tablespReport_CETAK_BKMHK_DETAIL_Online.OvertimeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOvertimeNull() {
+                this[this.tablespReport_CETAK_BKMHK_DETAIL_Online.OvertimeColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_CETAK_BUKUPANEN_HEADER_OnlineRow : global::System.Data.DataRow {
+            
+            private spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable tablespReport_CETAK_BUKUPANEN_HEADER_Online;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_CETAK_BUKUPANEN_HEADER_OnlineRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_CETAK_BUKUPANEN_HEADER_Online = ((spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DIVISION {
+                get {
+                    return ((string)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.DIVISIONColumn]));
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.DIVISIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string GANG {
+                get {
+                    return ((string)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.GANGColumn]));
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.GANGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime HarvestDate {
+                get {
+                    return ((global::System.DateTime)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.HarvestDateColumn]));
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.HarvestDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ESTATE {
+                get {
+                    return ((string)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.ESTATEColumn]));
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.ESTATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string BKMNo {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.BKMNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BKMNo\' in table \'spReport_CETAK_BUKUPANEN_HEADER_Online\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.BKMNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Location {
+                get {
+                    return ((string)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.LocationColumn]));
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.LocationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Harvested {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.HarvestedColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Harvested\' in table \'spReport_CETAK_BUKUPANEN_HEADER_Online" +
+                                "\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.HarvestedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MANDOR {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.MANDORColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MANDOR\' in table \'spReport_CETAK_BUKUPANEN_HEADER_Online\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.MANDORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CLERK {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.CLERKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CLERK\' in table \'spReport_CETAK_BUKUPANEN_HEADER_Online\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.CLERKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBKMNoNull() {
+                return this.IsNull(this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.BKMNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBKMNoNull() {
+                this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.BKMNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHarvestedNull() {
+                return this.IsNull(this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.HarvestedColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHarvestedNull() {
+                this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.HarvestedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMANDORNull() {
+                return this.IsNull(this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.MANDORColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMANDORNull() {
+                this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.MANDORColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCLERKNull() {
+                return this.IsNull(this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.CLERKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCLERKNull() {
+                this[this.tablespReport_CETAK_BUKUPANEN_HEADER_Online.CLERKColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_Cetak_BukuPanenItem_Rev1Row : global::System.Data.DataRow {
+            
+            private spReport_Cetak_BukuPanenItem_Rev1DataTable tablespReport_Cetak_BukuPanenItem_Rev1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_Cetak_BukuPanenItem_Rev1Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_Cetak_BukuPanenItem_Rev1 = ((spReport_Cetak_BukuPanenItem_Rev1DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Location {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.LocationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Location\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.LocationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NikHarvester {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.NikHarvesterColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NikHarvester\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' " +
+                                "is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.NikHarvesterColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Name {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal HK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HK\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal HA {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HA\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Gang {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.GangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gang\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.GangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime HarvestDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HarvestDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HarvestDate\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HarvestDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime CreatedDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.CreatedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CreatedDate\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.CreatedDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int JjgDinas {
+                get {
+                    try {
+                        return ((int)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.JjgDinasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'JjgDinas\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.JjgDinasColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int OverBasic {
+                get {
+                    try {
+                        return ((int)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.OverBasicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OverBasic\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.OverBasicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int BlockBasic {
+                get {
+                    try {
+                        return ((int)(this[this.tablespReport_Cetak_BukuPanenItem_Rev1.BlockBasicColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BlockBasic\' in table \'spReport_Cetak_BukuPanenItem_Rev1\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Cetak_BukuPanenItem_Rev1.BlockBasicColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLocationNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.LocationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLocationNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.LocationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNikHarvesterNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.NikHarvesterColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNikHarvesterNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.NikHarvesterColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNameNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHKNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.HKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHKNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHANull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.HAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHANull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGangNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.GangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGangNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.GangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHarvestDateNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.HarvestDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHarvestDateNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.HarvestDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCreatedDateNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.CreatedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCreatedDateNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.CreatedDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJjgDinasNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.JjgDinasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJjgDinasNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.JjgDinasColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOverBasicNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.OverBasicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOverBasicNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.OverBasicColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBlockBasicNull() {
+                return this.IsNull(this.tablespReport_Cetak_BukuPanenItem_Rev1.BlockBasicColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBlockBasicNull() {
+                this[this.tablespReport_Cetak_BukuPanenItem_Rev1.BlockBasicColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_POTONGBUAH_HDRRow : global::System.Data.DataRow {
+            
+            private spReport_POTONGBUAH_HDRDataTable tablespReport_POTONGBUAH_HDR;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_POTONGBUAH_HDRRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_POTONGBUAH_HDR = ((spReport_POTONGBUAH_HDRDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nik {
+                get {
+                    return ((string)(this[this.tablespReport_POTONGBUAH_HDR.NikColumn]));
+                }
+                set {
+                    this[this.tablespReport_POTONGBUAH_HDR.NikColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Start {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespReport_POTONGBUAH_HDR.StartColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Start\' in table \'spReport_POTONGBUAH_HDR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_POTONGBUAH_HDR.StartColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Finish {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespReport_POTONGBUAH_HDR.FinishColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Finish\' in table \'spReport_POTONGBUAH_HDR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_POTONGBUAH_HDR.FinishColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Name {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_POTONGBUAH_HDR.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'spReport_POTONGBUAH_HDR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_POTONGBUAH_HDR.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Gang {
+                get {
+                    return ((string)(this[this.tablespReport_POTONGBUAH_HDR.GangColumn]));
+                }
+                set {
+                    this[this.tablespReport_POTONGBUAH_HDR.GangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsStartNull() {
+                return this.IsNull(this.tablespReport_POTONGBUAH_HDR.StartColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetStartNull() {
+                this[this.tablespReport_POTONGBUAH_HDR.StartColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFinishNull() {
+                return this.IsNull(this.tablespReport_POTONGBUAH_HDR.FinishColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFinishNull() {
+                this[this.tablespReport_POTONGBUAH_HDR.FinishColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tablespReport_POTONGBUAH_HDR.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNameNull() {
+                this[this.tablespReport_POTONGBUAH_HDR.NameColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_ANOMALIRow : global::System.Data.DataRow {
+            
+            private spReport_ANOMALIDataTable tablespReport_ANOMALI;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_ANOMALIRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_ANOMALI = ((spReport_ANOMALIDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Gang {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.GangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gang\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.GangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nik {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.NikColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nik\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.NikColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int MandorOrKeani {
+                get {
+                    try {
+                        return ((int)(this[this.tablespReport_ANOMALI.MandorOrKeaniColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MandorOrKeani\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.MandorOrKeaniColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Name {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string AbsentType {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.AbsentTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AbsentType\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.AbsentTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Mandays {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_ANOMALI.MandaysColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mandays\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.MandaysColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Block {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.BlockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Block\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.BlockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Output {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.OutputColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Output\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.OutputColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Location {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.LocationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Location\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.LocationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string FFB {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.FFBColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FFB\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.FFBColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string LooseFruit {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALI.LooseFruitColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'LooseFruit\' in table \'spReport_ANOMALI\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALI.LooseFruitColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGangNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.GangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGangNull() {
+                this[this.tablespReport_ANOMALI.GangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNikNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.NikColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNikNull() {
+                this[this.tablespReport_ANOMALI.NikColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMandorOrKeaniNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.MandorOrKeaniColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMandorOrKeaniNull() {
+                this[this.tablespReport_ANOMALI.MandorOrKeaniColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNameNull() {
+                this[this.tablespReport_ANOMALI.NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAbsentTypeNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.AbsentTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAbsentTypeNull() {
+                this[this.tablespReport_ANOMALI.AbsentTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMandaysNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.MandaysColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMandaysNull() {
+                this[this.tablespReport_ANOMALI.MandaysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBlockNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.BlockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBlockNull() {
+                this[this.tablespReport_ANOMALI.BlockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOutputNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.OutputColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOutputNull() {
+                this[this.tablespReport_ANOMALI.OutputColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLocationNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.LocationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLocationNull() {
+                this[this.tablespReport_ANOMALI.LocationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsFFBNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.FFBColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetFFBNull() {
+                this[this.tablespReport_ANOMALI.FFBColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsLooseFruitNull() {
+                return this.IsNull(this.tablespReport_ANOMALI.LooseFruitColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetLooseFruitNull() {
+                this[this.tablespReport_ANOMALI.LooseFruitColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_PrestasiOutputHKDivisiRow : global::System.Data.DataRow {
+            
+            private spReport_PrestasiOutputHKDivisiDataTable tablespReport_PrestasiOutputHKDivisi;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_PrestasiOutputHKDivisiRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_PrestasiOutputHKDivisi = ((spReport_PrestasiOutputHKDivisiDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string gang {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.gangColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'gang\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.gangColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ActivityType {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.ActivityTypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActivityType\' in table \'spReport_PrestasiOutputHKDivisi\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.ActivityTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ActivityName {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.ActivityNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ActivityName\' in table \'spReport_PrestasiOutputHKDivisi\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.ActivityNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Block {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.BlockColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Block\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.BlockColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime BKMDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablespReport_PrestasiOutputHKDivisi.BKMDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'BKMDate\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.BKMDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Hectare {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.HectareColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Hectare\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.HectareColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int PlantingYear {
+                get {
+                    try {
+                        return ((int)(this[this.tablespReport_PrestasiOutputHKDivisi.PlantingYearColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PlantingYear\' in table \'spReport_PrestasiOutputHKDivisi\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.PlantingYearColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Uom {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.UomColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Uom\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.UomColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal OutputHi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.OutputHiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OutputHi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.OutputHiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Outputsdi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.OutputsdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Outputsdi\' in table \'spReport_PrestasiOutputHKDivisi\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.OutputsdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Outputtotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.OutputtotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Outputtotal\' in table \'spReport_PrestasiOutputHKDivisi\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.OutputtotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal HKHi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.HKHiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HKHi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.HKHiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal HKSdi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.HKSdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HKSdi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.HKSdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal HKTotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.HKTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HKTotal\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.HKTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal PremiHi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.PremiHiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PremiHi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.PremiHiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal premiSdi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.premiSdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'premiSdi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.premiSdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal PremiTotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.PremiTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PremiTotal\' in table \'spReport_PrestasiOutputHKDivisi\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.PremiTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal OvertimeHi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeHiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OvertimeHi\' in table \'spReport_PrestasiOutputHKDivisi\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeHiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal OvertimeSdi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeSdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OvertimeSdi\' in table \'spReport_PrestasiOutputHKDivisi\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeSdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal OvertimeTotal {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeTotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'OvertimeTotal\' in table \'spReport_PrestasiOutputHKDivisi\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeTotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Matnr {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.MatnrColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Matnr\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.MatnrColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MatName {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.MatNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MatName\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.MatNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MatUom {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_PrestasiOutputHKDivisi.MatUomColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MatUom\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.MatUomColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal MatHi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.MatHiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MatHi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.MatHiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal MatSdi {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_PrestasiOutputHKDivisi.MatSdiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MatSdi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.MatSdiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int rotasi {
+                get {
+                    try {
+                        return ((int)(this[this.tablespReport_PrestasiOutputHKDivisi.rotasiColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'rotasi\' in table \'spReport_PrestasiOutputHKDivisi\' is DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_PrestasiOutputHKDivisi.rotasiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsgangNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.gangColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetgangNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.gangColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsActivityTypeNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.ActivityTypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetActivityTypeNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.ActivityTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsActivityNameNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.ActivityNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetActivityNameNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.ActivityNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBlockNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.BlockColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBlockNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.BlockColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBKMDateNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.BKMDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBKMDateNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.BKMDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHectareNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.HectareColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHectareNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.HectareColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPlantingYearNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.PlantingYearColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPlantingYearNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.PlantingYearColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsUomNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.UomColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetUomNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.UomColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOutputHiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.OutputHiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOutputHiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.OutputHiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOutputsdiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.OutputsdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOutputsdiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.OutputsdiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOutputtotalNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.OutputtotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOutputtotalNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.OutputtotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHKHiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.HKHiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHKHiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.HKHiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHKSdiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.HKSdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHKSdiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.HKSdiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHKTotalNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.HKTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHKTotalNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.HKTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPremiHiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.PremiHiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPremiHiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.PremiHiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IspremiSdiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.premiSdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetpremiSdiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.premiSdiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPremiTotalNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.PremiTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPremiTotalNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.PremiTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOvertimeHiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.OvertimeHiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOvertimeHiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeHiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOvertimeSdiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.OvertimeSdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOvertimeSdiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeSdiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsOvertimeTotalNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.OvertimeTotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetOvertimeTotalNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.OvertimeTotalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMatnrNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.MatnrColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMatnrNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.MatnrColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMatNameNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.MatNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMatNameNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.MatNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMatUomNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.MatUomColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMatUomNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.MatUomColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMatHiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.MatHiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMatHiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.MatHiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMatSdiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.MatSdiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMatSdiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.MatSdiColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsrotasiNull() {
+                return this.IsNull(this.tablespReport_PrestasiOutputHKDivisi.rotasiColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetrotasiNull() {
+                this[this.tablespReport_PrestasiOutputHKDivisi.rotasiColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_ANOMALIPANENVSANGKUTRow : global::System.Data.DataRow {
+            
+            private spReport_ANOMALIPANENVSANGKUTDataTable tablespReport_ANOMALIPANENVSANGKUT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_ANOMALIPANENVSANGKUTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_ANOMALIPANENVSANGKUT = ((spReport_ANOMALIPANENVSANGKUTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string HarvestDate {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALIPANENVSANGKUT.HarvestDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HarvestDate\' in table \'spReport_ANOMALIPANENVSANGKUT\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.HarvestDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string location {
+                get {
+                    return ((string)(this[this.tablespReport_ANOMALIPANENVSANGKUT.locationColumn]));
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.locationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string tph {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALIPANENVSANGKUT.tphColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'tph\' in table \'spReport_ANOMALIPANENVSANGKUT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.tphColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal QtyJjg {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_ANOMALIPANENVSANGKUT.QtyJjgColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QtyJjg\' in table \'spReport_ANOMALIPANENVSANGKUT\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.QtyJjgColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal QtyAngkut {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_ANOMALIPANENVSANGKUT.QtyAngkutColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QtyAngkut\' in table \'spReport_ANOMALIPANENVSANGKUT\' is DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.QtyAngkutColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Restan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablespReport_ANOMALIPANENVSANGKUT.RestanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Restan\' in table \'spReport_ANOMALIPANENVSANGKUT\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.RestanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string KodeKendaraan {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALIPANENVSANGKUT.KodeKendaraanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'KodeKendaraan\' in table \'spReport_ANOMALIPANENVSANGKUT\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.KodeKendaraanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Mandor {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALIPANENVSANGKUT.MandorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mandor\' in table \'spReport_ANOMALIPANENVSANGKUT\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.MandorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string driver {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_ANOMALIPANENVSANGKUT.driverColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'driver\' in table \'spReport_ANOMALIPANENVSANGKUT\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.driverColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Achievement {
+                get {
+                    return ((string)(this[this.tablespReport_ANOMALIPANENVSANGKUT.AchievementColumn]));
+                }
+                set {
+                    this[this.tablespReport_ANOMALIPANENVSANGKUT.AchievementColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsHarvestDateNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.HarvestDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetHarvestDateNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.HarvestDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IstphNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.tphColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SettphNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.tphColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQtyJjgNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.QtyJjgColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQtyJjgNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.QtyJjgColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsQtyAngkutNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.QtyAngkutColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetQtyAngkutNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.QtyAngkutColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRestanNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.RestanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRestanNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.RestanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsKodeKendaraanNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.KodeKendaraanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetKodeKendaraanNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.KodeKendaraanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMandorNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.MandorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMandorNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.MandorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdriverNull() {
+                return this.IsNull(this.tablespReport_ANOMALIPANENVSANGKUT.driverColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdriverNull() {
+                this[this.tablespReport_ANOMALIPANENVSANGKUT.driverColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_HeaderRow : global::System.Data.DataRow {
+            
+            private spReport_HeaderDataTable tablespReport_Header;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_HeaderRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_Header = ((spReport_HeaderDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Estate {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Header.EstateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Estate\' in table \'spReport_Header\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Header.EstateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Company {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Header.CompanyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Company\' in table \'spReport_Header\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Header.CompanyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEstateNull() {
+                return this.IsNull(this.tablespReport_Header.EstateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEstateNull() {
+                this[this.tablespReport_Header.EstateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCompanyNull() {
+                return this.IsNull(this.tablespReport_Header.CompanyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCompanyNull() {
+                this[this.tablespReport_Header.CompanyColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class spReport_SigningRow : global::System.Data.DataRow {
+            
+            private spReport_SigningDataTable tablespReport_Signing;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal spReport_SigningRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablespReport_Signing = ((spReport_SigningDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string bacode {
+                get {
+                    return ((string)(this[this.tablespReport_Signing.bacodeColumn]));
+                }
+                set {
+                    this[this.tablespReport_Signing.bacodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Divisi {
+                get {
+                    return ((string)(this[this.tablespReport_Signing.DivisiColumn]));
+                }
+                set {
+                    this[this.tablespReport_Signing.DivisiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NIKAMA {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.NIKAMAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NIKAMA\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.NIKAMAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string AMA {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.AMAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'AMA\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.AMAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NIKMANAGER {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.NIKMANAGERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NIKMANAGER\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.NIKMANAGERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MANAGER {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.MANAGERColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MANAGER\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.MANAGERColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NIKASKEP {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.NIKASKEPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NIKASKEP\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.NIKASKEPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ASKEP {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.ASKEPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASKEP\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.ASKEPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nik_asisten {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.nik_asistenColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'nik_asisten\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.nik_asistenColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ASISTEN {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.ASISTENColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ASISTEN\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.ASISTENColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Foreman {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.ForemanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Foreman\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.ForemanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Nik_Foreman {
+                get {
+                    try {
+                        return ((string)(this[this.tablespReport_Signing.Nik_ForemanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nik_Foreman\' in table \'spReport_Signing\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablespReport_Signing.Nik_ForemanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NIKKraniDivisi {
+                get {
+                    return ((string)(this[this.tablespReport_Signing.NIKKraniDivisiColumn]));
+                }
+                set {
+                    this[this.tablespReport_Signing.NIKKraniDivisiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string KraniDivisi {
+                get {
+                    return ((string)(this[this.tablespReport_Signing.KraniDivisiColumn]));
+                }
+                set {
+                    this[this.tablespReport_Signing.KraniDivisiColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNIKAMANull() {
+                return this.IsNull(this.tablespReport_Signing.NIKAMAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNIKAMANull() {
+                this[this.tablespReport_Signing.NIKAMAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAMANull() {
+                return this.IsNull(this.tablespReport_Signing.AMAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAMANull() {
+                this[this.tablespReport_Signing.AMAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNIKMANAGERNull() {
+                return this.IsNull(this.tablespReport_Signing.NIKMANAGERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNIKMANAGERNull() {
+                this[this.tablespReport_Signing.NIKMANAGERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsMANAGERNull() {
+                return this.IsNull(this.tablespReport_Signing.MANAGERColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetMANAGERNull() {
+                this[this.tablespReport_Signing.MANAGERColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNIKASKEPNull() {
+                return this.IsNull(this.tablespReport_Signing.NIKASKEPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNIKASKEPNull() {
+                this[this.tablespReport_Signing.NIKASKEPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsASKEPNull() {
+                return this.IsNull(this.tablespReport_Signing.ASKEPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetASKEPNull() {
+                this[this.tablespReport_Signing.ASKEPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isnik_asistenNull() {
+                return this.IsNull(this.tablespReport_Signing.nik_asistenColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setnik_asistenNull() {
+                this[this.tablespReport_Signing.nik_asistenColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsASISTENNull() {
+                return this.IsNull(this.tablespReport_Signing.ASISTENColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetASISTENNull() {
+                this[this.tablespReport_Signing.ASISTENColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsForemanNull() {
+                return this.IsNull(this.tablespReport_Signing.ForemanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetForemanNull() {
+                this[this.tablespReport_Signing.ForemanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNik_ForemanNull() {
+                return this.IsNull(this.tablespReport_Signing.Nik_ForemanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNik_ForemanNull() {
+                this[this.tablespReport_Signing.Nik_ForemanColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -9940,40 +17457,6 @@ namespace IndoAgri.Report.Web.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SPS_Cetak_BukuPanenItem_QualityRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class SPS_CETAK_BKMHKRowChangeEvent : global::System.EventArgs {
-            
-            private SPS_CETAK_BKMHKRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SPS_CETAK_BKMHKRowChangeEvent(SPS_CETAK_BKMHKRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SPS_CETAK_BKMHKRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -10314,6 +17797,380 @@ namespace IndoAgri.Report.Web.DataSets {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SPS_REPORTANOMALIPANENVSANGKUTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class SPS_CETAK_BKMHK_OnlineRowChangeEvent : global::System.EventArgs {
+            
+            private SPS_CETAK_BKMHK_OnlineRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SPS_CETAK_BKMHK_OnlineRowChangeEvent(SPS_CETAK_BKMHK_OnlineRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public SPS_CETAK_BKMHK_OnlineRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_Cetak_BKM_HKRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_Cetak_BKM_HKRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BKM_HKRowChangeEvent(spReport_Cetak_BKM_HKRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BKM_HKRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_CETAK_BKMHK_DETAIL_OnlineRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BKMHK_DETAIL_OnlineRowChangeEvent(spReport_CETAK_BKMHK_DETAIL_OnlineRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BKMHK_DETAIL_OnlineRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_CETAK_BUKUPANEN_HEADER_OnlineRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BUKUPANEN_HEADER_OnlineRowChangeEvent(spReport_CETAK_BUKUPANEN_HEADER_OnlineRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_CETAK_BUKUPANEN_HEADER_OnlineRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_Cetak_BukuPanenItem_Rev1RowChangeEvent : global::System.EventArgs {
+            
+            private spReport_Cetak_BukuPanenItem_Rev1Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BukuPanenItem_Rev1RowChangeEvent(spReport_Cetak_BukuPanenItem_Rev1Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_Cetak_BukuPanenItem_Rev1Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_POTONGBUAH_HDRRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_POTONGBUAH_HDRRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_POTONGBUAH_HDRRowChangeEvent(spReport_POTONGBUAH_HDRRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_POTONGBUAH_HDRRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_ANOMALIRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_ANOMALIRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIRowChangeEvent(spReport_ANOMALIRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_PrestasiOutputHKDivisiRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_PrestasiOutputHKDivisiRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_PrestasiOutputHKDivisiRowChangeEvent(spReport_PrestasiOutputHKDivisiRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_PrestasiOutputHKDivisiRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_ANOMALIPANENVSANGKUTRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_ANOMALIPANENVSANGKUTRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIPANENVSANGKUTRowChangeEvent(spReport_ANOMALIPANENVSANGKUTRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_ANOMALIPANENVSANGKUTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_HeaderRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_HeaderRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_HeaderRowChangeEvent(spReport_HeaderRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_HeaderRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class spReport_SigningRowChangeEvent : global::System.EventArgs {
+            
+            private spReport_SigningRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_SigningRowChangeEvent(spReport_SigningRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public spReport_SigningRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -11059,222 +18916,6 @@ namespace IndoAgri.Report.Web.DataSets.HMSDataSetTableAdapters {
                 this.Adapter.SelectCommand.Parameters[6].Value = ((string)(Quality));
             }
             HMSDataSet.SPS_Cetak_BukuPanenItem_QualityDataTable dataTable = new HMSDataSet.SPS_Cetak_BukuPanenItem_QualityDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SPS_CETAK_BKMHKTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public SPS_CETAK_BKMHKTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SPS_CETAK_BKMHK";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("BKMNumber", "BKMNumber");
-            tableMapping.ColumnMappings.Add("BKMDate", "BKMDate");
-            tableMapping.ColumnMappings.Add("Division", "Division");
-            tableMapping.ColumnMappings.Add("Gang", "Gang");
-            tableMapping.ColumnMappings.Add("Estate", "Estate");
-            tableMapping.ColumnMappings.Add("Nik_Foreman", "Nik_Foreman");
-            tableMapping.ColumnMappings.Add("Foreman", "Foreman");
-            tableMapping.ColumnMappings.Add("Nik_Clerk", "Nik_Clerk");
-            tableMapping.ColumnMappings.Add("Clerk", "Clerk");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SPS_CETAK_BKMHK";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BkmDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Division", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GangCode", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HMSDataSet.SPS_CETAK_BKMHKDataTable dataTable, global::System.Nullable<global::System.DateTime> BkmDate, string Division, string GangCode) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((BkmDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(BkmDate.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Division == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Division));
-            }
-            if ((GangCode == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(GangCode));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HMSDataSet.SPS_CETAK_BKMHKDataTable GetData(global::System.Nullable<global::System.DateTime> BkmDate, string Division, string GangCode) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((BkmDate.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(BkmDate.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Division == null)) {
-                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(Division));
-            }
-            if ((GangCode == null)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(GangCode));
-            }
-            HMSDataSet.SPS_CETAK_BKMHKDataTable dataTable = new HMSDataSet.SPS_CETAK_BKMHKDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -13545,6 +21186,2512 @@ namespace IndoAgri.Report.Web.DataSets.HMSDataSetTableAdapters {
                 this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Block));
             }
             HMSDataSet.SPS_REPORTANOMALIPANENVSANGKUTDataTable dataTable = new HMSDataSet.SPS_REPORTANOMALIPANENVSANGKUTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SPS_CETAK_BKMHK_OnlineTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public SPS_CETAK_BKMHK_OnlineTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SPS_CETAK_BKMHK_Online";
+            tableMapping.ColumnMappings.Add("BKM_NO", "BKM_NO");
+            tableMapping.ColumnMappings.Add("BKM_DATE", "BKM_DATE");
+            tableMapping.ColumnMappings.Add("DIVISION", "DIVISION");
+            tableMapping.ColumnMappings.Add("GANG", "GANG");
+            tableMapping.ColumnMappings.Add("ESTATE", "ESTATE");
+            tableMapping.ColumnMappings.Add("COMPANY_CODE", "COMPANY_CODE");
+            tableMapping.ColumnMappings.Add("NIK_FOREMAN", "NIK_FOREMAN");
+            tableMapping.ColumnMappings.Add("FOREMAN", "FOREMAN");
+            tableMapping.ColumnMappings.Add("NIK_CLERK", "NIK_CLERK");
+            tableMapping.ColumnMappings.Add("CLERK", "CLERK");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SPS_CETAK_BKMHK_Online";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ESTATE", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BKM_DATE", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DIVISION", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GANG", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.SPS_CETAK_BKMHK_OnlineDataTable dataTable, string ESTATE, global::System.Nullable<global::System.DateTime> BKM_DATE, string DIVISION, string GANG) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ESTATE == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ESTATE));
+            }
+            if ((BKM_DATE.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BKM_DATE.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DIVISION == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(DIVISION));
+            }
+            if ((GANG == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GANG));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.SPS_CETAK_BKMHK_OnlineDataTable GetData(string ESTATE, global::System.Nullable<global::System.DateTime> BKM_DATE, string DIVISION, string GANG) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ESTATE == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ESTATE));
+            }
+            if ((BKM_DATE.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BKM_DATE.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DIVISION == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(DIVISION));
+            }
+            if ((GANG == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GANG));
+            }
+            HMSDataSet.SPS_CETAK_BKMHK_OnlineDataTable dataTable = new HMSDataSet.SPS_CETAK_BKMHK_OnlineDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_Cetak_BKM_HKTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_Cetak_BKM_HKTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_Cetak_BKM_HK";
+            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.ColumnMappings.Add("BKMNumber", "BKMNumber");
+            tableMapping.ColumnMappings.Add("BKMDate", "BKMDate");
+            tableMapping.ColumnMappings.Add("Division", "Division");
+            tableMapping.ColumnMappings.Add("Gang", "Gang");
+            tableMapping.ColumnMappings.Add("Estate", "Estate");
+            tableMapping.ColumnMappings.Add("Company", "Company");
+            tableMapping.ColumnMappings.Add("Nik_Foreman", "Nik_Foreman");
+            tableMapping.ColumnMappings.Add("Foreman", "Foreman");
+            tableMapping.ColumnMappings.Add("Nik_Clerk", "Nik_Clerk");
+            tableMapping.ColumnMappings.Add("Clerk", "Clerk");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_Cetak_BKM_HK";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estate", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BkmDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Division", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GangCode", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_Cetak_BKM_HKDataTable dataTable, string estate, global::System.Nullable<global::System.DateTime> BkmDate, string Division, string GangCode) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((BkmDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BkmDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            if ((GangCode == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GangCode));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_Cetak_BKM_HKDataTable GetData(string estate, global::System.Nullable<global::System.DateTime> BkmDate, string Division, string GangCode) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((BkmDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BkmDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            if ((GangCode == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GangCode));
+            }
+            HMSDataSet.spReport_Cetak_BKM_HKDataTable dataTable = new HMSDataSet.spReport_Cetak_BKM_HKDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_CETAK_BKMHK_DETAIL_OnlineTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_CETAK_BKMHK_DETAIL_OnlineTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_CETAK_BKMHK_DETAIL_Online";
+            tableMapping.ColumnMappings.Add("NIK", "NIK");
+            tableMapping.ColumnMappings.Add("NAME", "NAME");
+            tableMapping.ColumnMappings.Add("AbsentType", "AbsentType");
+            tableMapping.ColumnMappings.Add("Type", "Type");
+            tableMapping.ColumnMappings.Add("ActivityType", "ActivityType");
+            tableMapping.ColumnMappings.Add("Block", "Block");
+            tableMapping.ColumnMappings.Add("Mandays", "Mandays");
+            tableMapping.ColumnMappings.Add("Output", "Output");
+            tableMapping.ColumnMappings.Add("Uom", "Uom");
+            tableMapping.ColumnMappings.Add("JobPos", "JobPos");
+            tableMapping.ColumnMappings.Add("Premi", "Premi");
+            tableMapping.ColumnMappings.Add("Penalty", "Penalty");
+            tableMapping.ColumnMappings.Add("CreatedDate", "CreatedDate");
+            tableMapping.ColumnMappings.Add("Overtime", "Overtime");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_CETAK_BKMHK_DETAIL_Online";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ESTATE", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BKM_DATE", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DIVISION", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GANG", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_CETAK_BKMHK_DETAIL_OnlineDataTable dataTable, string ESTATE, global::System.Nullable<global::System.DateTime> BKM_DATE, string DIVISION, string GANG) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ESTATE == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ESTATE));
+            }
+            if ((BKM_DATE.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BKM_DATE.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DIVISION == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(DIVISION));
+            }
+            if ((GANG == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GANG));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_CETAK_BKMHK_DETAIL_OnlineDataTable GetData(string ESTATE, global::System.Nullable<global::System.DateTime> BKM_DATE, string DIVISION, string GANG) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ESTATE == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ESTATE));
+            }
+            if ((BKM_DATE.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BKM_DATE.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DIVISION == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(DIVISION));
+            }
+            if ((GANG == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GANG));
+            }
+            HMSDataSet.spReport_CETAK_BKMHK_DETAIL_OnlineDataTable dataTable = new HMSDataSet.spReport_CETAK_BKMHK_DETAIL_OnlineDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_CETAK_BUKUPANEN_HEADER_OnlineTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_CETAK_BUKUPANEN_HEADER_OnlineTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_CETAK_BUKUPANEN_HEADER_Online";
+            tableMapping.ColumnMappings.Add("DIVISION", "DIVISION");
+            tableMapping.ColumnMappings.Add("GANG", "GANG");
+            tableMapping.ColumnMappings.Add("HarvestDate", "HarvestDate");
+            tableMapping.ColumnMappings.Add("ESTATE", "ESTATE");
+            tableMapping.ColumnMappings.Add("BKMNo", "BKMNo");
+            tableMapping.ColumnMappings.Add("Location", "Location");
+            tableMapping.ColumnMappings.Add("Harvested", "Harvested");
+            tableMapping.ColumnMappings.Add("MANDOR", "MANDOR");
+            tableMapping.ColumnMappings.Add("CLERK", "CLERK");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_CETAK_BUKUPANEN_HEADER_Online";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ESTATE", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HARVEST_DATE", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DIVISION", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GANG", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable dataTable, string ESTATE, global::System.Nullable<global::System.DateTime> HARVEST_DATE, string DIVISION, string GANG) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ESTATE == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ESTATE));
+            }
+            if ((HARVEST_DATE.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(HARVEST_DATE.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DIVISION == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(DIVISION));
+            }
+            if ((GANG == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GANG));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable GetData(string ESTATE, global::System.Nullable<global::System.DateTime> HARVEST_DATE, string DIVISION, string GANG) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((ESTATE == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ESTATE));
+            }
+            if ((HARVEST_DATE.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(HARVEST_DATE.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((DIVISION == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(DIVISION));
+            }
+            if ((GANG == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(GANG));
+            }
+            HMSDataSet.spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable dataTable = new HMSDataSet.spReport_CETAK_BUKUPANEN_HEADER_OnlineDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_Cetak_BukuPanenItem_Rev1TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_Cetak_BukuPanenItem_Rev1TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_Cetak_BukuPanenItem_Rev1";
+            tableMapping.ColumnMappings.Add("Location", "Location");
+            tableMapping.ColumnMappings.Add("NikHarvester", "NikHarvester");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("HK", "HK");
+            tableMapping.ColumnMappings.Add("HA", "HA");
+            tableMapping.ColumnMappings.Add("Gang", "Gang");
+            tableMapping.ColumnMappings.Add("HarvestDate", "HarvestDate");
+            tableMapping.ColumnMappings.Add("CreatedDate", "CreatedDate");
+            tableMapping.ColumnMappings.Add("JjgDinas", "JjgDinas");
+            tableMapping.ColumnMappings.Add("OverBasic", "OverBasic");
+            tableMapping.ColumnMappings.Add("BlockBasic", "BlockBasic");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_Cetak_BukuPanenItem_Rev1";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estate", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HarvestDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Division", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gang", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Crop", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Achievement", global::System.Data.SqlDbType.NVarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_Cetak_BukuPanenItem_Rev1DataTable dataTable, string estate, global::System.Nullable<global::System.DateTime> HarvestDate, string Division, string Gang, global::System.Nullable<int> Crop, string Achievement) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((HarvestDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(HarvestDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            if ((Gang == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Gang));
+            }
+            if ((Crop.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Crop.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Achievement == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(Achievement));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_Cetak_BukuPanenItem_Rev1DataTable GetData(string estate, global::System.Nullable<global::System.DateTime> HarvestDate, string Division, string Gang, global::System.Nullable<int> Crop, string Achievement) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((HarvestDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(HarvestDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            if ((Gang == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Gang));
+            }
+            if ((Crop.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((int)(Crop.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Achievement == null)) {
+                this.Adapter.SelectCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[6].Value = ((string)(Achievement));
+            }
+            HMSDataSet.spReport_Cetak_BukuPanenItem_Rev1DataTable dataTable = new HMSDataSet.spReport_Cetak_BukuPanenItem_Rev1DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_POTONGBUAH_HDRTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_POTONGBUAH_HDRTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_POTONGBUAH_HDR";
+            tableMapping.ColumnMappings.Add("Nik", "Nik");
+            tableMapping.ColumnMappings.Add("Start", "Start");
+            tableMapping.ColumnMappings.Add("Finish", "Finish");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Gang", "Gang");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_POTONGBUAH_HDR";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Finish", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estate", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gang", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nik", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_POTONGBUAH_HDRDataTable dataTable, global::System.Nullable<global::System.DateTime> Start, global::System.Nullable<global::System.DateTime> Finish, string Estate, string Gang, string Nik) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Start.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Start.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Finish.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Finish.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Estate == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Estate));
+            }
+            if ((Gang == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Gang));
+            }
+            if ((Nik == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(Nik));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_POTONGBUAH_HDRDataTable GetData(global::System.Nullable<global::System.DateTime> Start, global::System.Nullable<global::System.DateTime> Finish, string Estate, string Gang, string Nik) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Start.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Start.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Finish.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Finish.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Estate == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Estate));
+            }
+            if ((Gang == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Gang));
+            }
+            if ((Nik == null)) {
+                this.Adapter.SelectCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(Nik));
+            }
+            HMSDataSet.spReport_POTONGBUAH_HDRDataTable dataTable = new HMSDataSet.spReport_POTONGBUAH_HDRDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_ANOMALITableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_ANOMALITableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_ANOMALI";
+            tableMapping.ColumnMappings.Add("Gang", "Gang");
+            tableMapping.ColumnMappings.Add("Nik", "Nik");
+            tableMapping.ColumnMappings.Add("MandorOrKeani", "MandorOrKeani");
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("AbsentType", "AbsentType");
+            tableMapping.ColumnMappings.Add("Mandays", "Mandays");
+            tableMapping.ColumnMappings.Add("Block", "Block");
+            tableMapping.ColumnMappings.Add("Output", "Output");
+            tableMapping.ColumnMappings.Add("Location", "Location");
+            tableMapping.ColumnMappings.Add("FFB", "FFB");
+            tableMapping.ColumnMappings.Add("LooseFruit", "LooseFruit");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_ANOMALI";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estate", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Division", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_ANOMALIDataTable dataTable, string estate, global::System.Nullable<global::System.DateTime> Date, string Division) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((Date.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_ANOMALIDataTable GetData(string estate, global::System.Nullable<global::System.DateTime> Date, string Division) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((Date.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Date.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            HMSDataSet.spReport_ANOMALIDataTable dataTable = new HMSDataSet.spReport_ANOMALIDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_PrestasiOutputHKDivisiTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_PrestasiOutputHKDivisiTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_PrestasiOutputHKDivisi";
+            tableMapping.ColumnMappings.Add("gang", "gang");
+            tableMapping.ColumnMappings.Add("ActivityType", "ActivityType");
+            tableMapping.ColumnMappings.Add("ActivityName", "ActivityName");
+            tableMapping.ColumnMappings.Add("Block", "Block");
+            tableMapping.ColumnMappings.Add("BKMDate", "BKMDate");
+            tableMapping.ColumnMappings.Add("Hectare", "Hectare");
+            tableMapping.ColumnMappings.Add("PlantingYear", "PlantingYear");
+            tableMapping.ColumnMappings.Add("Uom", "Uom");
+            tableMapping.ColumnMappings.Add("OutputHi", "OutputHi");
+            tableMapping.ColumnMappings.Add("Outputsdi", "Outputsdi");
+            tableMapping.ColumnMappings.Add("Outputtotal", "Outputtotal");
+            tableMapping.ColumnMappings.Add("HKHi", "HKHi");
+            tableMapping.ColumnMappings.Add("HKSdi", "HKSdi");
+            tableMapping.ColumnMappings.Add("HKTotal", "HKTotal");
+            tableMapping.ColumnMappings.Add("PremiHi", "PremiHi");
+            tableMapping.ColumnMappings.Add("premiSdi", "premiSdi");
+            tableMapping.ColumnMappings.Add("PremiTotal", "PremiTotal");
+            tableMapping.ColumnMappings.Add("OvertimeHi", "OvertimeHi");
+            tableMapping.ColumnMappings.Add("OvertimeSdi", "OvertimeSdi");
+            tableMapping.ColumnMappings.Add("OvertimeTotal", "OvertimeTotal");
+            tableMapping.ColumnMappings.Add("Matnr", "Matnr");
+            tableMapping.ColumnMappings.Add("MatName", "MatName");
+            tableMapping.ColumnMappings.Add("MatUom", "MatUom");
+            tableMapping.ColumnMappings.Add("MatHi", "MatHi");
+            tableMapping.ColumnMappings.Add("MatSdi", "MatSdi");
+            tableMapping.ColumnMappings.Add("rotasi", "rotasi");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_PrestasiOutputHKDivisi";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estate", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@divisi", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bkmdate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_PrestasiOutputHKDivisiDataTable dataTable, string estate, string divisi, global::System.Nullable<global::System.DateTime> bkmdate) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((divisi == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(divisi));
+            }
+            if ((bkmdate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(bkmdate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_PrestasiOutputHKDivisiDataTable GetData(string estate, string divisi, global::System.Nullable<global::System.DateTime> bkmdate) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((divisi == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(divisi));
+            }
+            if ((bkmdate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((System.DateTime)(bkmdate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            HMSDataSet.spReport_PrestasiOutputHKDivisiDataTable dataTable = new HMSDataSet.spReport_PrestasiOutputHKDivisiDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_ANOMALIPANENVSANGKUTTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_ANOMALIPANENVSANGKUTTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_ANOMALIPANENVSANGKUT";
+            tableMapping.ColumnMappings.Add("HarvestDate", "HarvestDate");
+            tableMapping.ColumnMappings.Add("location", "location");
+            tableMapping.ColumnMappings.Add("tph", "tph");
+            tableMapping.ColumnMappings.Add("QtyJjg", "QtyJjg");
+            tableMapping.ColumnMappings.Add("QtyAngkut", "QtyAngkut");
+            tableMapping.ColumnMappings.Add("Restan", "Restan");
+            tableMapping.ColumnMappings.Add("KodeKendaraan", "KodeKendaraan");
+            tableMapping.ColumnMappings.Add("Mandor", "Mandor");
+            tableMapping.ColumnMappings.Add("driver", "driver");
+            tableMapping.ColumnMappings.Add("Achievement", "Achievement");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_ANOMALIPANENVSANGKUT";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Start", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Finish", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Block", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Estate", global::System.Data.SqlDbType.NVarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_ANOMALIPANENVSANGKUTDataTable dataTable, global::System.Nullable<global::System.DateTime> Start, global::System.Nullable<global::System.DateTime> Finish, string Block, string Estate) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Start.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Start.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Finish.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Finish.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Block == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Block));
+            }
+            if ((Estate == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Estate));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_ANOMALIPANENVSANGKUTDataTable GetData(global::System.Nullable<global::System.DateTime> Start, global::System.Nullable<global::System.DateTime> Finish, string Block, string Estate) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((Start.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((System.DateTime)(Start.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Finish.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(Finish.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Block == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Block));
+            }
+            if ((Estate == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Estate));
+            }
+            HMSDataSet.spReport_ANOMALIPANENVSANGKUTDataTable dataTable = new HMSDataSet.spReport_ANOMALIPANENVSANGKUTDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_HeaderTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_HeaderTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_Header";
+            tableMapping.ColumnMappings.Add("Estate", "Estate");
+            tableMapping.ColumnMappings.Add("Company", "Company");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_Header";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estate", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_HeaderDataTable dataTable, string estate) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_HeaderDataTable GetData(string estate) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            HMSDataSet.spReport_HeaderDataTable dataTable = new HMSDataSet.spReport_HeaderDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class spReport_SigningTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public spReport_SigningTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "spReport_Signing";
+            tableMapping.ColumnMappings.Add("bacode", "bacode");
+            tableMapping.ColumnMappings.Add("Divisi", "Divisi");
+            tableMapping.ColumnMappings.Add("NIKAMA", "NIKAMA");
+            tableMapping.ColumnMappings.Add("AMA", "AMA");
+            tableMapping.ColumnMappings.Add("NIKMANAGER", "NIKMANAGER");
+            tableMapping.ColumnMappings.Add("MANAGER", "MANAGER");
+            tableMapping.ColumnMappings.Add("NIKASKEP", "NIKASKEP");
+            tableMapping.ColumnMappings.Add("ASKEP", "ASKEP");
+            tableMapping.ColumnMappings.Add("nik_asisten", "nik_asisten");
+            tableMapping.ColumnMappings.Add("ASISTEN", "ASISTEN");
+            tableMapping.ColumnMappings.Add("Foreman", "Foreman");
+            tableMapping.ColumnMappings.Add("Nik_Foreman", "Nik_Foreman");
+            tableMapping.ColumnMappings.Add("NIKKraniDivisi", "NIKKraniDivisi");
+            tableMapping.ColumnMappings.Add("KraniDivisi", "KraniDivisi");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ppmsdbConnectionString"].ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.spReport_Signing";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estate", global::System.Data.SqlDbType.VarChar, 4, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BkmDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Division", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gang", global::System.Data.SqlDbType.NVarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(HMSDataSet.spReport_SigningDataTable dataTable, string estate, global::System.Nullable<global::System.DateTime> BkmDate, string Division, string Gang) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((BkmDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BkmDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            if ((Gang == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Gang));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual HMSDataSet.spReport_SigningDataTable GetData(string estate, global::System.Nullable<global::System.DateTime> BkmDate, string Division, string Gang) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((estate == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(estate));
+            }
+            if ((BkmDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(BkmDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Division == null)) {
+                this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(Division));
+            }
+            if ((Gang == null)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((string)(Gang));
+            }
+            HMSDataSet.spReport_SigningDataTable dataTable = new HMSDataSet.spReport_SigningDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

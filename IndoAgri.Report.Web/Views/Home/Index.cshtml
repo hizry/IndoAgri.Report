@@ -7,23 +7,48 @@
     <p class="lead">
         <ol>
             <li>
-                <a href="@Url.Action("PPMS","Reports")/CETAK_BKMHK.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03" target="_blank">Cetak Buku Mandor HK </a>
+                <a href="@Url.Action("PPMS","Reports")/CETAK_BKMHK.aspx?bkmDate=2023-04-04&estate=3520&divisi=04&gang=04HC03" target="_blank">Cetak Buku Mandor HK </a>
             </li>
             <li>
-                <a href="@Url.Action("PPMS","Reports")/CetakBukuPanen2.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03" target="_blank">Cetak Buku Panen</a>
+                <a href="@Url.Action("PPMS","Reports")/CetakBukuPanen.aspx?bkmDate=2023-04-04&estate=3520&divisi=04&gang=04HC03" target="_blank">Cetak Buku Panen</a>
             </li>
             <li>
-                <a href="@Url.Action("PPMS","Reports")/RptAnomali.aspx?bkmDate=2023-04-04&divisi=04" target="_blank">Anomali Absent Output Panen</a>
+                <a href="@Url.Action("PPMS","Reports")/RptAnomali.aspx?bkmDate=2023-04-04&estate=3520&divisi=04" target="_blank">Anomali Absent Output Panen</a>
             </li>
             <li>
-                <a href="@Url.Action("PPMS","Reports")/NotesPotongBuah_Header.aspx?startDate=2022-12-20&finishDate=2022-12-22&nik=200500686&gang=03HC01" target="_blank">Note Potong Buah</a>
+                <a href="@Url.Action("PPMS","Reports")/NotesPotongBuah_Header.aspx?fromDate=2022-12-20&toDate=2022-12-22&nik=201702704&gang=03HC01&estate=3521" target="_blank">Note Potong Buah</a>
             </li>
 
             <li>
-                <a href="@Url.Action("PPMS","Reports")/ReportPrestasiDivisi.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03&estate=6920&company=9600" target="_blank">Prestasi Divisi</a>
+                <a href="@Url.Action("PPMS","Reports")/ReportPrestasiDivisi.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03&estate=3520&company=3500" target="_blank">Prestasi Divisi</a>
             </li>
             <li>
-                <a href="@Url.Action("PPMS","Reports")/ReportAnomaliPanenVsAngkut.aspx?from=2023-03-25&to=2023-04-04&block=H22P17&estate=3520" target="_blank">Anomali Penen Vs Angkut</a>
+                <a href="@Url.Action("PPMS","Reports")/ReportAnomaliPanenVsAngkut.aspx?fromDate=2023-03-25&toDate=2023-04-04&block=H22P17&estate=3520" target="_blank">Anomali Penen Vs Angkut</a>
+            </li>
+        </ol>
+    </p>
+
+    <h4>Print</h4>
+    <p class="lead">
+        <ol>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/CETAK_BKMHK_print.aspx?bkmDate=2023-04-04&estate=3520&divisi=04&gang=04HC03" target="_blank">Cetak Buku Mandor HK </a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/CetakBukuPanen_print.aspx?bkmDate=2023-04-04&estate=3520&divisi=04&gang=04HC03" target="_blank">Cetak Buku Panen</a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/RptAnomali_print.aspx?bkmDate=2023-04-04&estate=3520&divisi=04" target="_blank">Anomali Absent Output Panen</a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/NotesPotongBuah_Header_print.aspx?fromDate=2022-12-20&toDate=2022-12-22&nik=201702704&gang=03HC01&estate=3521" target="_blank">Note Potong Buah</a>
+            </li>
+
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/ReportPrestasiDivisi_print.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03&estate=3520&company=3500" target="_blank">Prestasi Divisi</a>
+            </li>
+            <li>
+                <a href="@Url.Action("PPMS","Reports")/ReportAnomaliPanenVsAngkut_print.aspx?fromDate=2023-03-25&toDate=2023-04-04&block=H22P17&estate=3520" target="_blank">Anomali Penen Vs Angkut</a>
             </li>
         </ol>
     </p>

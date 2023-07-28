@@ -11,7 +11,7 @@ using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
 {
-    public partial class ReportPrestasiDivisi : System.Web.UI.Page
+    public partial class ReportPrestasiDivisi_print : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,8 +28,11 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 HMSDataSet hmsdset = new HMSDataSet();
                 DataTable tblPrestasi = hmsdset.Tables["spReport_PrestasiOutputHKDivisi"];  //hmsdset.Tables["SP_PrestasiOuputHKDivisi"];
                 DataTable tblHeader = hmsdset.Tables["spReport_Header"];
+                DataTable tblSigning = hmsdset.Tables["spReport_Signing"];
+
                 var prestasiDivisi = new Reporting().GetReportPrestasiDivisiV2(estate, divisi, bkmDate, tblPrestasi);
                 var header = new Reporting().GetReportHeader(estate, tblHeader);
+                var reportSigning = new Reporting().GetSigning(bkmDate, estate, divisi, "", tblSigning);
 
                 CheckrollPeriod checkRollperiod = new CheckrollPeriod();
                 int period = checkRollperiod.GetCheckRollPeriodPeriodBy(estate, bkmDate, true);
@@ -48,6 +51,10 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 reportHeader.Name = "DataSetHeader";
                 reportHeader.Value = header;
 
+                var dsReportSigning = new ReportDataSource();
+                dsReportSigning.Name = "DataSetSigning";
+                dsReportSigning.Value = reportSigning;
+
                 ReportViewer1.ProcessingMode = ProcessingMode.Local;
                 ReportViewer1.ShowExportControls = true;
                 ReportViewer1.LocalReport.ReportPath = Server.MapPath("ReportPrestasiDivisi.rdlc");
@@ -55,6 +62,7 @@ namespace IndoAgri.Report.Web.Reports.PPMS
 
                 this.ReportViewer1.LocalReport.DataSources.Add(reportDataSource1);
                 this.ReportViewer1.LocalReport.DataSources.Add(reportHeader);
+                this.ReportViewer1.LocalReport.DataSources.Add(dsReportSigning);
             }
         }
     }

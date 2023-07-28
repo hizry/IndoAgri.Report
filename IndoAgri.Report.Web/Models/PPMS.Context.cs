@@ -327,5 +327,273 @@ namespace IndoAgri.Report.Web.Models
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPS_REPORTANOMALIPANENVSANGKUT_Result>("SPS_REPORTANOMALIPANENVSANGKUT", startParameter, finishParameter, blockParameter, estateParameter);
         }
+    
+        public virtual ObjectResult<spReport_Cetak_BKM_HK_Result> spReport_Cetak_BKM_HK(string estate, Nullable<System.DateTime> bkmDate, string division, string gangCode)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var bkmDateParameter = bkmDate.HasValue ?
+                new ObjectParameter("BkmDate", bkmDate) :
+                new ObjectParameter("BkmDate", typeof(System.DateTime));
+    
+            var divisionParameter = division != null ?
+                new ObjectParameter("Division", division) :
+                new ObjectParameter("Division", typeof(string));
+    
+            var gangCodeParameter = gangCode != null ?
+                new ObjectParameter("GangCode", gangCode) :
+                new ObjectParameter("GangCode", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_Cetak_BKM_HK_Result>("spReport_Cetak_BKM_HK", estateParameter, bkmDateParameter, divisionParameter, gangCodeParameter);
+        }
+    
+        public virtual ObjectResult<spReport_CETAK_BKMHK_DETAIL_Online_Result> spReport_CETAK_BKMHK_DETAIL_Online(string eSTATE, Nullable<System.DateTime> bKM_DATE, string dIVISION, string gANG)
+        {
+            var eSTATEParameter = eSTATE != null ?
+                new ObjectParameter("ESTATE", eSTATE) :
+                new ObjectParameter("ESTATE", typeof(string));
+    
+            var bKM_DATEParameter = bKM_DATE.HasValue ?
+                new ObjectParameter("BKM_DATE", bKM_DATE) :
+                new ObjectParameter("BKM_DATE", typeof(System.DateTime));
+    
+            var dIVISIONParameter = dIVISION != null ?
+                new ObjectParameter("DIVISION", dIVISION) :
+                new ObjectParameter("DIVISION", typeof(string));
+    
+            var gANGParameter = gANG != null ?
+                new ObjectParameter("GANG", gANG) :
+                new ObjectParameter("GANG", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_CETAK_BKMHK_DETAIL_Online_Result>("spReport_CETAK_BKMHK_DETAIL_Online", eSTATEParameter, bKM_DATEParameter, dIVISIONParameter, gANGParameter);
+        }
+    
+        public virtual ObjectResult<spReport_Cetak_BukuPanenItem_Rev1_Result> spReport_Cetak_BukuPanenItem_Rev1(string estate, Nullable<System.DateTime> harvestDate, string division, string gang, Nullable<int> crop, string achievement)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var harvestDateParameter = harvestDate.HasValue ?
+                new ObjectParameter("HarvestDate", harvestDate) :
+                new ObjectParameter("HarvestDate", typeof(System.DateTime));
+    
+            var divisionParameter = division != null ?
+                new ObjectParameter("Division", division) :
+                new ObjectParameter("Division", typeof(string));
+    
+            var gangParameter = gang != null ?
+                new ObjectParameter("Gang", gang) :
+                new ObjectParameter("Gang", typeof(string));
+    
+            var cropParameter = crop.HasValue ?
+                new ObjectParameter("Crop", crop) :
+                new ObjectParameter("Crop", typeof(int));
+    
+            var achievementParameter = achievement != null ?
+                new ObjectParameter("Achievement", achievement) :
+                new ObjectParameter("Achievement", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_Cetak_BukuPanenItem_Rev1_Result>("spReport_Cetak_BukuPanenItem_Rev1", estateParameter, harvestDateParameter, divisionParameter, gangParameter, cropParameter, achievementParameter);
+        }
+    
+        public virtual ObjectResult<spReport_GetBukuPanenItemPenalty_Result> spReport_GetBukuPanenItemPenalty(string estate, string nik, Nullable<System.DateTime> harvestDate, string location, string crop, string achievement, string gang)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var nikParameter = nik != null ?
+                new ObjectParameter("Nik", nik) :
+                new ObjectParameter("Nik", typeof(string));
+    
+            var harvestDateParameter = harvestDate.HasValue ?
+                new ObjectParameter("HarvestDate", harvestDate) :
+                new ObjectParameter("HarvestDate", typeof(System.DateTime));
+    
+            var locationParameter = location != null ?
+                new ObjectParameter("Location", location) :
+                new ObjectParameter("Location", typeof(string));
+    
+            var cropParameter = crop != null ?
+                new ObjectParameter("Crop", crop) :
+                new ObjectParameter("Crop", typeof(string));
+    
+            var achievementParameter = achievement != null ?
+                new ObjectParameter("Achievement", achievement) :
+                new ObjectParameter("Achievement", typeof(string));
+    
+            var gangParameter = gang != null ?
+                new ObjectParameter("Gang", gang) :
+                new ObjectParameter("Gang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_GetBukuPanenItemPenalty_Result>("spReport_GetBukuPanenItemPenalty", estateParameter, nikParameter, harvestDateParameter, locationParameter, cropParameter, achievementParameter, gangParameter);
+        }
+    
+        public virtual ObjectResult<spReport_POTONGBUAH_HDR_Result> spReport_POTONGBUAH_HDR(Nullable<System.DateTime> start, Nullable<System.DateTime> finish, string estate, string gang, string nik)
+        {
+            var startParameter = start.HasValue ?
+                new ObjectParameter("Start", start) :
+                new ObjectParameter("Start", typeof(System.DateTime));
+    
+            var finishParameter = finish.HasValue ?
+                new ObjectParameter("Finish", finish) :
+                new ObjectParameter("Finish", typeof(System.DateTime));
+    
+            var estateParameter = estate != null ?
+                new ObjectParameter("Estate", estate) :
+                new ObjectParameter("Estate", typeof(string));
+    
+            var gangParameter = gang != null ?
+                new ObjectParameter("Gang", gang) :
+                new ObjectParameter("Gang", typeof(string));
+    
+            var nikParameter = nik != null ?
+                new ObjectParameter("Nik", nik) :
+                new ObjectParameter("Nik", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_POTONGBUAH_HDR_Result>("spReport_POTONGBUAH_HDR", startParameter, finishParameter, estateParameter, gangParameter, nikParameter);
+        }
+    
+        public virtual ObjectResult<spReport_ANOMALI_Result> spReport_ANOMALI(string estate, Nullable<System.DateTime> date, string division)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("Date", date) :
+                new ObjectParameter("Date", typeof(System.DateTime));
+    
+            var divisionParameter = division != null ?
+                new ObjectParameter("Division", division) :
+                new ObjectParameter("Division", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_ANOMALI_Result>("spReport_ANOMALI", estateParameter, dateParameter, divisionParameter);
+        }
+    
+        public virtual ObjectResult<spReport_CETAK_BUKUPANEN_HEADER_Online_Result> spReport_CETAK_BUKUPANEN_HEADER_Online(string eSTATE, Nullable<System.DateTime> hARVEST_DATE, string dIVISION, string gANG)
+        {
+            var eSTATEParameter = eSTATE != null ?
+                new ObjectParameter("ESTATE", eSTATE) :
+                new ObjectParameter("ESTATE", typeof(string));
+    
+            var hARVEST_DATEParameter = hARVEST_DATE.HasValue ?
+                new ObjectParameter("HARVEST_DATE", hARVEST_DATE) :
+                new ObjectParameter("HARVEST_DATE", typeof(System.DateTime));
+    
+            var dIVISIONParameter = dIVISION != null ?
+                new ObjectParameter("DIVISION", dIVISION) :
+                new ObjectParameter("DIVISION", typeof(string));
+    
+            var gANGParameter = gANG != null ?
+                new ObjectParameter("GANG", gANG) :
+                new ObjectParameter("GANG", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_CETAK_BUKUPANEN_HEADER_Online_Result>("spReport_CETAK_BUKUPANEN_HEADER_Online", eSTATEParameter, hARVEST_DATEParameter, dIVISIONParameter, gANGParameter);
+        }
+    
+        public virtual ObjectResult<spReport_GetBukuPanenItemNormal_Result> spReport_GetBukuPanenItemNormal(string estate, string nik, Nullable<System.DateTime> harvestDate, string location, string crop, string achievement, string gang)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var nikParameter = nik != null ?
+                new ObjectParameter("Nik", nik) :
+                new ObjectParameter("Nik", typeof(string));
+    
+            var harvestDateParameter = harvestDate.HasValue ?
+                new ObjectParameter("HarvestDate", harvestDate) :
+                new ObjectParameter("HarvestDate", typeof(System.DateTime));
+    
+            var locationParameter = location != null ?
+                new ObjectParameter("Location", location) :
+                new ObjectParameter("Location", typeof(string));
+    
+            var cropParameter = crop != null ?
+                new ObjectParameter("Crop", crop) :
+                new ObjectParameter("Crop", typeof(string));
+    
+            var achievementParameter = achievement != null ?
+                new ObjectParameter("Achievement", achievement) :
+                new ObjectParameter("Achievement", typeof(string));
+    
+            var gangParameter = gang != null ?
+                new ObjectParameter("Gang", gang) :
+                new ObjectParameter("Gang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_GetBukuPanenItemNormal_Result>("spReport_GetBukuPanenItemNormal", estateParameter, nikParameter, harvestDateParameter, locationParameter, cropParameter, achievementParameter, gangParameter);
+        }
+    
+        public virtual ObjectResult<spReport_ANOMALIPANENVSANGKUT_Result> spReport_ANOMALIPANENVSANGKUT(Nullable<System.DateTime> start, Nullable<System.DateTime> finish, string block, string estate)
+        {
+            var startParameter = start.HasValue ?
+                new ObjectParameter("Start", start) :
+                new ObjectParameter("Start", typeof(System.DateTime));
+    
+            var finishParameter = finish.HasValue ?
+                new ObjectParameter("Finish", finish) :
+                new ObjectParameter("Finish", typeof(System.DateTime));
+    
+            var blockParameter = block != null ?
+                new ObjectParameter("Block", block) :
+                new ObjectParameter("Block", typeof(string));
+    
+            var estateParameter = estate != null ?
+                new ObjectParameter("Estate", estate) :
+                new ObjectParameter("Estate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_ANOMALIPANENVSANGKUT_Result>("spReport_ANOMALIPANENVSANGKUT", startParameter, finishParameter, blockParameter, estateParameter);
+        }
+    
+        public virtual ObjectResult<spReport_Header_Result> spReport_Header(string estate)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_Header_Result>("spReport_Header", estateParameter);
+        }
+    
+        public virtual ObjectResult<spReport_PrestasiOutputHKDivisi_Result> spReport_PrestasiOutputHKDivisi(string estate, string divisi, Nullable<System.DateTime> bkmdate)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var divisiParameter = divisi != null ?
+                new ObjectParameter("divisi", divisi) :
+                new ObjectParameter("divisi", typeof(string));
+    
+            var bkmdateParameter = bkmdate.HasValue ?
+                new ObjectParameter("bkmdate", bkmdate) :
+                new ObjectParameter("bkmdate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_PrestasiOutputHKDivisi_Result>("spReport_PrestasiOutputHKDivisi", estateParameter, divisiParameter, bkmdateParameter);
+        }
+    
+        public virtual ObjectResult<spReport_Signing_Result> spReport_Signing(string estate, Nullable<System.DateTime> bkmDate, string division, string gang)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var bkmDateParameter = bkmDate.HasValue ?
+                new ObjectParameter("BkmDate", bkmDate) :
+                new ObjectParameter("BkmDate", typeof(System.DateTime));
+    
+            var divisionParameter = division != null ?
+                new ObjectParameter("Division", division) :
+                new ObjectParameter("Division", typeof(string));
+    
+            var gangParameter = gang != null ?
+                new ObjectParameter("Gang", gang) :
+                new ObjectParameter("Gang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_Signing_Result>("spReport_Signing", estateParameter, bkmDateParameter, divisionParameter, gangParameter);
+        }
     }
 }
