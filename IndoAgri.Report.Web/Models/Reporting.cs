@@ -137,10 +137,70 @@ namespace IndoAgri.Report.Web.Models
             return tb;
         }
 
+        public DataTable GetReportHeaderTaksasi(string estate, string division, int year, DataTable tblIn)
+        {
+            DataTable tb = new DataTable();
+            using (PPMSEntities context = new PPMSEntities())
+            {
+                var qry_Hdr = context.spReport_HeaderTaksasi(estate, division, year);
+                foreach (var item in qry_Hdr)
+                {
+                    DataRow dr = tblIn.NewRow();
+                    dr["Company"] = item.Company;
+                    dr["Estate"] = item.Estate;
+                    dr["Divisi"] = item.Divisi;
+                    dr["NIKAMA"] = item.NIKAMA;
+                    dr["AMA"] = item.AMA;
+                    dr["NIKMANAGER"] = item.NIKMANAGER;
+                    dr["MANAGER"] = item.MANAGER;
+                    dr["NIKASKEP"] = item.NIKASKEP;
+                    dr["ASKEP"] = item.ASKEP;
+                    dr["nik_asisten"] = item.nik_asisten;
+                    dr["assistant"] = item.assistant;
+
+                    tblIn.Rows.Add(dr);
+                }
+            }
+            tb = tblIn;
+            return tb;
+        }
+
+        //[spReport_Taksasi] '6920','01',2023,7,'20230727','20230727'
+        public DataTable GetReportTaksasi(string estate, string division, int year, int period, DateTime startDate, DateTime endDate, DataTable tblIn)
+        {
+            DataTable tb = new DataTable();
+            using (PPMSEntities context = new PPMSEntities())
+            {
+                var qry_Hdr = context.spReport_Taksasi(estate, division, year, period, startDate, endDate);
+                foreach (var item in qry_Hdr)
+                {
+                    DataRow dr = tblIn.NewRow();
+                    dr["BJR"] = item.BJR;
+                    dr["BLOCK"] = item.BLOCK;
+                    dr["DIVISION"] = item.DIVISION;
+                    dr["ESTATE"] = item.ESTATE;
+                    dr["FOREMAN"] = item.FOREMAN;
+                    dr["JANJANGTAKSASI"] = item.JANJANGTAKSASI;
+                    dr["PERCENTAGE"] = item.PERCENTAGE;
+                    dr["Prod_Trees"] = item.Prod_Trees;
+                    dr["QTY_JJG"] = item.QTY_JJG;
+                    dr["TAKSASIDATE"] = item.TAKSASIDATE;
+                    dr["TONASE"] = item.TONASE;
+                    dr["TotalBarisPengecekan"] = item.TotalBarisPengecekan;
+                    dr["TotalBarisSKB"] = item.TotalBarisSKB;
+                    dr["TotalPokokPengecekan"] = item.TotalPokokPengecekan;
+                    tblIn.Rows.Add(dr);
+                }
+            }
+            tb = tblIn;
+            return tb;
+        }
+
         public DataTable GetSigning(DateTime BKMDate, string estate, string Division, string GangCode, DataTable tblIn)
         {
             using (PPMSEntities context = new PPMSEntities())
             {
+                context.Database.CommandTimeout = 10000;
                 var QryDetail = context.spReport_Signing(estate, BKMDate, Division, GangCode);
 
                 foreach (var item in QryDetail)
@@ -203,13 +263,13 @@ namespace IndoAgri.Report.Web.Models
             {
                 using (PPMSEntities context = new PPMSEntities())
                 {
-                    var QryDetail = context.SPS_CETAK_BKMHK_DETAIL_DDT(BKMDate, Division, GangCode);
+                    var QryDetail = context.spReport_CETAK_BKMHK_DETAIL_Online(estate, BKMDate, Division, GangCode);
                     foreach (var item in QryDetail)
                     {
                         DataRow drow = tblIn.NewRow();
                         //drow["Number"] = item.Number;
-                        drow["Nik"] = item.Nik;
-                        drow["Name"] = item.Name;
+                        drow["Nik"] = item.NIK;
+                        drow["Name"] = item.NAME;
                         drow["AbsentType"] = item.AbsentType;
                         drow["Type"] = item.Type;
                         drow["ActivityType"] = item.ActivityType;
@@ -287,6 +347,7 @@ namespace IndoAgri.Report.Web.Models
             DataTable tbRes = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
+                context.Database.CommandTimeout = 10000;
                 //var a = context.SPS_CETAK_BUKUPANEN_HEADER(estate, HarvestDate, Division, Gang);
                 var Qry = context.spReport_CETAK_BUKUPANEN_HEADER_Online(estate, HarvestDate, Division, Gang);
                 foreach (var item in Qry)
@@ -314,6 +375,7 @@ namespace IndoAgri.Report.Web.Models
             DataTable tbRes = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
+                context.Database.CommandTimeout = 10000;
                 //var cetakBukuPanen = context.spReport_Cetak_BukuPanenItem_Rev1(estate, HarvestDate, Division, Gang, Crop, Achievement);
                 var Qry = context.spReport_Cetak_BukuPanenItem_Rev1(estate , HarvestDate.Date, Division, Gang, Crop, Achievement);
                 foreach (var item in Qry)
@@ -370,6 +432,7 @@ namespace IndoAgri.Report.Web.Models
             DataTable tb = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
+                context.Database.CommandTimeout = 10000;
                 // var Qry = context.GetBukuPanenItemNormal1(Nik, HarvestDate, Location, Crop, Achievement, Gang);
                 var Qry = context.spReport_GetBukuPanenItemNormal(estate, Nik, HarvestDate, Location, Crop, Achievement, Gang);
 
@@ -404,11 +467,115 @@ namespace IndoAgri.Report.Web.Models
             return tb;
         }
 
+        public DataTable GetTPH_SumNormal_PerNik(string estate, string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
+        {
+            DataTable tb = new DataTable();
+            using (PPMSEntities context = new PPMSEntities())
+            {
+                context.Database.CommandTimeout = 10000;
+                var Qry = context.spReport_GetBukuPanenItemNormal_SUM(estate, Nik, HarvestDate, Location, Crop, Achievement, Gang);
+
+                foreach (var item in Qry)
+                {
+                    DataRow drow = temp.NewRow();
+                    drow["Achievement"] = item.Achievement;
+                    drow["Qty"] = item.Qty;
+                    temp.Rows.Add(drow);
+                }
+              
+                tb = temp;
+            }
+
+            return tb;
+        }
+
+        public DataTable GetTPH_SubJanjang_PerNik(string estate, string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
+        {
+            DataTable tb = new DataTable();
+            using (PPMSEntities context = new PPMSEntities())
+            {
+                context.Database.CommandTimeout = 10000;
+                // var Qry = context.GetBukuPanenItemNormal1(Nik, HarvestDate, Location, Crop, Achievement, Gang);
+                var Qry = context.spReport_GetBukuPanenItemNormal_JJG(estate, Nik, HarvestDate, Location, Crop);
+
+                foreach (var item in Qry)
+                {
+
+                    DataRow drow = temp.NewRow();
+                    drow["Tph"] = item.Tph;
+                    drow["Qty"] = item.Qty;
+                    temp.Rows.Add(drow);
+
+
+                }
+                //cek apakah jumlah TPH sudah 8 kalau belum tambahkan sampai 8 isi quality dgn 0 utk ngepasin Column
+
+                List<string> tphs = temp.AsEnumerable().Select(t => t.Field<string>("Tph")).Distinct().ToList();
+                int countColumns = tphs.Count;
+                if (countColumns < 8)
+                {
+                    while (countColumns < 8)
+                    {
+                        DataRow drow = temp.NewRow();
+                        drow["Tph"] = "TPH" + temp.Rows.Count;
+                        drow["Qty"] = 0;
+                        temp.Rows.Add(drow);
+                        countColumns += 1;
+                    }
+                }
+                tb = temp;
+            }
+
+            return tb;
+        }
+
+        public DataTable GetTPH_SubLSF_PerNik(string estate, string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
+        {
+            DataTable tb = new DataTable();
+            using (PPMSEntities context = new PPMSEntities())
+            {
+                context.Database.CommandTimeout = 10000;
+                // var Qry = context.GetBukuPanenItemNormal1(Nik, HarvestDate, Location, Crop, Achievement, Gang);
+                var Qry = context.spReport_GetBukuPanenItemNormal_LSF(estate, Nik, HarvestDate, Location, Crop);
+
+                foreach (var item in Qry)
+                {
+
+                    DataRow drow = temp.NewRow();
+                    drow["Tph"] = item.Tph;
+                    drow["Qty"] = item.Qty;
+                    temp.Rows.Add(drow);
+
+
+                }
+                //cek apakah jumlah TPH sudah 8 kalau belum tambahkan sampai 8 isi quality dgn 0 utk ngepasin Column
+
+                List<string> tphs = temp.AsEnumerable().Select(t => t.Field<string>("Tph")).Distinct().ToList();
+                int countColumns = tphs.Count;
+                if (countColumns < 8)
+                {
+                    while (countColumns < 8)
+                    {
+                        DataRow drow = temp.NewRow();
+                        drow["Tph"] = "TPH" + temp.Rows.Count;
+                        drow["Qty"] = 0;
+                        temp.Rows.Add(drow);
+                        countColumns += 1;
+                    }
+                }
+                tb = temp;
+            }
+
+            return tb;
+        }
+
+
         public DataTable GetTPH_Unripe_PerNik( string estate, string Nik, DateTime HarvestDate, string Location, string Crop, string Achievement, DataTable temp, string Gang)
         {
             DataTable tb = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
+                context.Database.CommandTimeout = 10000;
                 //var Qry = context.GetBukuPanenItemNormal1(Nik, HarvestDate, Location, Crop, Achievement, Gang);
                 var Qry = context.spReport_GetBukuPanenItemPenalty(estate, Nik, HarvestDate, Location, Crop, Achievement, Gang);
                 foreach (var item in Qry)
@@ -451,6 +618,7 @@ namespace IndoAgri.Report.Web.Models
             DataTable tb = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
+                context.Database.CommandTimeout = 10000;
                 var Qry = context.spReport_GetBukuPanenItemPenalty(estate, Nik, HarvestDate, Location, Crop, Achievement, Gang);
                 foreach (var item in Qry)
                 {
@@ -492,6 +660,7 @@ namespace IndoAgri.Report.Web.Models
             DataTable tbl = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
+                context.Database.CommandTimeout = 10000;
                 var qry = context.spReport_POTONGBUAH_HDR(start, finish, estate ,Gang, Nik);
                 foreach (var item in qry)
                 {
@@ -514,28 +683,29 @@ namespace IndoAgri.Report.Web.Models
             DataTable tbl = new DataTable();
             using (PPMSEntities context = new PPMSEntities())
             {
-                var qry = context.SPS_POTONGBUAH(start, finish, Gang, Nik);
-                foreach (var item in qry)
-                {
-                    DataRow dr = tblin.NewRow();
-                    dr["Start"] = item.Start;
-                    dr["Finish"] = item.Finish;
-                    dr["Nik"] = item.Nik;
-                    dr["Name"] = item.Name;
-                    dr["BkmDate"] = item.BkmDate;
-                    dr["Gang"] = item.Gang;
-                    dr["Location"] = item.Location;
-                    dr["BlockBasic"] = item.BlockBasic == null ? 0 : item.BlockBasic;
-                    dr["Achievement"] = item.Achievement;
-                    dr["BasisHarian"] = item.BasisHarian == null ? 0 : item.BasisHarian;
-                    dr["OverBasic"] = item.OverBasic == null ? 0 : item.OverBasic;
-                    dr["PremiAllocation"] = item.PremiAllocation == null ? 0 : item.PremiAllocation;
-                    dr["OveBasicPremi"] = item.OveBasicPremi == null ? 0 : item.OveBasicPremi;
-                    dr["TotalPremiAllocation"] = item.TotalPremiAllocation == null ? 0 : item.TotalPremiAllocation;
-                    dr["RpPenalty"] = item.RpPenalty == null ? 0 : item.RpPenalty;
-                    dr["NettPremi"] = item.NettPremi == null ? 0 : item.NettPremi;
-                    tblin.Rows.Add(dr);
-                }
+                context.Database.CommandTimeout = 10000;
+                //var qry = context.SPS_POTONGBUAH(start, finish, Gang, Nik);
+                //foreach (var item in qry)
+                //{
+                //    DataRow dr = tblin.NewRow();
+                //    dr["Start"] = item.Start;
+                //    dr["Finish"] = item.Finish;
+                //    dr["Nik"] = item.Nik;
+                //    dr["Name"] = item.Name;
+                //    dr["BkmDate"] = item.BkmDate;
+                //    dr["Gang"] = item.Gang;
+                //    dr["Location"] = item.Location;
+                //    dr["BlockBasic"] = item.BlockBasic == null ? 0 : item.BlockBasic;
+                //    dr["Achievement"] = item.Achievement;
+                //    dr["BasisHarian"] = item.BasisHarian == null ? 0 : item.BasisHarian;
+                //    dr["OverBasic"] = item.OverBasic == null ? 0 : item.OverBasic;
+                //    dr["PremiAllocation"] = item.PremiAllocation == null ? 0 : item.PremiAllocation;
+                //    dr["OveBasicPremi"] = item.OveBasicPremi == null ? 0 : item.OveBasicPremi;
+                //    dr["TotalPremiAllocation"] = item.TotalPremiAllocation == null ? 0 : item.TotalPremiAllocation;
+                //    dr["RpPenalty"] = item.RpPenalty == null ? 0 : item.RpPenalty;
+                //    dr["NettPremi"] = item.NettPremi == null ? 0 : item.NettPremi;
+                //    tblin.Rows.Add(dr);
+                //}
 
             }
             tbl = tblin;

@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using IndoAgri.Report.Web.DataSets;
 using IndoAgri.Report.Web.Models;
+using IndoAgri.Security;
 using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
@@ -18,8 +19,16 @@ namespace IndoAgri.Report.Web.Reports.PPMS
             if (!IsPostBack)
             {
                 // Reports/PPMS/ReportAnomaliPanenVsAngkut.aspx?from=2023-03-25&to=2023-04-04&block=H22P17&estate=3520
-                var block = Request.QueryString["block"] ?? "";
+                var block = Request.QueryString["block"] == "" || Request.QueryString["block"] == null ? "ALL" : Request.QueryString["block"];
                 var estate = Request.QueryString["estate"] ?? "";
+                bool isEncrypt = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["isEncrypt"]);
+                if (isEncrypt)
+                {
+                    var estateEncrypt = Request.QueryString["estate"] ?? "";
+                    var key = System.Configuration.ConfigurationManager.AppSettings["key"];
+                    estate = Md5Config.Decrypt(estateEncrypt, key, true);
+                }
+
                 var fromString = Request.QueryString["fromDate"] ?? "";
                 var fromDate = DateTime.ParseExact(fromString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
                 var toString = Request.QueryString["toDate"] ?? "";

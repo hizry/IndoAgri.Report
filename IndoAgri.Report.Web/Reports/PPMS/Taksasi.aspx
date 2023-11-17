@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RptAnomali_print.aspx.cs" Inherits="IndoAgri.Report.Web.Reports.PPMS.RptAnomali_print" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Taksasi.aspx.cs" Inherits="IndoAgri.Report.Web.Reports.PPMS.Taksasi" %>
 <%@Register Assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
    <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <rsweb:ReportViewer ID="ReportViewer1" runat="server" AsyncRendering="false" Height="900px" Style="display: block; min-width: 1150px;
-        min-height: 250px" ShowToolBar="true"></rsweb:ReportViewer>
+        min-height: 250px" ShowToolBar="false"></rsweb:ReportViewer>
     </form>
 </body>
 </html>

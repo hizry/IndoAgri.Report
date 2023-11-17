@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using IndoAgri.Report.Web.DataSets;
 using IndoAgri.Report.Web.Models;
+using IndoAgri.Security;
 using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
@@ -17,9 +18,18 @@ namespace IndoAgri.Report.Web.Reports.PPMS
         {
             if (!IsPostBack)
             {
-                // Reports/PPMS/CETAK_BKMHK.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03
+                // Reports/PPMS/CETAK_BKMHK.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03&estate=0dAk1Do8vp8=
                 var divisi = Request.QueryString["divisi"] ?? "";
                 var estate = Request.QueryString["estate"] ?? "";
+
+                bool isEncrypt = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["isEncrypt"]);
+                if (isEncrypt)
+                {
+                    var estateEncrypt = Request.QueryString["estate"] ?? "";
+                    var key = System.Configuration.ConfigurationManager.AppSettings["key"];
+                    estate = Md5Config.Decrypt(estateEncrypt, key, true);
+                }
+
                 var gang = Request.QueryString["gang"] ?? "";
                 var bkmDateString = Request.QueryString["bkmDate"] ?? "";
                 var bkmDate = DateTime.ParseExact(bkmDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
@@ -47,7 +57,6 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 this.ReportViewer1.LocalReport.DataSources.Add(rds_hdr);
                 this.ReportViewer1.LocalReport.DataSources.Add(rds_Detail);
                 this.ReportViewer1.LocalReport.DataSources.Add(rds_reportSign);
-
             }
         }
     }

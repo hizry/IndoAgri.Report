@@ -189,7 +189,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Jumlah</Value>
+                                <Value>Jml</Value>
                                 <Style>
                                   <FontSize>8pt</FontSize>
                                   <FontWeight>Bold</FontWeight>

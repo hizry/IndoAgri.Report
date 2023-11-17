@@ -27,8 +27,8 @@ namespace IndoAgri.Report.Web.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<tblM_CheckrollPeriod> tblM_CheckrollPeriod { get; set; }
         public virtual DbSet<tblM_AccountingPeriod> tblM_AccountingPeriod { get; set; }
+        public virtual DbSet<tblM_CheckrollPeriod> tblM_CheckrollPeriod { get; set; }
     
         public virtual ObjectResult<SPS_CETAK_BKMHK_Result> SPS_CETAK_BKMHK(Nullable<System.DateTime> bkmDate, string division, string gangCode)
         {
@@ -237,27 +237,6 @@ namespace IndoAgri.Report.Web.Models
                 new ObjectParameter("Gang", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetBukuPanenItemPenalty_Result>("GetBukuPanenItemPenalty", nikParameter, harvestDateParameter, locationParameter, cropParameter, achievementParameter, gangParameter);
-        }
-    
-        public virtual ObjectResult<SPS_POTONGBUAH_Result> SPS_POTONGBUAH(Nullable<System.DateTime> start, Nullable<System.DateTime> finish, string gang, string nik)
-        {
-            var startParameter = start.HasValue ?
-                new ObjectParameter("Start", start) :
-                new ObjectParameter("Start", typeof(System.DateTime));
-    
-            var finishParameter = finish.HasValue ?
-                new ObjectParameter("Finish", finish) :
-                new ObjectParameter("Finish", typeof(System.DateTime));
-    
-            var gangParameter = gang != null ?
-                new ObjectParameter("Gang", gang) :
-                new ObjectParameter("Gang", typeof(string));
-    
-            var nikParameter = nik != null ?
-                new ObjectParameter("Nik", nik) :
-                new ObjectParameter("Nik", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<SPS_POTONGBUAH_Result>("SPS_POTONGBUAH", startParameter, finishParameter, gangParameter, nikParameter);
         }
     
         public virtual ObjectResult<SPS_POTONGBUAH_HDR_Result> SPS_POTONGBUAH_HDR(Nullable<System.DateTime> start, Nullable<System.DateTime> finish, string gang, string nik)
@@ -594,6 +573,156 @@ namespace IndoAgri.Report.Web.Models
                 new ObjectParameter("Gang", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_Signing_Result>("spReport_Signing", estateParameter, bkmDateParameter, divisionParameter, gangParameter);
+        }
+    
+        public virtual ObjectResult<spReport_HeaderTaksasi_Result> spReport_HeaderTaksasi(string estate, string division, Nullable<int> year)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var divisionParameter = division != null ?
+                new ObjectParameter("division", division) :
+                new ObjectParameter("division", typeof(string));
+    
+            var yearParameter = year.HasValue ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_HeaderTaksasi_Result>("spReport_HeaderTaksasi", estateParameter, divisionParameter, yearParameter);
+        }
+    
+        public virtual ObjectResult<spReport_Taksasi_Result> spReport_Taksasi(string estate, string division, Nullable<int> year, Nullable<int> period, Nullable<System.DateTime> startdate, Nullable<System.DateTime> enddate)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var divisionParameter = division != null ?
+                new ObjectParameter("division", division) :
+                new ObjectParameter("division", typeof(string));
+    
+            var yearParameter = year.HasValue ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(int));
+    
+            var periodParameter = period.HasValue ?
+                new ObjectParameter("period", period) :
+                new ObjectParameter("period", typeof(int));
+    
+            var startdateParameter = startdate.HasValue ?
+                new ObjectParameter("startdate", startdate) :
+                new ObjectParameter("startdate", typeof(System.DateTime));
+    
+            var enddateParameter = enddate.HasValue ?
+                new ObjectParameter("enddate", enddate) :
+                new ObjectParameter("enddate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_Taksasi_Result>("spReport_Taksasi", estateParameter, divisionParameter, yearParameter, periodParameter, startdateParameter, enddateParameter);
+        }
+    
+        public virtual ObjectResult<spReport_GetBukuPanenItemNormal_JJG_Result> spReport_GetBukuPanenItemNormal_JJG(string estate, string nik, Nullable<System.DateTime> harvestDate, string location, string crop)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var nikParameter = nik != null ?
+                new ObjectParameter("Nik", nik) :
+                new ObjectParameter("Nik", typeof(string));
+    
+            var harvestDateParameter = harvestDate.HasValue ?
+                new ObjectParameter("HarvestDate", harvestDate) :
+                new ObjectParameter("HarvestDate", typeof(System.DateTime));
+    
+            var locationParameter = location != null ?
+                new ObjectParameter("Location", location) :
+                new ObjectParameter("Location", typeof(string));
+    
+            var cropParameter = crop != null ?
+                new ObjectParameter("Crop", crop) :
+                new ObjectParameter("Crop", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_GetBukuPanenItemNormal_JJG_Result>("spReport_GetBukuPanenItemNormal_JJG", estateParameter, nikParameter, harvestDateParameter, locationParameter, cropParameter);
+        }
+    
+        public virtual ObjectResult<spReport_GetBukuPanenItemNormal_LSF_Result> spReport_GetBukuPanenItemNormal_LSF(string estate, string nik, Nullable<System.DateTime> harvestDate, string location, string crop)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var nikParameter = nik != null ?
+                new ObjectParameter("Nik", nik) :
+                new ObjectParameter("Nik", typeof(string));
+    
+            var harvestDateParameter = harvestDate.HasValue ?
+                new ObjectParameter("HarvestDate", harvestDate) :
+                new ObjectParameter("HarvestDate", typeof(System.DateTime));
+    
+            var locationParameter = location != null ?
+                new ObjectParameter("Location", location) :
+                new ObjectParameter("Location", typeof(string));
+    
+            var cropParameter = crop != null ?
+                new ObjectParameter("Crop", crop) :
+                new ObjectParameter("Crop", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_GetBukuPanenItemNormal_LSF_Result>("spReport_GetBukuPanenItemNormal_LSF", estateParameter, nikParameter, harvestDateParameter, locationParameter, cropParameter);
+        }
+    
+        public virtual ObjectResult<spReport_GetBukuPanenItemNormal_SUM_Result> spReport_GetBukuPanenItemNormal_SUM(string estate, string nik, Nullable<System.DateTime> harvestDate, string location, string crop, string achievement, string gang)
+        {
+            var estateParameter = estate != null ?
+                new ObjectParameter("estate", estate) :
+                new ObjectParameter("estate", typeof(string));
+    
+            var nikParameter = nik != null ?
+                new ObjectParameter("Nik", nik) :
+                new ObjectParameter("Nik", typeof(string));
+    
+            var harvestDateParameter = harvestDate.HasValue ?
+                new ObjectParameter("HarvestDate", harvestDate) :
+                new ObjectParameter("HarvestDate", typeof(System.DateTime));
+    
+            var locationParameter = location != null ?
+                new ObjectParameter("Location", location) :
+                new ObjectParameter("Location", typeof(string));
+    
+            var cropParameter = crop != null ?
+                new ObjectParameter("Crop", crop) :
+                new ObjectParameter("Crop", typeof(string));
+    
+            var achievementParameter = achievement != null ?
+                new ObjectParameter("Achievement", achievement) :
+                new ObjectParameter("Achievement", typeof(string));
+    
+            var gangParameter = gang != null ?
+                new ObjectParameter("Gang", gang) :
+                new ObjectParameter("Gang", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spReport_GetBukuPanenItemNormal_SUM_Result>("spReport_GetBukuPanenItemNormal_SUM", estateParameter, nikParameter, harvestDateParameter, locationParameter, cropParameter, achievementParameter, gangParameter);
+        }
+    
+        public virtual int SPS_POTONGBUAH(Nullable<System.DateTime> start, Nullable<System.DateTime> finish, string gang, string nik)
+        {
+            var startParameter = start.HasValue ?
+                new ObjectParameter("Start", start) :
+                new ObjectParameter("Start", typeof(System.DateTime));
+    
+            var finishParameter = finish.HasValue ?
+                new ObjectParameter("Finish", finish) :
+                new ObjectParameter("Finish", typeof(System.DateTime));
+    
+            var gangParameter = gang != null ?
+                new ObjectParameter("Gang", gang) :
+                new ObjectParameter("Gang", typeof(string));
+    
+            var nikParameter = nik != null ?
+                new ObjectParameter("Nik", nik) :
+                new ObjectParameter("Nik", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SPS_POTONGBUAH", startParameter, finishParameter, gangParameter, nikParameter);
         }
     }
 }

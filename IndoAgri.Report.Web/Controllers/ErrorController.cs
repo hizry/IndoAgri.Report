@@ -8,8 +8,9 @@ namespace IndoAgri.Report.Web.Controllers
 {
     public class ErrorController : Controller
     {
-        public ViewResult Index()
+        public ViewResult Index(string message)
         {
+            ViewData["message"] = message;
             return View("Error");
         }
         public ViewResult NotFound()

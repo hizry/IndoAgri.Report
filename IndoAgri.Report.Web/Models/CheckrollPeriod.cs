@@ -77,7 +77,7 @@ namespace IndoAgri.Report.Web.Models
                     data.ModifiedBy = item.ModifiedBy;
                     data.ModifiedDate = item.ModifiedDate;
                     data.Period = item.Period;
-                    data.RowVersion = item.RowVersion;
+                    //data.RowVersion = item.RowVersion;
                     data.Status = item.Status;
                     data.ZYear = item.ZYear;
                     results.Add(data);
@@ -125,7 +125,7 @@ namespace IndoAgri.Report.Web.Models
                     result.ModifiedBy = activities.ModifiedBy;
                     result.ModifiedDate = activities.ModifiedDate;
                     result.Period = activities.Period;
-                    result.RowVersion = activities.RowVersion;
+                   // result.RowVersion = activities.RowVersion;
                     result.Status = activities.Status;
                     result.ZYear = activities.ZYear;
                     return result;
@@ -155,7 +155,7 @@ namespace IndoAgri.Report.Web.Models
                     result.ModifiedBy = activities.ModifiedBy;
                     result.ModifiedDate = activities.ModifiedDate;
                     result.Period = activities.Period;
-                    result.RowVersion = activities.RowVersion;
+                    //result.RowVersion = activities.RowVersion;
                     result.Status = activities.Status;
                     result.ZYear = activities.ZYear;
                     return result;

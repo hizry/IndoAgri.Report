@@ -7,7 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3952f0d4-b502-406c-b3a5-9a6d765d0b11</rd:DataSourceID>
+      <rd:DataSourceID>763ee261-cbd9-4438-87a9-31aac20d5362</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>

@@ -44,7 +44,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.58688cm</Width>
+                  <Width>1.03126cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -140,7 +140,7 @@
             </TablixRowHierarchy>
             <DataSetName>DS_Normal</DataSetName>
             <Height>1.2cm</Height>
-            <Width>1.58688cm</Width>
+            <Width>1.03126cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -151,7 +151,7 @@
         <Height>0.47244in</Height>
         <Style />
       </Body>
-      <Width>0.62476in</Width>
+      <Width>0.40601in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

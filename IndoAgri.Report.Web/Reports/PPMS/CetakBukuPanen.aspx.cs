@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using IndoAgri.Report.Web.DataSets;
 using IndoAgri.Report.Web.Models;
+using IndoAgri.Security;
 using Microsoft.Reporting.WebForms;
 
 
@@ -18,46 +19,58 @@ namespace IndoAgri.Report.Web.Reports.PPMS
         {
             if (!IsPostBack)
             {
-                //Reports/PPMS/CetakBukuPanen2.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03
-                var divisi = Request.QueryString["divisi"] ?? "";
-                var estate = Request.QueryString["estate"] ?? "";
-                var gang = Request.QueryString["gang"] ?? "";
-                var bkmDateString = Request.QueryString["bkmDate"] ?? "";
-                var bkmDate = DateTime.ParseExact(bkmDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                try
+                {
+                   
+                    //Reports/PPMS/CetakBukuPanen2.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03
+                    var divisi = Request.QueryString["divisi"] ?? "";
+                    var estate = Request.QueryString["estate"] ?? "";
+                    bool isEncrypt = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["isEncrypt"]);
+                    if (isEncrypt)
+                    {
+                        var estateEncrypt = Request.QueryString["estate"] ?? "";
+                        var key = System.Configuration.ConfigurationManager.AppSettings["key"];
+                        estate = Md5Config.Decrypt(estateEncrypt, key, true);
+                    }
 
-                HMSDataSet hmsdset = new HMSDataSet();
-                DataTable tblHeader = hmsdset.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"]; //hmsdset.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"];//
-                DataTable tblItemNormal = hmsdset.Tables["SPS_Cetak_BukuPanenItem_Rev1"];// hmsdset.Tables["spReport_Cetak_BukuPanenItem_Rev1"];// hmsdset.Tables["SPS_Cetak_BukuPanenItem_Rev1"];
-                DataTable tblSigning = hmsdset.Tables["spReport_Signing"];
+                    var gang = Request.QueryString["gang"] ?? "";
+                    var bkmDateString = Request.QueryString["bkmDate"] ?? "";
+                    var bkmDate = DateTime.ParseExact(bkmDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
 
-                tblHeader = new Reporting().GetCetakBukuPanenHeader(estate, bkmDate, divisi, gang, tblHeader);
-                tblItemNormal = new Reporting().GetCetakBukuPanenItem(estate, bkmDate, divisi, gang, 1, "01", tblItemNormal);
-                tblSigning = new Reporting().GetSigning(bkmDate, estate, divisi, gang, tblSigning);
+                    HMSDataSet hmsdset = new HMSDataSet();
+                    DataTable tblHeader = hmsdset.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"]; //hmsdset.Tables["spReport_CETAK_BUKUPANEN_HEADER_Online"];//
+                    DataTable tblItemNormal = hmsdset.Tables["SPS_Cetak_BukuPanenItem_Rev1"];// hmsdset.Tables["spReport_Cetak_BukuPanenItem_Rev1"];// hmsdset.Tables["SPS_Cetak_BukuPanenItem_Rev1"];
+                    DataTable tblSigning = hmsdset.Tables["spReport_Signing"];
 
-                this.ReportViewer1.Reset();
-                this.ReportViewer1.KeepSessionAlive = false;
-                ReportDataSource rds_Signing = new ReportDataSource("DSSigning", tblSigning);
-                ReportDataSource rds_hdr = new ReportDataSource("DSBukuPanenHdr", tblHeader);
-                ReportDataSource rds_Normal = new ReportDataSource("DSITEM_NORMAL", tblItemNormal);
+                    tblHeader = new Reporting().GetCetakBukuPanenHeader(estate, bkmDate, divisi, gang, tblHeader);
+                    tblItemNormal = new Reporting().GetCetakBukuPanenItem(estate, bkmDate, divisi, gang, 1, "01", tblItemNormal);
+                    tblSigning = new Reporting().GetSigning(bkmDate, estate, divisi, gang, tblSigning);
 
-                ReportViewer1.ProcessingMode = ProcessingMode.Local;
-                ReportViewer1.ShowExportControls = true;
+                    this.ReportViewer1.Reset();
+                    this.ReportViewer1.KeepSessionAlive = false;
+                    ReportDataSource rds_Signing = new ReportDataSource("DSSigning", tblSigning);
+                    ReportDataSource rds_hdr = new ReportDataSource("DSBukuPanenHdr", tblHeader);
+                    ReportDataSource rds_Normal = new ReportDataSource("DSITEM_NORMAL", tblItemNormal);
 
-                this.ReportViewer1.LocalReport.ReportPath = Server.MapPath("CetakBukuPanenV5.rdlc");
+                    ReportViewer1.ProcessingMode = ProcessingMode.Local;
+                    ReportViewer1.ShowExportControls = true;
 
-                this.ReportViewer1.LocalReport.DataSources.Add(rds_Signing);
-                this.ReportViewer1.LocalReport.DataSources.Add(rds_hdr);
-                this.ReportViewer1.LocalReport.DataSources.Add(rds_Normal);
+                    this.ReportViewer1.LocalReport.ReportPath = Server.MapPath("CetakBukuPanenV5.rdlc");
 
-                this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Normal_Processing);
-                this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Unripe_Processing);
-                this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_EmptyBunch_Processing);
-                this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Normal_GrandTotal_Processing);
-                // this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(Subreport_Signing);
+                    this.ReportViewer1.LocalReport.DataSources.Add(rds_Signing);
+                    this.ReportViewer1.LocalReport.DataSources.Add(rds_hdr);
+                    this.ReportViewer1.LocalReport.DataSources.Add(rds_Normal);
 
-
-                //this.reportViewer1.LocalReport.SubreportProcessing += new Microsoft.Reporting.WinForms.SubreportProcessingEventHandler(LocalReport_Subreport_BorongHarianSum_Processing);
-                //this.ReportViewer1.LocalReport.DataSources.Clear();
+                    this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Normal_Processing);
+                    this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_SumNormal_Processing);
+                    this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Unripe_Processing);
+                    this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_EmptyBunch_Processing);
+                    this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Normal_GrandTotal_Processing);
+                }
+                catch (Exception ex)
+                {
+                    Response.Redirect("~/home/mymessage?message="+ ex.Message);
+                }
             }
         }
 
@@ -80,7 +93,7 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
             }
 
-            if (e.ReportPath == "BPN_NormalSum")
+            if (e.ReportPath == "BPN_NSum")
             {
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
             }
@@ -115,6 +128,24 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 }
 
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
+            }
+        }
+
+        void LocalReport_Subreport_SumNormal_Processing(object sender, SubreportProcessingEventArgs e)
+        {
+            HMSDataSet ds = new HMSDataSet();
+            string Nik = e.Parameters["Nik"].Values[0].ToString();
+            DateTime Date = Convert.ToDateTime(e.Parameters["Date"].Values[0].ToString());
+            string Location = e.Parameters["Location"].Values[0].ToString();
+            string Crop = e.Parameters["Crop"].Values[0].ToString();
+            string Achievement = e.Parameters["Achievement"].Values[0].ToString();
+            string Gang = e.Parameters["Gang"].Values[0].ToString();
+            var estate = Request.QueryString["estate"] ?? "";
+
+            if (e.ReportPath == "BPN_NormalSum")
+            {
+                DataTable result = new Reporting().GetTPH_SumNormal_PerNik(estate, Nik, Date, Location, Crop, Achievement, ds.Tables["spReport_GetBukuPanenItemNormal_SUM"], Gang);
+                e.DataSources.Add(new ReportDataSource("DataSet_NormalSum", result));
             }
         }
 
@@ -225,5 +256,39 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
             }
         }
+
+        //void LocalReport_Subreport_Jajang_Processing(object sender, SubreportProcessingEventArgs e)
+        //{
+        //    HMSDataSet ds = new HMSDataSet();
+        //    string Nik = e.Parameters["Nik"].Values[0].ToString();
+        //    DateTime Date = Convert.ToDateTime(e.Parameters["Date"].Values[0].ToString());
+        //    string Location = e.Parameters["Location"].Values[0].ToString();
+        //    string Crop = e.Parameters["Crop"].Values[0].ToString();
+        //    string Achievement = e.Parameters["Achievement"].Values[0].ToString();
+        //    string Gang = e.Parameters["Gang"].Values[0].ToString();
+        //    var estate = Request.QueryString["estate"] ?? "";
+        //    DataTable result = new Reporting().GetTPH_SubJanjang_PerNik(estate, Nik, Date, Location, Crop, Achievement, ds.Tables["GetBukuPanenItemNormal"], Gang);
+        //    if (e.ReportPath == "BPN_Janjang")
+        //    {
+        //        e.DataSources.Add(new ReportDataSource("DS_Normal", result));
+        //    }
+        //}
+
+        //void LocalReport_Subreport_LSF_Processing(object sender, SubreportProcessingEventArgs e)
+        //{
+        //    HMSDataSet ds = new HMSDataSet();
+        //    string Nik = e.Parameters["Nik"].Values[0].ToString();
+        //    DateTime Date = Convert.ToDateTime(e.Parameters["Date"].Values[0].ToString());
+        //    string Location = e.Parameters["Location"].Values[0].ToString();
+        //    string Crop = e.Parameters["Crop"].Values[0].ToString();
+        //    string Achievement = e.Parameters["Achievement"].Values[0].ToString();
+        //    string Gang = e.Parameters["Gang"].Values[0].ToString();
+        //    var estate = Request.QueryString["estate"] ?? "";
+        //    DataTable result = new Reporting().GetTPH_SubLSF_PerNik(estate, Nik, Date, Location, Crop, Achievement, ds.Tables["GetBukuPanenItemNormal"], Gang);
+        //    if (e.ReportPath == "BPN_Normal")
+        //    {
+        //        e.DataSources.Add(new ReportDataSource("DS_Normal", result));
+        //    }
+        //}
     }
 }

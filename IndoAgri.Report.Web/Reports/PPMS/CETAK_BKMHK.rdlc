@@ -500,7 +500,7 @@
               <Width>2.1825cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.50157cm</Width>
+              <Width>4.9113cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.39385cm</Width>
@@ -518,25 +518,25 @@
               <Width>1.61769cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.07667cm</Width>
+              <Width>1.59298cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.73271cm</Width>
+              <Width>1.41692cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.15cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.23542cm</Width>
+              <Width>1.38054cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.05021cm</Width>
+              <Width>1.24595cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.89146cm</Width>
+              <Width>1.64981cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.84938cm</Width>
+              <Width>3.77286cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -1227,7 +1227,9 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>AbsentType</rd:DefaultName>
@@ -1430,7 +1432,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1752,7 +1754,7 @@
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1982,7 +1984,7 @@
         <Top>3.45917cm</Top>
         <Left>0.05293cm</Left>
         <Height>2.17042cm</Height>
-        <Width>29.22353cm</Width>
+        <Width>27.85647cm</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -2029,7 +2031,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Nik_Clerk.Value, "DSHdr") + " - " + First(Fields!Clerk.Value, "DSHdr")</Value>
+                <Value>=First(Fields!Company.Value, "DSHdr")</Value>
                 <Style>
                   <FontSize>8pt</FontSize>
                 </Style>
@@ -2765,7 +2767,7 @@
     <Height>3.61805in</Height>
     <Style />
   </Body>
-  <Width>11.5626in</Width>
+  <Width>11.3345in</Width>
   <Page>
     <PageHeader>
       <Height>0.48507cm</Height>
@@ -2794,7 +2796,7 @@
           <rd:DefaultName>Textbox18</rd:DefaultName>
           <Left>0.09526cm</Left>
           <Height>0.48507cm</Height>
-          <Width>29.22354cm</Width>
+          <Width>28.59547cm</Width>
           <Style>
             <Border>
               <Style>Solid</Style>

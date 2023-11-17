@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using IndoAgri.Report.Web.DataSets;
 using IndoAgri.Report.Web.Models;
+using IndoAgri.Security;
 using Microsoft.Reporting.WebForms;
 
 
@@ -21,6 +22,14 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 //Reports/PPMS/CetakBukuPanen2.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03
                 var divisi = Request.QueryString["divisi"] ?? "";
                 var estate = Request.QueryString["estate"] ?? "";
+                bool isEncrypt = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["isEncrypt"]);
+                if (isEncrypt)
+                {
+                    var estateEncrypt = Request.QueryString["estate"] ?? "";
+                    var key = System.Configuration.ConfigurationManager.AppSettings["key"];
+                    estate = Md5Config.Decrypt(estateEncrypt, key, true);
+                }
+
                 var gang = Request.QueryString["gang"] ?? "";
                 var bkmDateString = Request.QueryString["bkmDate"] ?? "";
                 var bkmDate = DateTime.ParseExact(bkmDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
@@ -50,6 +59,9 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 this.ReportViewer1.LocalReport.DataSources.Add(rds_Normal);
 
                 this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Normal_Processing);
+                this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_SumNormal_Processing);
+                //this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Jajang_Processing);
+                //this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_LSF_Processing);
                 this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Unripe_Processing);
                 this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_EmptyBunch_Processing);
                 this.ReportViewer1.LocalReport.SubreportProcessing += new SubreportProcessingEventHandler(LocalReport_Subreport_Normal_GrandTotal_Processing);
@@ -80,7 +92,7 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
             }
 
-            if (e.ReportPath == "BPN_NormalSum")
+            if (e.ReportPath == "BPN_NSum")
             {
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
             }
@@ -115,6 +127,24 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 }
 
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
+            }
+        }
+
+        void LocalReport_Subreport_SumNormal_Processing(object sender, SubreportProcessingEventArgs e)
+        {
+            HMSDataSet ds = new HMSDataSet();
+            string Nik = e.Parameters["Nik"].Values[0].ToString();
+            DateTime Date = Convert.ToDateTime(e.Parameters["Date"].Values[0].ToString());
+            string Location = e.Parameters["Location"].Values[0].ToString();
+            string Crop = e.Parameters["Crop"].Values[0].ToString();
+            string Achievement = e.Parameters["Achievement"].Values[0].ToString();
+            string Gang = e.Parameters["Gang"].Values[0].ToString();
+            var estate = Request.QueryString["estate"] ?? "";
+
+            if (e.ReportPath == "BPN_NormalSum")
+            {
+                DataTable result = new Reporting().GetTPH_SumNormal_PerNik(estate, Nik, Date, Location, Crop, Achievement, ds.Tables["spReport_GetBukuPanenItemNormal_SUM"], Gang);
+                e.DataSources.Add(new ReportDataSource("DataSet_NormalSum", result));
             }
         }
 
@@ -225,5 +255,39 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 e.DataSources.Add(new ReportDataSource("DS_Normal", result));
             }
         }
+
+        //void LocalReport_Subreport_Jajang_Processing(object sender, SubreportProcessingEventArgs e)
+        //{
+        //    HMSDataSet ds = new HMSDataSet();
+        //    string Nik = e.Parameters["Nik"].Values[0].ToString();
+        //    DateTime Date = Convert.ToDateTime(e.Parameters["Date"].Values[0].ToString());
+        //    string Location = e.Parameters["Location"].Values[0].ToString();
+        //    string Crop = e.Parameters["Crop"].Values[0].ToString();
+        //    string Achievement = e.Parameters["Achievement"].Values[0].ToString();
+        //    string Gang = e.Parameters["Gang"].Values[0].ToString();
+        //    var estate = Request.QueryString["estate"] ?? "";
+        //    DataTable result = new Reporting().GetTPH_SubJanjang_PerNik(estate, Nik, Date, Location, Crop, Achievement, ds.Tables["GetBukuPanenItemNormal"], Gang);
+        //    if (e.ReportPath == "BPN_Janjang")
+        //    {
+        //        e.DataSources.Add(new ReportDataSource("DS_Normal", result));
+        //    }
+        //}
+
+        //void LocalReport_Subreport_LSF_Processing(object sender, SubreportProcessingEventArgs e)
+        //{
+        //    HMSDataSet ds = new HMSDataSet();
+        //    string Nik = e.Parameters["Nik"].Values[0].ToString();
+        //    DateTime Date = Convert.ToDateTime(e.Parameters["Date"].Values[0].ToString());
+        //    string Location = e.Parameters["Location"].Values[0].ToString();
+        //    string Crop = e.Parameters["Crop"].Values[0].ToString();
+        //    string Achievement = e.Parameters["Achievement"].Values[0].ToString();
+        //    string Gang = e.Parameters["Gang"].Values[0].ToString();
+        //    var estate = Request.QueryString["estate"] ?? "";
+        //    DataTable result = new Reporting().GetTPH_SubLSF_PerNik(estate, Nik, Date, Location, Crop, Achievement, ds.Tables["GetBukuPanenItemNormal"], Gang);
+        //    if (e.ReportPath == "BPN_Normal")
+        //    {
+        //        e.DataSources.Add(new ReportDataSource("DS_Normal", result));
+        //    }
+        //}
     }
 }

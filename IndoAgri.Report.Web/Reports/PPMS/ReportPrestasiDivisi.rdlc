@@ -24,8 +24,8 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Gang">
-          <DataField>Gang</DataField>
+        <Field Name="gang">
+          <DataField>gang</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ActivityType">
@@ -40,13 +40,13 @@
           <DataField>Block</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Hectare">
-          <DataField>Hectare</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
         <Field Name="BKMDate">
           <DataField>BKMDate</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Hectare">
+          <DataField>Hectare</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="PlantingYear">
           <DataField>PlantingYear</DataField>
@@ -60,12 +60,12 @@
           <DataField>OutputHi</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="OutputSdi">
-          <DataField>OutputSdi</DataField>
+        <Field Name="Outputsdi">
+          <DataField>Outputsdi</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
-        <Field Name="OutputTotal">
-          <DataField>OutputTotal</DataField>
+        <Field Name="Outputtotal">
+          <DataField>Outputtotal</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="HKHi">
@@ -130,12 +130,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>SDE_DDTDataSet</rd:DataSetName>
-        <rd:SchemaPath>F:\Office\HMS\Source Code\HMS\MAIN\Staging Sawit\StagingHMS\Staging.Forms\SDE_DDTDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>SP_PrestasiOuputHKDivisi</rd:TableName>
+        <rd:DataSetName>HMSDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\Office\IndoAgri Reports\IndoAgri.Report\IndoAgri.Report.Web\DataSets\HMSDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>spReport_PrestasiOutputHKDivisi</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>SP_PrestasiOuputHKDivisiTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>spReport_PrestasiOutputHKDivisiTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
     <DataSet Name="DataSetHeader">
@@ -755,7 +755,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>1.47917cm</Size>
+                            <Size>1.76547cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox260">
                                 <CanGrow>true</CanGrow>
@@ -1103,7 +1103,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>1.47917cm</Size>
+                            <Size>1.76547cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox27">
                                 <CanGrow>true</CanGrow>
@@ -1654,7 +1654,7 @@
                                 </SortExpression>
                               </SortExpressions>
                               <TablixHeader>
-                                <Size>1.47917cm</Size>
+                                <Size>1.76547cm</Size>
                                 <CellContents>
                                   <Textbox Name="Block">
                                     <CanGrow>true</CanGrow>
@@ -1777,14 +1777,14 @@
                                           <TablixHeader>
                                             <Size>1.24517cm</Size>
                                             <CellContents>
-                                              <Textbox Name="OutputSdi">
+                                              <Textbox Name="Outputsdi">
                                                 <CanGrow>true</CanGrow>
                                                 <KeepTogether>true</KeepTogether>
                                                 <Paragraphs>
                                                   <Paragraph>
                                                     <TextRuns>
                                                       <TextRun>
-                                                        <Value>=Sum(Fields!OutputSdi.Value)</Value>
+                                                        <Value>=Sum(Fields!Outputsdi.Value)</Value>
                                                         <Style>
                                                           <FontSize>9pt</FontSize>
                                                         </Style>
@@ -1795,7 +1795,7 @@
                                                     </Style>
                                                   </Paragraph>
                                                 </Paragraphs>
-                                                <rd:DefaultName>OutputSdi</rd:DefaultName>
+                                                <rd:DefaultName>Outputsdi</rd:DefaultName>
                                                 <Style>
                                                   <Border>
                                                     <Color>LightGrey</Color>
@@ -2147,7 +2147,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>7.51217cm</Size>
+                        <Size>7.79847cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox301">
                             <CanGrow>true</CanGrow>
@@ -2539,7 +2539,7 @@
             <Top>2.96333cm</Top>
             <Left>0.23495cm</Left>
             <Height>2.4cm</Height>
-            <Width>28.41235cm</Width>
+            <Width>28.69865cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>

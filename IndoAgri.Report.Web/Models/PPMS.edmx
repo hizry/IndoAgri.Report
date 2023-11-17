@@ -39,7 +39,6 @@
           <Property Name="CreatedDate" Type="datetime2" Precision="7" />
           <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
           <Property Name="ModifiedDate" Type="datetime2" Precision="7" />
-          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" />
         </EntityType>
         <Function Name="GetBukuPanenItemNormal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Nik" Type="nvarchar" Mode="In" />
@@ -107,6 +106,29 @@
           <Parameter Name="Achievement" Type="nvarchar" Mode="In" />
           <Parameter Name="Gang" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="spReport_GetBukuPanenItemNormal_JJG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estate" Type="varchar" Mode="In" />
+          <Parameter Name="Nik" Type="nvarchar" Mode="In" />
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spReport_GetBukuPanenItemNormal_LSF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estate" Type="varchar" Mode="In" />
+          <Parameter Name="Nik" Type="nvarchar" Mode="In" />
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spReport_GetBukuPanenItemNormal_SUM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estate" Type="varchar" Mode="In" />
+          <Parameter Name="Nik" Type="nvarchar" Mode="In" />
+          <Parameter Name="HarvestDate" Type="datetime" Mode="In" />
+          <Parameter Name="Location" Type="nvarchar" Mode="In" />
+          <Parameter Name="Crop" Type="nvarchar" Mode="In" />
+          <Parameter Name="Achievement" Type="nvarchar" Mode="In" />
+          <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="spReport_GetBukuPanenItemPenalty" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="estate" Type="varchar" Mode="In" />
           <Parameter Name="Nik" Type="nvarchar" Mode="In" />
@@ -118,6 +140,11 @@
         </Function>
         <Function Name="spReport_Header" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="estate" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spReport_HeaderTaksasi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estate" Type="varchar" Mode="In" />
+          <Parameter Name="division" Type="varchar" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
         </Function>
         <Function Name="spReport_POTONGBUAH_HDR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Start" Type="datetime" Mode="In" />
@@ -136,6 +163,14 @@
           <Parameter Name="BkmDate" Type="datetime" Mode="In" />
           <Parameter Name="Division" Type="nvarchar" Mode="In" />
           <Parameter Name="Gang" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spReport_Taksasi" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estate" Type="varchar" Mode="In" />
+          <Parameter Name="division" Type="varchar" Mode="In" />
+          <Parameter Name="year" Type="int" Mode="In" />
+          <Parameter Name="period" Type="int" Mode="In" />
+          <Parameter Name="startdate" Type="datetime" Mode="In" />
+          <Parameter Name="enddate" Type="datetime" Mode="In" />
         </Function>
         <Function Name="SPS_CETAK_BKMHK" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="BkmDate" Type="datetime" Mode="In" />
@@ -264,12 +299,6 @@
             <Parameter Name="Achievement" Mode="In" Type="String" />
             <Parameter Name="Gang" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="SPS_POTONGBUAH" ReturnType="Collection(PPMSModel.SPS_POTONGBUAH_Result)">
-            <Parameter Name="Start" Mode="In" Type="DateTime" />
-            <Parameter Name="Finish" Mode="In" Type="DateTime" />
-            <Parameter Name="Gang" Mode="In" Type="String" />
-            <Parameter Name="Nik" Mode="In" Type="String" />
-          </FunctionImport>
           <FunctionImport Name="SPS_POTONGBUAH_HDR" ReturnType="Collection(PPMSModel.SPS_POTONGBUAH_HDR_Result)">
             <Parameter Name="Start" Mode="In" Type="DateTime" />
             <Parameter Name="Finish" Mode="In" Type="DateTime" />
@@ -280,7 +309,6 @@
             <Parameter Name="divisi" Mode="In" Type="String" />
             <Parameter Name="bkmdate" Mode="In" Type="DateTime" />
           </FunctionImport>
-          <EntitySet Name="tblM_CheckrollPeriod" EntityType="PPMSModel.tblM_CheckrollPeriod" />
           <EntitySet Name="tblM_AccountingPeriod" EntityType="PPMSModel.tblM_AccountingPeriod" />
           <FunctionImport Name="SPS_REPORT_ANOMALI" ReturnType="Collection(PPMSModel.SPS_REPORT_ANOMALI_Result)">
             <Parameter Name="Date" Mode="In" Type="DateTime" />
@@ -367,6 +395,49 @@
             <Parameter Name="BkmDate" Mode="In" Type="DateTime" />
             <Parameter Name="Division" Mode="In" Type="String" />
             <Parameter Name="Gang" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spReport_HeaderTaksasi" ReturnType="Collection(PPMSModel.spReport_HeaderTaksasi_Result)">
+            <Parameter Name="estate" Mode="In" Type="String" />
+            <Parameter Name="division" Mode="In" Type="String" />
+            <Parameter Name="year" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spReport_Taksasi" ReturnType="Collection(PPMSModel.spReport_Taksasi_Result)">
+            <Parameter Name="estate" Mode="In" Type="String" />
+            <Parameter Name="division" Mode="In" Type="String" />
+            <Parameter Name="year" Mode="In" Type="Int32" />
+            <Parameter Name="period" Mode="In" Type="Int32" />
+            <Parameter Name="startdate" Mode="In" Type="DateTime" />
+            <Parameter Name="enddate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="spReport_GetBukuPanenItemNormal_JJG" ReturnType="Collection(PPMSModel.spReport_GetBukuPanenItemNormal_JJG_Result)">
+            <Parameter Name="estate" Mode="In" Type="String" />
+            <Parameter Name="Nik" Mode="In" Type="String" />
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spReport_GetBukuPanenItemNormal_LSF" ReturnType="Collection(PPMSModel.spReport_GetBukuPanenItemNormal_LSF_Result)">
+            <Parameter Name="estate" Mode="In" Type="String" />
+            <Parameter Name="Nik" Mode="In" Type="String" />
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spReport_GetBukuPanenItemNormal_SUM" ReturnType="Collection(PPMSModel.spReport_GetBukuPanenItemNormal_SUM_Result)">
+            <Parameter Name="estate" Mode="In" Type="String" />
+            <Parameter Name="Nik" Mode="In" Type="String" />
+            <Parameter Name="HarvestDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Location" Mode="In" Type="String" />
+            <Parameter Name="Crop" Mode="In" Type="String" />
+            <Parameter Name="Achievement" Mode="In" Type="String" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="tblM_CheckrollPeriod" EntityType="PPMSModel.tblM_CheckrollPeriod" />
+          <FunctionImport Name="SPS_POTONGBUAH">
+            <Parameter Name="Start" Mode="In" Type="DateTime" />
+            <Parameter Name="Finish" Mode="In" Type="DateTime" />
+            <Parameter Name="Gang" Mode="In" Type="String" />
+            <Parameter Name="Nik" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="SPS_CETAK_BKMHK_Result">
@@ -514,24 +585,6 @@
           <Property Type="Decimal" Name="MatSdi" Nullable="true" Precision="38" Scale="2" />
           <Property Type="Int32" Name="rotasi" Nullable="true" />
         </ComplexType>
-        <EntityType Name="tblM_CheckrollPeriod">
-          <Key>
-            <PropertyRef Name="Estate" />
-            <PropertyRef Name="ZYear" />
-            <PropertyRef Name="Period" />
-          </Key>
-          <Property Name="Estate" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
-          <Property Name="ZYear" Type="Int32" Nullable="false" />
-          <Property Name="Period" Type="Int16" Nullable="false" />
-          <Property Name="ClosingDate" Type="DateTime" Precision="7" />
-          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Active" Type="Boolean" />
-          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CreatedDate" Type="DateTime" Precision="7" />
-          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
-          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
-        </EntityType>
         <EntityType Name="tblM_AccountingPeriod">
           <Key>
             <PropertyRef Name="Estate" />
@@ -716,6 +769,64 @@
           <Property Type="String" Name="NIKKraniDivisi" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="KraniDivisi" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <ComplexType Name="spReport_HeaderTaksasi_Result">
+          <Property Type="String" Name="Company" Nullable="false" MaxLength="57" />
+          <Property Type="String" Name="Estate" Nullable="false" MaxLength="57" />
+          <Property Type="String" Name="Divisi" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="NIKAMA" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="AMA" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NIKMANAGER" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="MANAGER" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NIKASKEP" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ASKEP" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="nik_asisten" Nullable="true" MaxLength="11" />
+          <Property Type="String" Name="assistant" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spReport_Taksasi_Result">
+          <Property Type="String" Name="ESTATE" Nullable="false" MaxLength="4" />
+          <Property Type="String" Name="DIVISION" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="BLOCK" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="TAKSASIDATE" Nullable="false" />
+          <Property Type="String" Name="FOREMAN" Nullable="false" MaxLength="103" />
+          <Property Type="Decimal" Name="BJR" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Prod_Trees" Nullable="true" Precision="13" Scale="3" />
+          <Property Type="Int32" Name="TotalBarisSKB" Nullable="true" />
+          <Property Type="Int32" Name="TotalBarisPengecekan" Nullable="true" />
+          <Property Type="Int32" Name="TotalPokokPengecekan" Nullable="true" />
+          <Property Type="Double" Name="QTY_JJG" Nullable="true" />
+          <Property Type="Decimal" Name="PERCENTAGE" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Int32" Name="JANJANGTAKSASI" Nullable="true" />
+          <Property Type="Decimal" Name="TONASE" Nullable="true" Precision="18" Scale="3" />
+        </ComplexType>
+        <ComplexType Name="spReport_GetBukuPanenItemNormal_JJG_Result">
+          <Property Type="String" Name="Tph" Nullable="false" MaxLength="21" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="spReport_GetBukuPanenItemNormal_LSF_Result">
+          <Property Type="String" Name="Tph" Nullable="false" MaxLength="21" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="spReport_GetBukuPanenItemNormal_SUM_Result">
+          <Property Type="String" Name="Achievement" Nullable="false" MaxLength="5" />
+          <Property Type="Decimal" Name="Qty" Nullable="true" Precision="38" Scale="2" />
+        </ComplexType>
+        <EntityType Name="tblM_CheckrollPeriod">
+          <Key>
+            <PropertyRef Name="Estate" />
+            <PropertyRef Name="ZYear" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="Estate" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ZYear" Type="Int32" Nullable="false" />
+          <Property Name="Period" Type="Int16" Nullable="false" />
+          <Property Name="ClosingDate" Type="DateTime" Precision="7" />
+          <Property Name="Status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="7" />
+          <Property Name="ModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="7" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -850,28 +961,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="SPS_POTONGBUAH" FunctionName="PPMSModel.Store.SPS_POTONGBUAH">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="PPMSModel.SPS_POTONGBUAH_Result">
-                <ScalarProperty Name="Start" ColumnName="Start" />
-                <ScalarProperty Name="Finish" ColumnName="Finish" />
-                <ScalarProperty Name="Nik" ColumnName="Nik" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="BkmDate" ColumnName="BkmDate" />
-                <ScalarProperty Name="Gang" ColumnName="Gang" />
-                <ScalarProperty Name="Location" ColumnName="Location" />
-                <ScalarProperty Name="BlockBasic" ColumnName="BlockBasic" />
-                <ScalarProperty Name="Achievement" ColumnName="Achievement" />
-                <ScalarProperty Name="BasisHarian" ColumnName="BasisHarian" />
-                <ScalarProperty Name="OverBasic" ColumnName="OverBasic" />
-                <ScalarProperty Name="PremiAllocation" ColumnName="PremiAllocation" />
-                <ScalarProperty Name="OveBasicPremi" ColumnName="OveBasicPremi" />
-                <ScalarProperty Name="TotalPremiAllocation" ColumnName="TotalPremiAllocation" />
-                <ScalarProperty Name="RpPenalty" ColumnName="RpPenalty" />
-                <ScalarProperty Name="NettPremi" ColumnName="NettPremi" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SPS_POTONGBUAH_HDR" FunctionName="PPMSModel.Store.SPS_POTONGBUAH_HDR">
             <ResultMapping>
               <ComplexTypeMapping TypeName="PPMSModel.SPS_POTONGBUAH_HDR_Result">
@@ -915,23 +1004,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <EntitySetMapping Name="tblM_CheckrollPeriod">
-            <EntityTypeMapping TypeName="PPMSModel.tblM_CheckrollPeriod">
-              <MappingFragment StoreEntitySet="tblM_CheckrollPeriod">
-                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
-                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-                <ScalarProperty Name="Active" ColumnName="Active" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="ClosingDate" ColumnName="ClosingDate" />
-                <ScalarProperty Name="Period" ColumnName="Period" />
-                <ScalarProperty Name="ZYear" ColumnName="ZYear" />
-                <ScalarProperty Name="Estate" ColumnName="Estate" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tblM_AccountingPeriod">
             <EntityTypeMapping TypeName="PPMSModel.tblM_AccountingPeriod">
               <MappingFragment StoreEntitySet="tblM_AccountingPeriod">
@@ -1155,6 +1227,84 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReport_HeaderTaksasi" FunctionName="PPMSModel.Store.spReport_HeaderTaksasi">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.spReport_HeaderTaksasi_Result">
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Estate" ColumnName="Estate" />
+                <ScalarProperty Name="Divisi" ColumnName="Divisi" />
+                <ScalarProperty Name="NIKAMA" ColumnName="NIKAMA" />
+                <ScalarProperty Name="AMA" ColumnName="AMA" />
+                <ScalarProperty Name="NIKMANAGER" ColumnName="NIKMANAGER" />
+                <ScalarProperty Name="MANAGER" ColumnName="MANAGER" />
+                <ScalarProperty Name="NIKASKEP" ColumnName="NIKASKEP" />
+                <ScalarProperty Name="ASKEP" ColumnName="ASKEP" />
+                <ScalarProperty Name="nik_asisten" ColumnName="nik_asisten" />
+                <ScalarProperty Name="assistant" ColumnName="assistant" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReport_Taksasi" FunctionName="PPMSModel.Store.spReport_Taksasi">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.spReport_Taksasi_Result">
+                <ScalarProperty Name="ESTATE" ColumnName="ESTATE" />
+                <ScalarProperty Name="DIVISION" ColumnName="DIVISION" />
+                <ScalarProperty Name="BLOCK" ColumnName="BLOCK" />
+                <ScalarProperty Name="TAKSASIDATE" ColumnName="TAKSASIDATE" />
+                <ScalarProperty Name="FOREMAN" ColumnName="FOREMAN" />
+                <ScalarProperty Name="BJR" ColumnName="BJR" />
+                <ScalarProperty Name="Prod_Trees" ColumnName="Prod_Trees" />
+                <ScalarProperty Name="TotalBarisSKB" ColumnName="TotalBarisSKB" />
+                <ScalarProperty Name="TotalBarisPengecekan" ColumnName="TotalBarisPengecekan" />
+                <ScalarProperty Name="TotalPokokPengecekan" ColumnName="TotalPokokPengecekan" />
+                <ScalarProperty Name="QTY_JJG" ColumnName="QTY_JJG" />
+                <ScalarProperty Name="PERCENTAGE" ColumnName="PERCENTAGE" />
+                <ScalarProperty Name="JANJANGTAKSASI" ColumnName="JANJANGTAKSASI" />
+                <ScalarProperty Name="TONASE" ColumnName="TONASE" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReport_GetBukuPanenItemNormal_JJG" FunctionName="PPMSModel.Store.spReport_GetBukuPanenItemNormal_JJG">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.spReport_GetBukuPanenItemNormal_JJG_Result">
+                <ScalarProperty Name="Tph" ColumnName="Tph" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReport_GetBukuPanenItemNormal_LSF" FunctionName="PPMSModel.Store.spReport_GetBukuPanenItemNormal_LSF">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.spReport_GetBukuPanenItemNormal_LSF_Result">
+                <ScalarProperty Name="Tph" ColumnName="Tph" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spReport_GetBukuPanenItemNormal_SUM" FunctionName="PPMSModel.Store.spReport_GetBukuPanenItemNormal_SUM">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PPMSModel.spReport_GetBukuPanenItemNormal_SUM_Result">
+                <ScalarProperty Name="Achievement" ColumnName="Achievement" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="tblM_CheckrollPeriod">
+            <EntityTypeMapping TypeName="PPMSModel.tblM_CheckrollPeriod">
+              <MappingFragment StoreEntitySet="tblM_CheckrollPeriod">
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ClosingDate" ColumnName="ClosingDate" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="ZYear" ColumnName="ZYear" />
+                <ScalarProperty Name="Estate" ColumnName="Estate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SPS_POTONGBUAH" FunctionName="PPMSModel.Store.SPS_POTONGBUAH" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

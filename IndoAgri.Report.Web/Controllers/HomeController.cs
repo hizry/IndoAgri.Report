@@ -26,5 +26,12 @@ namespace IndoAgri.Report.Web.Controllers
 
             return View();
         }
+
+        public ActionResult MyMessage(string message)
+        {
+            ViewBag.Message = message;
+
+            return View();
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using IndoAgri.Report.Web.DataSets;
 using IndoAgri.Report.Web.Models;
+using IndoAgri.Security;
 using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
@@ -23,6 +24,13 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 DataTable tblHeader = hmsdset.Tables["spReport_Header"];
 
                 var estate = Request.QueryString["estate"] ?? "";
+                bool isEncrypt = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["isEncrypt"]);
+                if (isEncrypt)
+                {
+                    var estateEncrypt = Request.QueryString["estate"] ?? "";
+                    var key = System.Configuration.ConfigurationManager.AppSettings["key"];
+                    estate = Md5Config.Decrypt(estateEncrypt, key, true);
+                }
                 var divisi = Request.QueryString["divisi"] ?? "";
                 var bkmDateString = Request.QueryString["bkmDate"] ?? "";
                 var bkmDate = DateTime.ParseExact(bkmDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);

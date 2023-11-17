@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using IndoAgri.Report.Web.DataSets;
 using IndoAgri.Report.Web.Models;
+using IndoAgri.Security;
 using Microsoft.Reporting.WebForms;
 
 namespace IndoAgri.Report.Web.Reports.PPMS
@@ -20,6 +21,15 @@ namespace IndoAgri.Report.Web.Reports.PPMS
                 // Reports/PPMS/CETAK_BKMHK.aspx?bkmDate=2023-04-04&divisi=04&gang=04HC03
                 var divisi = Request.QueryString["divisi"] ?? "";
                 var estate = Request.QueryString["estate"] ?? "";
+
+                bool isEncrypt = Convert.ToBoolean(System.Configuration.ConfigurationManager.AppSettings["isEncrypt"]);
+                if (isEncrypt)
+                {
+                    var estateEncrypt = Request.QueryString["estate"] ?? "";
+                    var key = System.Configuration.ConfigurationManager.AppSettings["key"];
+                    estate = Md5Config.Decrypt(estateEncrypt, key, true);
+                }
+
                 var gang = Request.QueryString["gang"] ?? "";
                 var bkmDateString = Request.QueryString["bkmDate"] ?? "";
                 var bkmDate =   DateTime.ParseExact(bkmDateString, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);

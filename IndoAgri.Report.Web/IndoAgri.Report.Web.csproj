@@ -51,6 +51,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="IndoAgri.Security">
+      <HintPath>..\..\IndoAgri.Security.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -132,7 +135,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DataSets\HMSDataSet.Designer.cs">
+    <Compile Include="DataSets\HMSDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HMSDataSet.xsd</DependentUpon>
@@ -181,10 +184,22 @@
     <Compile Include="Models\spReport_CETAK_BUKUPANEN_HEADER_Online_Result.cs">
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\spReport_GetBukuPanenItemNormal_JJG_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_GetBukuPanenItemNormal_LSF_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\spReport_GetBukuPanenItemNormal_Result.cs">
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\spReport_GetBukuPanenItemNormal_SUM_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\spReport_GetBukuPanenItemPenalty_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_HeaderTaksasi_Result.cs">
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\spReport_Header_Result.cs">
@@ -197,6 +212,9 @@
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\spReport_Signing_Result.cs">
+      <DependentUpon>PPMS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spReport_Taksasi_Result.cs">
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SPS_CETAK_BKMHK_DETAIL_DDT_Result.cs">
@@ -242,6 +260,13 @@
       <DependentUpon>PPMS.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\PPMS\FingerScanList_print.aspx.cs">
+      <DependentUpon>FingerScanList_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\FingerScanList_print.aspx.designer.cs">
+      <DependentUpon>FingerScanList_print.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PPMS\CetakBukuPanen_print.aspx.cs">
       <DependentUpon>CetakBukuPanen_print.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -326,6 +351,20 @@
     <Compile Include="Reports\PPMS\ReportPrestasiDivisi.aspx.designer.cs">
       <DependentUpon>ReportPrestasiDivisi.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PPMS\Taksasi.aspx.cs">
+      <DependentUpon>Taksasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\Taksasi.aspx.designer.cs">
+      <DependentUpon>Taksasi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PPMS\Taksasi_print.aspx.cs">
+      <DependentUpon>Taksasi_print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PPMS\Taksasi_print.aspx.designer.cs">
+      <DependentUpon>Taksasi_print.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PPMS\RptAnomali_print.aspx.cs">
       <DependentUpon>RptAnomali_print.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -367,6 +406,7 @@
       <DependentUpon>PPMS.edmx</DependentUpon>
       <LastGenOutput>PPMS.cs</LastGenOutput>
     </Content>
+    <Content Include="Reports\PPMS\FingerScanList_print.aspx" />
     <Content Include="Reports\PPMS\CetakBukuPanen_print.aspx" />
     <Content Include="Reports\PPMS\CetakBukuPanen.aspx" />
     <Content Include="Reports\PPMS\CETAK_BKMHK_print.aspx" />
@@ -379,6 +419,8 @@
     <Content Include="Reports\PPMS\NotesPotongBuahHarian.aspx" />
     <Content Include="Reports\PPMS\ReportPrestasiDivisi_print.aspx" />
     <Content Include="Reports\PPMS\ReportPrestasiDivisi.aspx" />
+    <Content Include="Reports\PPMS\Taksasi.aspx" />
+    <Content Include="Reports\PPMS\Taksasi_print.aspx" />
     <Content Include="Reports\PPMS\RptAnomali_print.aspx" />
     <Content Include="Reports\PPMS\RptAnomali.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -389,7 +431,7 @@
     <None Include="DataSets\HMSDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HMSDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>HMSDataSet2.Designer.cs</LastGenOutput>
     </None>
     <Content Include="DataSets\HMSDataSet.xss">
       <DependentUpon>HMSDataSet.xsd</DependentUpon>
@@ -401,8 +443,12 @@
     <Content Include="Models\PPMS.edmx.diagram">
       <DependentUpon>PPMS.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\simp-report - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\simp-report - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\simp-report-dev - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\simp-report-dev - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\simp-report-qa - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\simp-report-qa - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -429,10 +475,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="MasterPage.Master" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Home\MyMessage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -467,9 +514,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Reports\PPMS\BPN_Janjang.rdlc" />
+    <EmbeddedResource Include="Reports\PPMS\BPN_NSum.rdlc" />
     <EmbeddedResource Include="Reports\PPMS\CetakBukuPanenV5.rdlc" />
     <EmbeddedResource Include="Reports\PPMS\Cetak_BukuPanen.rdlc" />
     <EmbeddedResource Include="Reports\PPMS\Subreport_Signing.rdlc" />
+    <EmbeddedResource Include="Reports\PPMS\Taksasi.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
