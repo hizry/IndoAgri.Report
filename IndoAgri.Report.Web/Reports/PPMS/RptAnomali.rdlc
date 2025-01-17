@@ -1156,7 +1156,7 @@ IIF(((Fields!AbsentType.Value="CT"
   or Fields!AbsentType.Value="T1"
   or Fields!AbsentType.Value="T2"
   or Fields!AbsentType.Value="TM") AND (Fields!Output.Value&lt;&gt;"" )),
-  "Red", "Transparent"))</BackgroundColor>
+  "Red", IIF(Fields!Block.Value &lt;&gt; Fields!Location.Value ,"Red","Transparent")))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1216,7 +1216,7 @@ IIF(((Fields!AbsentType.Value="CT"
   or Fields!AbsentType.Value="T1"
   or Fields!AbsentType.Value="T2"
   or Fields!AbsentType.Value="TM") AND (Fields!Output.Value&lt;&gt;"" )),
-  "Red", "Transparent"))</BackgroundColor>
+  "Red","Transparent"))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -1275,7 +1275,7 @@ IIF(((Fields!AbsentType.Value="CT"
   or Fields!AbsentType.Value="T1"
   or Fields!AbsentType.Value="T2"
   or Fields!AbsentType.Value="TM") AND (Fields!FFB.Value&lt;&gt;"" )),
-  "Red", IIF(Fields!AbsentType.Value="", "Red","Transparent")))</BackgroundColor>
+  "Red", IIF(Fields!AbsentType.Value="", "Red",IIF(Fields!Block.Value &lt;&gt; Fields!Location.Value ,"Red","Transparent"))))</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
